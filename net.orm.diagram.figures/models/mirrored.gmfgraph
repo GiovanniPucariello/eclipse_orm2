@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="orm">
+  <figures name="Default" implementationBundle="net.orm.diagram.figures">
+    <descriptors name="RoleFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" qualifiedClassName="net.orm.diagram.figures.RoleFigure"/>
+    </descriptors>
+    <descriptors name="EntityFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" qualifiedClassName="net.orm.diagram.figures.EntityFigure">
+        <customChildren accessor="getFigureEntityNameFigure">
+          <typedFigure xsi:type="gmfgraph:Label"/>
+        </customChildren>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.1/@actualFigure/@customChildren.0/@typedFigure"/>
+    </descriptors>
+    <descriptors name="PredicateFigure">
+      <actualFigure xsi:type="gmfgraph:CustomFigure" qualifiedClassName="net.orm.diagram.figures.PredicateFigure">
+        <customChildren accessor="getFigureRoleFigure">
+          <typedFigure xsi:type="gmfgraph:Rectangle"/>
+        </customChildren>
+      </actualFigure>
+      <accessors figure="//@figures.0/@descriptors.2/@actualFigure/@customChildren.0/@typedFigure"/>
+    </descriptors>
+    <descriptors name="SubTypeFigure">
+      <actualFigure xsi:type="gmfgraph:CustomConnection" qualifiedClassName="net.orm.diagram.figures.SubTypeFigure"/>
+    </descriptors>
+    <descriptors name="UniquenessConstraintFigure">
+      <actualFigure xsi:type="gmfgraph:CustomConnection" qualifiedClassName="net.orm.diagram.figures.UniquenessConstraintFigure"/>
+    </descriptors>
+    <descriptors name="EntityRoleFigure">
+      <actualFigure xsi:type="gmfgraph:CustomConnection" qualifiedClassName="net.orm.diagram.figures.EntityRoleFigure"/>
+    </descriptors>
+  </figures>
+  <nodes name="Role" figure="RoleFigure"/>
+  <nodes name="Entity" figure="EntityFigure"/>
+  <nodes name="Predicate" figure="PredicateFigure"/>
+  <connections name="SubType" figure="SubTypeFigure"/>
+  <connections name="UniquenessConstraint" figure="UniquenessConstraintFigure"/>
+  <connections name="EntityRole" figure="EntityRoleFigure"/>
+  <labels name="EntityName" figure="EntityFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+</gmfgraph:Canvas>

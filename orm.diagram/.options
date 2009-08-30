@@ -1,0 +1,7 @@
+# Tracing options for the orm.diagram plug-in
+
+# Common issues
+orm.diagram/debug=false
+
+# Visual IDs
+orm.diagram/debug/visualID=false
