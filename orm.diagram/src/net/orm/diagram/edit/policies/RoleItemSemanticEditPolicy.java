@@ -45,7 +45,7 @@ public class RoleItemSemanticEditPolicy extends OrmBaseItemSemanticEditPolicy {
 		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(
 				getEditingDomain(), null);
 		cmd.setTransactionNestingEnabled(false);
-		for (Iterator it = view.getTargetEdges().iterator(); it.hasNext();) {
+		for (Iterator<?> it = view.getTargetEdges().iterator(); it.hasNext();) {
 			Edge incomingLink = (Edge) it.next();
 			if (OrmVisualIDRegistry.getVisualID(incomingLink) == EntityRoleEditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(
@@ -62,7 +62,7 @@ public class RoleItemSemanticEditPolicy extends OrmBaseItemSemanticEditPolicy {
 				continue;
 			}
 		}
-		for (Iterator it = view.getSourceEdges().iterator(); it.hasNext();) {
+		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
 			Edge outgoingLink = (Edge) it.next();
 			if (OrmVisualIDRegistry.getVisualID(outgoingLink) == EntityRole2EditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(
@@ -110,12 +110,12 @@ public class RoleItemSemanticEditPolicy extends OrmBaseItemSemanticEditPolicy {
 			return null;
 		}
 		if (OrmElementTypes.EntityRole_4004 == req.getElementType()) {
-			return getGEFWrapper(new EntityRole2CreateCommand(req, req
-					.getSource(), req.getTarget()));
+			return getGEFWrapper(new EntityRole2CreateCommand(req,
+					req.getSource(), req.getTarget()));
 		}
 		if (OrmElementTypes.UniquenessConstraint_4002 == req.getElementType()) {
-			return getGEFWrapper(new UniquenessConstraintCreateCommand(req, req
-					.getSource(), req.getTarget()));
+			return getGEFWrapper(new UniquenessConstraintCreateCommand(req,
+					req.getSource(), req.getTarget()));
 		}
 		return null;
 	}
@@ -126,15 +126,15 @@ public class RoleItemSemanticEditPolicy extends OrmBaseItemSemanticEditPolicy {
 	protected Command getCompleteCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
 		if (OrmElementTypes.EntityRole_4001 == req.getElementType()) {
-			return getGEFWrapper(new EntityRoleCreateCommand(req, req
-					.getSource(), req.getTarget()));
+			return getGEFWrapper(new EntityRoleCreateCommand(req,
+					req.getSource(), req.getTarget()));
 		}
 		if (OrmElementTypes.EntityRole_4004 == req.getElementType()) {
 			return null;
 		}
 		if (OrmElementTypes.UniquenessConstraint_4002 == req.getElementType()) {
-			return getGEFWrapper(new UniquenessConstraintCreateCommand(req, req
-					.getSource(), req.getTarget()));
+			return getGEFWrapper(new UniquenessConstraintCreateCommand(req,
+					req.getSource(), req.getTarget()));
 		}
 		return null;
 	}

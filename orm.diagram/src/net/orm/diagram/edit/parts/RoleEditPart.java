@@ -1,6 +1,7 @@
 package net.orm.diagram.edit.parts;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import net.orm.diagram.edit.policies.RoleItemSemanticEditPolicy;
@@ -8,6 +9,8 @@ import net.orm.diagram.figures.RoleFigure;
 import net.orm.diagram.providers.OrmElementTypes;
 
 import org.eclipse.draw2d.IFigure;
+import org.eclipse.draw2d.PolylineDecoration;
+import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
 import org.eclipse.gef.EditPart;
@@ -69,7 +72,7 @@ public class RoleEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected LayoutEditPolicy createLayoutEditPolicy() {
-		LayoutEditPolicy lep = new LayoutEditPolicy() {
+		org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy() {
 
 			protected EditPolicy createChildEditPolicy(EditPart child) {
 				EditPolicy result = child
@@ -95,8 +98,7 @@ public class RoleEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure createNodeShape() {
-		RoleFigure figure = new RoleFigure();
-		return primaryShape = figure;
+		return primaryShape = new RoleFigure();
 	}
 
 	/**
@@ -192,8 +194,8 @@ public class RoleEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnSource() {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+	public List<IElementType> getMARelTypesOnSource() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(OrmElementTypes.EntityRole_4004);
 		types.add(OrmElementTypes.UniquenessConstraint_4002);
 		return types;
@@ -202,9 +204,9 @@ public class RoleEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnSourceAndTarget(
+	public List<IElementType> getMARelTypesOnSourceAndTarget(
 			IGraphicalEditPart targetEditPart) {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (targetEditPart instanceof PredicateEditPart) {
 			types.add(OrmElementTypes.EntityRole_4004);
 		}
@@ -220,16 +222,12 @@ public class RoleEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMATypesForTarget(
-			IElementType relationshipType) {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (relationshipType == OrmElementTypes.EntityRole_4004) {
 			types.add(OrmElementTypes.Predicate_2001);
-		}
-		if (relationshipType == OrmElementTypes.EntityRole_4004) {
 			types.add(OrmElementTypes.Entity_2002);
-		}
-		if (relationshipType == OrmElementTypes.UniquenessConstraint_4002) {
+		} else if (relationshipType == OrmElementTypes.UniquenessConstraint_4002) {
 			types.add(OrmElementTypes.Role_3001);
 		}
 		return types;
@@ -238,8 +236,8 @@ public class RoleEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnTarget() {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+	public List<IElementType> getMARelTypesOnTarget() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(OrmElementTypes.EntityRole_4001);
 		types.add(OrmElementTypes.UniquenessConstraint_4002);
 		return types;
@@ -248,21 +246,59 @@ public class RoleEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMATypesForSource(
-			IElementType relationshipType) {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (relationshipType == OrmElementTypes.EntityRole_4001) {
 			types.add(OrmElementTypes.Predicate_2001);
-		}
-		if (relationshipType == OrmElementTypes.EntityRole_4001) {
 			types.add(OrmElementTypes.Entity_2002);
-		}
-		if (relationshipType == OrmElementTypes.UniquenessConstraint_4002) {
+		} else if (relationshipType == OrmElementTypes.UniquenessConstraint_4002) {
 			types.add(OrmElementTypes.Role_3001);
 		}
 		return types;
 	}
 
-	
+	/**
+	 * @generated
+	 */
+	public class RoleFigure extends RectangleFigure {
+
+		/**
+		 * @generated
+		 */
+		public RoleFigure() {
+			createContents();
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			PolylineDecoration uniquenessConsraintDecorator0 = new PolylineDecoration();
+
+			this.add(uniquenessConsraintDecorator0);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		private boolean myUseLocalCoordinates = true;
+
+		/**
+		 * @generated
+		 */
+		protected boolean useLocalCoordinates() {
+			return myUseLocalCoordinates;
+		}
+
+		/**
+		 * @generated
+		 */
+		protected void setUseLocalCoordinates(boolean useLocalCoordinates) {
+			myUseLocalCoordinates = useLocalCoordinates;
+		}
+
+	}
 
 }

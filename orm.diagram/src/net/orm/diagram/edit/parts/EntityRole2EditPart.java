@@ -7,6 +7,7 @@ import org.eclipse.draw2d.Connection;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ITreeBranchEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
 
 /**
@@ -56,5 +57,18 @@ public class EntityRole2EditPart extends ConnectionNodeEditPart implements
 		return (EntityRoleFigure) getFigure();
 	}
 
+	/**
+	 * @generated
+	 */
+	public class EntityRoleFigure extends PolylineConnectionEx {
+
+		/**
+		 * @generated
+		 */
+		public EntityRoleFigure() {
+
+		}
+
+	}
 
 }

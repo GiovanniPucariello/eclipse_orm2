@@ -62,7 +62,7 @@ public class PredicateItemSemanticEditPolicy extends
 		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(
 				getEditingDomain(), null);
 		cmd.setTransactionNestingEnabled(false);
-		for (Iterator it = view.getTargetEdges().iterator(); it.hasNext();) {
+		for (Iterator<?> it = view.getTargetEdges().iterator(); it.hasNext();) {
 			Edge incomingLink = (Edge) it.next();
 			if (OrmVisualIDRegistry.getVisualID(incomingLink) == EntityRole2EditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(
@@ -79,7 +79,7 @@ public class PredicateItemSemanticEditPolicy extends
 				continue;
 			}
 		}
-		for (Iterator it = view.getSourceEdges().iterator(); it.hasNext();) {
+		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
 			Edge outgoingLink = (Edge) it.next();
 			if (OrmVisualIDRegistry.getVisualID(outgoingLink) == EntityRoleEditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(
@@ -114,11 +114,11 @@ public class PredicateItemSemanticEditPolicy extends
 	 */
 	private void addDestroyChildNodesCommand(ICompositeCommand cmd) {
 		View view = (View) getHost().getModel();
-		for (Iterator nit = view.getChildren().iterator(); nit.hasNext();) {
+		for (Iterator<?> nit = view.getChildren().iterator(); nit.hasNext();) {
 			Node node = (Node) nit.next();
 			switch (OrmVisualIDRegistry.getVisualID(node)) {
 			case RoleEditPart.VISUAL_ID:
-				for (Iterator it = node.getTargetEdges().iterator(); it
+				for (Iterator<?> it = node.getTargetEdges().iterator(); it
 						.hasNext();) {
 					Edge incomingLink = (Edge) it.next();
 					if (OrmVisualIDRegistry.getVisualID(incomingLink) == EntityRoleEditPart.VISUAL_ID) {
@@ -138,7 +138,7 @@ public class PredicateItemSemanticEditPolicy extends
 						continue;
 					}
 				}
-				for (Iterator it = node.getSourceEdges().iterator(); it
+				for (Iterator<?> it = node.getSourceEdges().iterator(); it
 						.hasNext();) {
 					Edge outgoingLink = (Edge) it.next();
 					if (OrmVisualIDRegistry.getVisualID(outgoingLink) == EntityRole2EditPart.VISUAL_ID) {
@@ -183,8 +183,8 @@ public class PredicateItemSemanticEditPolicy extends
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
 		if (OrmElementTypes.EntityRole_4001 == req.getElementType()) {
-			return getGEFWrapper(new EntityRoleCreateCommand(req, req
-					.getSource(), req.getTarget()));
+			return getGEFWrapper(new EntityRoleCreateCommand(req,
+					req.getSource(), req.getTarget()));
 		}
 		if (OrmElementTypes.EntityRole_4004 == req.getElementType()) {
 			return null;
@@ -205,8 +205,8 @@ public class PredicateItemSemanticEditPolicy extends
 			return null;
 		}
 		if (OrmElementTypes.EntityRole_4004 == req.getElementType()) {
-			return getGEFWrapper(new EntityRole2CreateCommand(req, req
-					.getSource(), req.getTarget()));
+			return getGEFWrapper(new EntityRole2CreateCommand(req,
+					req.getSource(), req.getTarget()));
 		}
 		if (OrmElementTypes.SubType_4003 == req.getElementType()) {
 			return getGEFWrapper(new SubTypeCreateCommand(req, req.getSource(),

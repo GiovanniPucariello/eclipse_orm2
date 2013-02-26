@@ -70,7 +70,7 @@ public class EntityRole2CreateCommand extends EditElementCommand {
 		if (getContainer() == null) {
 			return false;
 		}
-		return OrmBaseItemSemanticEditPolicy.LinkConstraints
+		return OrmBaseItemSemanticEditPolicy.getLinkConstraints()
 				.canCreateEntityRole_4004(getContainer(), getSource(),
 						getTarget());
 	}

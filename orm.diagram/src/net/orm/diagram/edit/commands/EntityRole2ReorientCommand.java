@@ -72,8 +72,9 @@ public class EntityRole2ReorientCommand extends EditElementCommand {
 			return false;
 		}
 		Schema container = (Schema) getLink().eContainer();
-		return OrmBaseItemSemanticEditPolicy.LinkConstraints
-				.canExistEntityRole_4004(container, getNewSource(), target);
+		return OrmBaseItemSemanticEditPolicy.getLinkConstraints()
+				.canExistEntityRole_4004(container, getLink(), getNewSource(),
+						target);
 	}
 
 	/**
@@ -88,8 +89,9 @@ public class EntityRole2ReorientCommand extends EditElementCommand {
 			return false;
 		}
 		Schema container = (Schema) getLink().eContainer();
-		return OrmBaseItemSemanticEditPolicy.LinkConstraints
-				.canExistEntityRole_4004(container, source, getNewTarget());
+		return OrmBaseItemSemanticEditPolicy.getLinkConstraints()
+				.canExistEntityRole_4004(container, getLink(), source,
+						getNewTarget());
 	}
 
 	/**

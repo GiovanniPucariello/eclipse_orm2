@@ -183,8 +183,7 @@ public class WizardNewFileCreationPage extends WizardPage {
 
 			public void widgetSelected(SelectionEvent e) {
 				FileDialog dialog = new FileDialog(getShell(), SWT.SAVE);
-				dialog
-						.setText(Messages.WizardNewFileCreationPage_SelectNewFileDialog);
+				dialog.setText(Messages.WizardNewFileCreationPage_SelectNewFileDialog);
 				dialog.setFileName(getFileName());
 				String fileName = dialog.open();
 				if (fileName != null) {

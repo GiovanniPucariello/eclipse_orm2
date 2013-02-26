@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EAnnotation;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.gmf.runtime.notation.Diagram;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.structure.DiagramStructure;
 
 /**
  * This registry is used to determine which type of visual object should be
@@ -83,7 +84,7 @@ public class OrmVisualIDRegistry {
 	 * @generated
 	 */
 	public static String getType(int visualID) {
-		return String.valueOf(visualID);
+		return Integer.toString(visualID);
 	}
 
 	/**
@@ -124,12 +125,6 @@ public class OrmVisualIDRegistry {
 			}
 		}
 		switch (containerVisualID) {
-		case PredicateEditPart.VISUAL_ID:
-			if (Package.eINSTANCE.getRole().isSuperTypeOf(
-					domainElement.eClass())) {
-				return RoleEditPart.VISUAL_ID;
-			}
-			break;
 		case SchemaEditPart.VISUAL_ID:
 			if (Package.eINSTANCE.getPredicate().isSuperTypeOf(
 					domainElement.eClass())) {
@@ -138,6 +133,12 @@ public class OrmVisualIDRegistry {
 			if (Package.eINSTANCE.getEntity().isSuperTypeOf(
 					domainElement.eClass())) {
 				return EntityEditPart.VISUAL_ID;
+			}
+			break;
+		case PredicateEditPart.VISUAL_ID:
+			if (Package.eINSTANCE.getRole().isSuperTypeOf(
+					domainElement.eClass())) {
+				return RoleEditPart.VISUAL_ID;
 			}
 			break;
 		}
@@ -165,6 +166,14 @@ public class OrmVisualIDRegistry {
 			}
 		}
 		switch (containerVisualID) {
+		case SchemaEditPart.VISUAL_ID:
+			if (PredicateEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			if (EntityEditPart.VISUAL_ID == nodeVisualID) {
+				return true;
+			}
+			break;
 		case PredicateEditPart.VISUAL_ID:
 			if (RoleEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
@@ -172,14 +181,6 @@ public class OrmVisualIDRegistry {
 			break;
 		case EntityEditPart.VISUAL_ID:
 			if (EntityNameEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			break;
-		case SchemaEditPart.VISUAL_ID:
-			if (PredicateEditPart.VISUAL_ID == nodeVisualID) {
-				return true;
-			}
-			if (EntityEditPart.VISUAL_ID == nodeVisualID) {
 				return true;
 			}
 			break;
@@ -222,5 +223,99 @@ public class OrmVisualIDRegistry {
 	private static boolean isDiagram(Schema element) {
 		return true;
 	}
+
+	/**
+	 * @generated
+	 */
+	public static boolean checkNodeVisualID(View containerView,
+			EObject domainElement, int candidate) {
+		if (candidate == -1) {
+			//unrecognized id is always bad
+			return false;
+		}
+		int basic = getNodeVisualID(containerView, domainElement);
+		return basic == candidate;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static boolean isCompartmentVisualID(int visualID) {
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static boolean isSemanticLeafVisualID(int visualID) {
+		switch (visualID) {
+		case SchemaEditPart.VISUAL_ID:
+			return false;
+		case EntityEditPart.VISUAL_ID:
+		case RoleEditPart.VISUAL_ID:
+			return true;
+		default:
+			break;
+		}
+		return false;
+	}
+
+	/**
+	 * @generated
+	 */
+	public static final DiagramStructure TYPED_INSTANCE = new DiagramStructure() {
+		/**
+		 * @generated
+		 */
+		@Override
+		public int getVisualID(View view) {
+			return net.orm.diagram.part.OrmVisualIDRegistry.getVisualID(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public String getModelID(View view) {
+			return net.orm.diagram.part.OrmVisualIDRegistry.getModelID(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public int getNodeVisualID(View containerView, EObject domainElement) {
+			return net.orm.diagram.part.OrmVisualIDRegistry.getNodeVisualID(
+					containerView, domainElement);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public boolean checkNodeVisualID(View containerView,
+				EObject domainElement, int candidate) {
+			return net.orm.diagram.part.OrmVisualIDRegistry.checkNodeVisualID(
+					containerView, domainElement, candidate);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public boolean isCompartmentVisualID(int visualID) {
+			return net.orm.diagram.part.OrmVisualIDRegistry
+					.isCompartmentVisualID(visualID);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public boolean isSemanticLeafVisualID(int visualID) {
+			return net.orm.diagram.part.OrmVisualIDRegistry
+					.isSemanticLeafVisualID(visualID);
+		}
+	};
 
 }

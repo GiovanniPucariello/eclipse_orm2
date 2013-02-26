@@ -138,8 +138,8 @@ public class OrmCreationWizard extends Wizard implements INewWizard {
 			public void run(IProgressMonitor monitor)
 					throws InvocationTargetException, InterruptedException {
 				diagram = OrmDiagramEditorUtil.createDiagram(
-						diagramModelFilePage.getURI(), domainModelFilePage
-								.getURI(), monitor);
+						diagramModelFilePage.getURI(),
+						domainModelFilePage.getURI(), monitor);
 				if (isOpenNewlyCreatedDiagramEditor() && diagram != null) {
 					try {
 						OrmDiagramEditorUtil.openDiagram(diagram);

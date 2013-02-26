@@ -71,8 +71,9 @@ public class SubTypeReorientCommand extends EditElementCommand {
 			return false;
 		}
 		Schema container = (Schema) getLink().eContainer();
-		return OrmBaseItemSemanticEditPolicy.LinkConstraints
-				.canExistSubType_4003(container, getNewSource(), target);
+		return OrmBaseItemSemanticEditPolicy.getLinkConstraints()
+				.canExistSubType_4003(container, getLink(), getNewSource(),
+						target);
 	}
 
 	/**
@@ -87,8 +88,9 @@ public class SubTypeReorientCommand extends EditElementCommand {
 			return false;
 		}
 		Schema container = (Schema) getLink().eContainer();
-		return OrmBaseItemSemanticEditPolicy.LinkConstraints
-				.canExistSubType_4003(container, source, getNewTarget());
+		return OrmBaseItemSemanticEditPolicy.getLinkConstraints()
+				.canExistSubType_4003(container, getLink(), source,
+						getNewTarget());
 	}
 
 	/**

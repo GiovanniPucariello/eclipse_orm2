@@ -1,42 +1,18 @@
 package net.orm.diagram.part;
 
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.gmf.tooling.runtime.update.UpdaterNodeDescriptor;
 
 /**
  * @generated
  */
-public class OrmNodeDescriptor {
-
-	/**
-	 * @generated
-	 */
-	private final EObject myModelElement;
-
-	/**
-	 * @generated
-	 */
-	private final int myVisualID;
+public class OrmNodeDescriptor extends UpdaterNodeDescriptor {
 
 	/**
 	 * @generated
 	 */
 	public OrmNodeDescriptor(EObject modelElement, int visualID) {
-		myModelElement = modelElement;
-		myVisualID = visualID;
-	}
-
-	/**
-	 * @generated
-	 */
-	public EObject getModelElement() {
-		return myModelElement;
-	}
-
-	/**
-	 * @generated
-	 */
-	public int getVisualID() {
-		return myVisualID;
+		super(modelElement, visualID);
 	}
 
 }

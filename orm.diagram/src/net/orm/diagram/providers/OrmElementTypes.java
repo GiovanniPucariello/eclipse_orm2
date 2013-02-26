@@ -30,7 +30,7 @@ import org.eclipse.swt.graphics.Image;
 /**
  * @generated
  */
-public class OrmElementTypes extends ElementInitializers {
+public class OrmElementTypes {
 
 	/**
 	 * @generated
@@ -41,7 +41,7 @@ public class OrmElementTypes extends ElementInitializers {
 	/**
 	 * @generated
 	 */
-	private static Map elements;
+	private static Map<IElementType, ENamedElement> elements;
 
 	/**
 	 * @generated
@@ -51,7 +51,7 @@ public class OrmElementTypes extends ElementInitializers {
 	/**
 	 * @generated
 	 */
-	private static Set KNOWN_ELEMENT_TYPES;
+	private static Set<IElementType> KNOWN_ELEMENT_TYPES;
 
 	/**
 	 * @generated
@@ -196,7 +196,7 @@ public class OrmElementTypes extends ElementInitializers {
 	public static ENamedElement getElement(IAdaptable hint) {
 		Object type = hint.getAdapter(IElementType.class);
 		if (elements == null) {
-			elements = new IdentityHashMap();
+			elements = new IdentityHashMap<IElementType, ENamedElement>();
 
 			elements.put(Schema_1000, Package.eINSTANCE.getSchema());
 
@@ -210,8 +210,8 @@ public class OrmElementTypes extends ElementInitializers {
 
 			elements.put(EntityRole_4004, Package.eINSTANCE.getEntityRole());
 
-			elements.put(UniquenessConstraint_4002, Package.eINSTANCE
-					.getUniquenessConstraint());
+			elements.put(UniquenessConstraint_4002,
+					Package.eINSTANCE.getUniquenessConstraint());
 
 			elements.put(SubType_4003, Package.eINSTANCE.getSubType());
 		}
@@ -230,7 +230,7 @@ public class OrmElementTypes extends ElementInitializers {
 	 */
 	public static boolean isKnownElementType(IElementType elementType) {
 		if (KNOWN_ELEMENT_TYPES == null) {
-			KNOWN_ELEMENT_TYPES = new HashSet();
+			KNOWN_ELEMENT_TYPES = new HashSet<IElementType>();
 			KNOWN_ELEMENT_TYPES.add(Schema_1000);
 			KNOWN_ELEMENT_TYPES.add(Predicate_2001);
 			KNOWN_ELEMENT_TYPES.add(Entity_2002);

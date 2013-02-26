@@ -45,7 +45,7 @@ public class EntityItemSemanticEditPolicy extends OrmBaseItemSemanticEditPolicy 
 		CompositeTransactionalCommand cmd = new CompositeTransactionalCommand(
 				getEditingDomain(), null);
 		cmd.setTransactionNestingEnabled(false);
-		for (Iterator it = view.getTargetEdges().iterator(); it.hasNext();) {
+		for (Iterator<?> it = view.getTargetEdges().iterator(); it.hasNext();) {
 			Edge incomingLink = (Edge) it.next();
 			if (OrmVisualIDRegistry.getVisualID(incomingLink) == EntityRole2EditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(
@@ -62,7 +62,7 @@ public class EntityItemSemanticEditPolicy extends OrmBaseItemSemanticEditPolicy 
 				continue;
 			}
 		}
-		for (Iterator it = view.getSourceEdges().iterator(); it.hasNext();) {
+		for (Iterator<?> it = view.getSourceEdges().iterator(); it.hasNext();) {
 			Edge outgoingLink = (Edge) it.next();
 			if (OrmVisualIDRegistry.getVisualID(outgoingLink) == EntityRoleEditPart.VISUAL_ID) {
 				DestroyElementRequest r = new DestroyElementRequest(
@@ -107,8 +107,8 @@ public class EntityItemSemanticEditPolicy extends OrmBaseItemSemanticEditPolicy 
 	protected Command getStartCreateRelationshipCommand(
 			CreateRelationshipRequest req) {
 		if (OrmElementTypes.EntityRole_4001 == req.getElementType()) {
-			return getGEFWrapper(new EntityRoleCreateCommand(req, req
-					.getSource(), req.getTarget()));
+			return getGEFWrapper(new EntityRoleCreateCommand(req,
+					req.getSource(), req.getTarget()));
 		}
 		if (OrmElementTypes.EntityRole_4004 == req.getElementType()) {
 			return null;
@@ -129,8 +129,8 @@ public class EntityItemSemanticEditPolicy extends OrmBaseItemSemanticEditPolicy 
 			return null;
 		}
 		if (OrmElementTypes.EntityRole_4004 == req.getElementType()) {
-			return getGEFWrapper(new EntityRole2CreateCommand(req, req
-					.getSource(), req.getTarget()));
+			return getGEFWrapper(new EntityRole2CreateCommand(req,
+					req.getSource(), req.getTarget()));
 		}
 		if (OrmElementTypes.SubType_4003 == req.getElementType()) {
 			return getGEFWrapper(new SubTypeCreateCommand(req, req.getSource(),

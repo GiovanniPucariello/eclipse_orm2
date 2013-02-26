@@ -80,6 +80,10 @@
             <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.DiagramEditPart">
                <GlobalActionId actionId="save"/>
             </ElementType>
+            <ElementType class="org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart">
+               <GlobalActionId actionId="save">
+               </GlobalActionId>
+            </ElementType>        
          </ViewId>
       </GlobalActionHandlerProvider>
       <GlobalActionHandlerProvider
@@ -243,7 +247,8 @@
          <object class="net.orm.diagram.edit.parts.SchemaEditPart" id="Schema_1000"/>
          <object class="net.orm.diagram.edit.parts.PredicateEditPart" id="Predicate_2001"/>
          <object class="net.orm.diagram.edit.parts.EntityEditPart" id="Entity_2002"/>
-         <context elements="Schema_1000,Predicate_2001,Entity_2002"/>
+         <object class="net.orm.diagram.edit.parts.RoleEditPart" id="Role_3001"/>
+         <context elements="Schema_1000,Predicate_2001,Entity_2002,Role_3001"/>
       </modelingAssistantProvider>
    </extension>
 

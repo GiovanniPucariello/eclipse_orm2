@@ -1,17 +1,21 @@
 package net.orm.diagram.edit.parts;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import net.orm.diagram.edit.policies.OrmTextSelectionEditPolicy;
 import net.orm.diagram.edit.policies.PredicateCanonicalEditPolicy;
 import net.orm.diagram.edit.policies.PredicateItemSemanticEditPolicy;
 import net.orm.diagram.figures.PredicateFigure;
+import net.orm.diagram.part.OrmVisualIDRegistry;
 import net.orm.diagram.providers.OrmElementTypes;
 
 import org.eclipse.draw2d.IFigure;
+import org.eclipse.draw2d.RectangleFigure;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
+import org.eclipse.draw2d.ToolbarLayout;
 import org.eclipse.gef.EditPart;
 import org.eclipse.gef.EditPolicy;
 import org.eclipse.gef.editpolicies.LayoutEditPolicy;
@@ -27,6 +31,7 @@ import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.edit.policies.reparent.CreationEditPolicyWithCustomReparent;
 import org.eclipse.swt.graphics.Color;
 
 /**
@@ -61,7 +66,8 @@ public class PredicateEditPart extends ShapeNodeEditPart {
 	 */
 	protected void createDefaultEditPolicies() {
 		installEditPolicy(EditPolicyRoles.CREATION_ROLE,
-				new CreationEditPolicy());
+				new CreationEditPolicyWithCustomReparent(
+						OrmVisualIDRegistry.TYPED_INSTANCE));
 		super.createDefaultEditPolicies();
 		installEditPolicy(EditPolicyRoles.SEMANTIC_ROLE,
 				new PredicateItemSemanticEditPolicy());
@@ -97,8 +103,7 @@ public class PredicateEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure createNodeShape() {
-		PredicateFigure figure = new PredicateFigure();
-		return primaryShape = figure;
+		return primaryShape = new PredicateFigure();
 	}
 
 	/**
@@ -199,8 +204,8 @@ public class PredicateEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnSource() {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+	public List<IElementType> getMARelTypesOnSource() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(OrmElementTypes.EntityRole_4001);
 		types.add(OrmElementTypes.SubType_4003);
 		return types;
@@ -209,9 +214,9 @@ public class PredicateEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnSourceAndTarget(
+	public List<IElementType> getMARelTypesOnSourceAndTarget(
 			IGraphicalEditPart targetEditPart) {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (targetEditPart instanceof RoleEditPart) {
 			types.add(OrmElementTypes.EntityRole_4001);
 		}
@@ -227,16 +232,12 @@ public class PredicateEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMATypesForTarget(
-			IElementType relationshipType) {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (relationshipType == OrmElementTypes.EntityRole_4001) {
 			types.add(OrmElementTypes.Role_3001);
-		}
-		if (relationshipType == OrmElementTypes.SubType_4003) {
+		} else if (relationshipType == OrmElementTypes.SubType_4003) {
 			types.add(OrmElementTypes.Predicate_2001);
-		}
-		if (relationshipType == OrmElementTypes.SubType_4003) {
 			types.add(OrmElementTypes.Entity_2002);
 		}
 		return types;
@@ -245,8 +246,8 @@ public class PredicateEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnTarget() {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+	public List<IElementType> getMARelTypesOnTarget() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(OrmElementTypes.EntityRole_4004);
 		types.add(OrmElementTypes.SubType_4003);
 		return types;
@@ -255,19 +256,81 @@ public class PredicateEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMATypesForSource(
-			IElementType relationshipType) {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (relationshipType == OrmElementTypes.EntityRole_4004) {
 			types.add(OrmElementTypes.Role_3001);
-		}
-		if (relationshipType == OrmElementTypes.SubType_4003) {
+		} else if (relationshipType == OrmElementTypes.SubType_4003) {
 			types.add(OrmElementTypes.Predicate_2001);
-		}
-		if (relationshipType == OrmElementTypes.SubType_4003) {
 			types.add(OrmElementTypes.Entity_2002);
 		}
 		return types;
+	}
+
+	/**
+	 * @generated
+	 */
+	public class PredicateFigure extends RectangleFigure {
+
+		/**
+		 * @generated
+		 */
+		private RectangleFigure fFigureRoleFigure;
+
+		/**
+		 * @generated
+		 */
+		public PredicateFigure() {
+
+			ToolbarLayout layoutThis = new ToolbarLayout();
+			layoutThis.setStretchMinorAxis(false);
+			layoutThis.setMinorAlignment(ToolbarLayout.ALIGN_TOPLEFT);
+
+			layoutThis.setSpacing(1);
+			layoutThis.setVertical(false);
+
+			this.setLayoutManager(layoutThis);
+
+			createContents();
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			fFigureRoleFigure = new RectangleFigure();
+
+			this.add(fFigureRoleFigure);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		private boolean myUseLocalCoordinates = false;
+
+		/**
+		 * @generated
+		 */
+		protected boolean useLocalCoordinates() {
+			return myUseLocalCoordinates;
+		}
+
+		/**
+		 * @generated
+		 */
+		protected void setUseLocalCoordinates(boolean useLocalCoordinates) {
+			myUseLocalCoordinates = useLocalCoordinates;
+		}
+
+		/**
+		 * @generated
+		 */
+		public RectangleFigure getFigureRoleFigure() {
+			return fFigureRoleFigure;
+		}
+
 	}
 
 }

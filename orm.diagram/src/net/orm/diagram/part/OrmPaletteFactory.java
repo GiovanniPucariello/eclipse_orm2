@@ -1,6 +1,7 @@
 package net.orm.diagram.part;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import net.orm.diagram.providers.OrmElementTypes;
@@ -14,6 +15,7 @@ import org.eclipse.gef.palette.PaletteSeparator;
 import org.eclipse.gef.palette.ToolEntry;
 import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeConnectionTool;
 import org.eclipse.gmf.runtime.diagram.ui.tools.UnspecifiedTypeCreationTool;
+import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 
 /**
  * @generated
@@ -94,11 +96,10 @@ public class OrmPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createEntity1CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(OrmElementTypes.Entity_2002);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Entity1CreationTool_title,
-				Messages.Entity1CreationTool_desc, types);
+				Messages.Entity1CreationTool_desc,
+				Collections.singletonList(OrmElementTypes.Entity_2002));
 		entry.setId("createEntity1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(OrmElementTypes
 				.getImageDescriptor(OrmElementTypes.Entity_2002));
@@ -154,11 +155,10 @@ public class OrmPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createPredicate4CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(OrmElementTypes.Predicate_2001);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Predicate4CreationTool_title,
-				Messages.Predicate4CreationTool_desc, types);
+				Messages.Predicate4CreationTool_desc,
+				Collections.singletonList(OrmElementTypes.Predicate_2001));
 		entry.setId("createPredicate4CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(OrmElementTypes
 				.getImageDescriptor(OrmElementTypes.Predicate_2001));
@@ -170,11 +170,10 @@ public class OrmPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createRole5CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(OrmElementTypes.Role_3001);
 		NodeToolEntry entry = new NodeToolEntry(
 				Messages.Role5CreationTool_title,
-				Messages.Role5CreationTool_desc, types);
+				Messages.Role5CreationTool_desc,
+				Collections.singletonList(OrmElementTypes.Role_3001));
 		entry.setId("createRole5CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(OrmElementTypes
 				.getImageDescriptor(OrmElementTypes.Role_3001));
@@ -186,7 +185,7 @@ public class OrmPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createEntityRole6CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(2);
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(OrmElementTypes.EntityRole_4001);
 		types.add(OrmElementTypes.EntityRole_4004);
 		LinkToolEntry entry = new LinkToolEntry(
@@ -203,11 +202,11 @@ public class OrmPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createUniquenessConstraint1CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(OrmElementTypes.UniquenessConstraint_4002);
 		LinkToolEntry entry = new LinkToolEntry(
 				Messages.UniquenessConstraint1CreationTool_title,
-				Messages.UniquenessConstraint1CreationTool_desc, types);
+				Messages.UniquenessConstraint1CreationTool_desc,
+				Collections
+						.singletonList(OrmElementTypes.UniquenessConstraint_4002));
 		entry.setId("createUniquenessConstraint1CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(OrmElementTypes
 				.getImageDescriptor(OrmElementTypes.UniquenessConstraint_4002));
@@ -219,11 +218,10 @@ public class OrmPaletteFactory {
 	 * @generated
 	 */
 	private ToolEntry createSubType2CreationTool() {
-		List/*<IElementType>*/types = new ArrayList/*<IElementType>*/(1);
-		types.add(OrmElementTypes.SubType_4003);
 		LinkToolEntry entry = new LinkToolEntry(
 				Messages.SubType2CreationTool_title,
-				Messages.SubType2CreationTool_desc, types);
+				Messages.SubType2CreationTool_desc,
+				Collections.singletonList(OrmElementTypes.SubType_4003));
 		entry.setId("createSubType2CreationTool"); //$NON-NLS-1$
 		entry.setSmallIcon(OrmElementTypes
 				.getImageDescriptor(OrmElementTypes.SubType_4003));
@@ -239,13 +237,13 @@ public class OrmPaletteFactory {
 		/**
 		 * @generated
 		 */
-		private final List elementTypes;
+		private final List<IElementType> elementTypes;
 
 		/**
 		 * @generated
 		 */
 		private NodeToolEntry(String title, String description,
-				List elementTypes) {
+				List<IElementType> elementTypes) {
 			super(title, description, null, null);
 			this.elementTypes = elementTypes;
 		}
@@ -268,13 +266,13 @@ public class OrmPaletteFactory {
 		/**
 		 * @generated
 		 */
-		private final List relationshipTypes;
+		private final List<IElementType> relationshipTypes;
 
 		/**
 		 * @generated
 		 */
 		private LinkToolEntry(String title, String description,
-				List relationshipTypes) {
+				List<IElementType> relationshipTypes) {
 			super(title, description, null, null);
 			this.relationshipTypes = relationshipTypes;
 		}

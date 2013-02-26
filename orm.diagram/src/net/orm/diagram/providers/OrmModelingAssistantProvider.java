@@ -39,15 +39,15 @@ public class OrmModelingAssistantProvider extends ModelingAssistantProvider {
 	public List getTypesForPopupBar(IAdaptable host) {
 		IGraphicalEditPart editPart = (IGraphicalEditPart) host
 				.getAdapter(IGraphicalEditPart.class);
-		if (editPart instanceof PredicateEditPart) {
-			ArrayList types = new ArrayList(1);
-			types.add(OrmElementTypes.Role_3001);
-			return types;
-		}
 		if (editPart instanceof SchemaEditPart) {
-			ArrayList types = new ArrayList(2);
+			ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 			types.add(OrmElementTypes.Predicate_2001);
 			types.add(OrmElementTypes.Entity_2002);
+			return types;
+		}
+		if (editPart instanceof PredicateEditPart) {
+			ArrayList<IElementType> types = new ArrayList<IElementType>(1);
+			types.add(OrmElementTypes.Role_3001);
 			return types;
 		}
 		return Collections.EMPTY_LIST;
@@ -162,8 +162,8 @@ public class OrmModelingAssistantProvider extends ModelingAssistantProvider {
 	 */
 	public EObject selectExistingElementForSource(IAdaptable target,
 			IElementType relationshipType) {
-		return selectExistingElement(target, getTypesForSource(target,
-				relationshipType));
+		return selectExistingElement(target,
+				getTypesForSource(target, relationshipType));
 	}
 
 	/**
@@ -171,8 +171,8 @@ public class OrmModelingAssistantProvider extends ModelingAssistantProvider {
 	 */
 	public EObject selectExistingElementForTarget(IAdaptable source,
 			IElementType relationshipType) {
-		return selectExistingElement(source, getTypesForTarget(source,
-				relationshipType));
+		return selectExistingElement(source,
+				getTypesForTarget(source, relationshipType));
 	}
 
 	/**
@@ -188,9 +188,10 @@ public class OrmModelingAssistantProvider extends ModelingAssistantProvider {
 			return null;
 		}
 		Diagram diagram = (Diagram) editPart.getRoot().getContents().getModel();
-		Collection elements = new HashSet();
-		for (Iterator it = diagram.getElement().eAllContents(); it.hasNext();) {
-			EObject element = (EObject) it.next();
+		HashSet<EObject> elements = new HashSet<EObject>();
+		for (Iterator<EObject> it = diagram.getElement().eAllContents(); it
+				.hasNext();) {
+			EObject element = it.next();
 			if (isApplicableElement(element, types)) {
 				elements.add(element);
 			}

@@ -69,7 +69,8 @@ public class SubTypeCreateCommand extends EditElementCommand {
 		if (getContainer() == null) {
 			return false;
 		}
-		return OrmBaseItemSemanticEditPolicy.LinkConstraints
+		return OrmBaseItemSemanticEditPolicy
+				.getLinkConstraints()
 				.canCreateSubType_4003(getContainer(), getSource(), getTarget());
 	}
 

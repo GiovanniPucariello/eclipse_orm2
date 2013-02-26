@@ -1,6 +1,7 @@
 package net.orm.diagram.edit.parts;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 import net.orm.Entity;
@@ -10,9 +11,13 @@ import net.orm.diagram.part.OrmVisualIDRegistry;
 import net.orm.diagram.providers.OrmElementTypes;
 
 import org.eclipse.draw2d.Graphics;
+import org.eclipse.draw2d.GridData;
+import org.eclipse.draw2d.GridLayout;
 import org.eclipse.draw2d.IFigure;
+import org.eclipse.draw2d.RoundedRectangle;
 import org.eclipse.draw2d.Shape;
 import org.eclipse.draw2d.StackLayout;
+import org.eclipse.draw2d.geometry.Dimension;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.gef.EditPart;
@@ -26,6 +31,7 @@ import org.eclipse.gmf.runtime.diagram.ui.editparts.IGraphicalEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ShapeNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
 import org.eclipse.gmf.runtime.draw2d.ui.figures.ConstrainedToolbarLayout;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.WrappingLabel;
 import org.eclipse.gmf.runtime.emf.type.core.IElementType;
 import org.eclipse.gmf.runtime.gef.ui.figures.DefaultSizeNodeFigure;
 import org.eclipse.gmf.runtime.gef.ui.figures.NodeFigure;
@@ -76,7 +82,7 @@ public class EntityEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected LayoutEditPolicy createLayoutEditPolicy() {
-		LayoutEditPolicy lep = new LayoutEditPolicy() {
+		org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy lep = new org.eclipse.gmf.runtime.diagram.ui.editpolicies.LayoutEditPolicy() {
 
 			protected EditPolicy createChildEditPolicy(EditPart child) {
 				EditPolicy result = child
@@ -128,8 +134,7 @@ public class EntityEditPart extends ShapeNodeEditPart {
 	 * @generated
 	 */
 	protected IFigure createNodeShape() {
-		EntityFigure figure = new EntityFigure();
-		return primaryShape = figure;
+		return primaryShape = new EntityFigure();
 	}
 
 	/**
@@ -287,8 +292,8 @@ public class EntityEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnSource() {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+	public List<IElementType> getMARelTypesOnSource() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(OrmElementTypes.EntityRole_4001);
 		types.add(OrmElementTypes.SubType_4003);
 		return types;
@@ -297,9 +302,9 @@ public class EntityEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnSourceAndTarget(
+	public List<IElementType> getMARelTypesOnSourceAndTarget(
 			IGraphicalEditPart targetEditPart) {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (targetEditPart instanceof RoleEditPart) {
 			types.add(OrmElementTypes.EntityRole_4001);
 		}
@@ -315,16 +320,12 @@ public class EntityEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMATypesForTarget(
-			IElementType relationshipType) {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+	public List<IElementType> getMATypesForTarget(IElementType relationshipType) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (relationshipType == OrmElementTypes.EntityRole_4001) {
 			types.add(OrmElementTypes.Role_3001);
-		}
-		if (relationshipType == OrmElementTypes.SubType_4003) {
+		} else if (relationshipType == OrmElementTypes.SubType_4003) {
 			types.add(OrmElementTypes.Predicate_2001);
-		}
-		if (relationshipType == OrmElementTypes.SubType_4003) {
 			types.add(OrmElementTypes.Entity_2002);
 		}
 		return types;
@@ -333,8 +334,8 @@ public class EntityEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMARelTypesOnTarget() {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+	public List<IElementType> getMARelTypesOnTarget() {
+		ArrayList<IElementType> types = new ArrayList<IElementType>(2);
 		types.add(OrmElementTypes.EntityRole_4004);
 		types.add(OrmElementTypes.SubType_4003);
 		return types;
@@ -343,22 +344,91 @@ public class EntityEditPart extends ShapeNodeEditPart {
 	/**
 	 * @generated
 	 */
-	public List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/getMATypesForSource(
-			IElementType relationshipType) {
-		List/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/types = new ArrayList/*<org.eclipse.gmf.runtime.emf.type.core.IElementType>*/();
+	public List<IElementType> getMATypesForSource(IElementType relationshipType) {
+		LinkedList<IElementType> types = new LinkedList<IElementType>();
 		if (relationshipType == OrmElementTypes.EntityRole_4004) {
 			types.add(OrmElementTypes.Role_3001);
-		}
-		if (relationshipType == OrmElementTypes.SubType_4003) {
+		} else if (relationshipType == OrmElementTypes.SubType_4003) {
 			types.add(OrmElementTypes.Predicate_2001);
-		}
-		if (relationshipType == OrmElementTypes.SubType_4003) {
 			types.add(OrmElementTypes.Entity_2002);
 		}
 		return types;
 	}
 
-	
+	/**
+	 * @generated
+	 */
+	public class EntityFigure extends RoundedRectangle {
+
+		/**
+		 * @generated
+		 */
+		private WrappingLabel fFigureEntityNameFigure;
+
+		/**
+		 * @generated
+		 */
+		public EntityFigure() {
+
+			GridLayout layoutThis = new GridLayout();
+			layoutThis.numColumns = 1;
+			layoutThis.makeColumnsEqualWidth = true;
+			this.setLayoutManager(layoutThis);
+
+			this.setCornerDimensions(new Dimension(getMapMode().DPtoLP(16),
+					getMapMode().DPtoLP(16)));
+			this.setLineStyle(Graphics.LINE_DASH);
+			createContents();
+		}
+
+		/**
+		 * @generated
+		 */
+		private void createContents() {
+
+			fFigureEntityNameFigure = new WrappingLabel();
+			fFigureEntityNameFigure.setText("<...>");
+
+			GridData constraintFFigureEntityNameFigure = new GridData();
+			constraintFFigureEntityNameFigure.verticalAlignment = GridData.CENTER;
+			constraintFFigureEntityNameFigure.horizontalAlignment = GridData.CENTER;
+			constraintFFigureEntityNameFigure.horizontalIndent = 0;
+			constraintFFigureEntityNameFigure.horizontalSpan = 1;
+			constraintFFigureEntityNameFigure.verticalSpan = 1;
+			constraintFFigureEntityNameFigure.grabExcessHorizontalSpace = true;
+			constraintFFigureEntityNameFigure.grabExcessVerticalSpace = true;
+			this.add(fFigureEntityNameFigure, constraintFFigureEntityNameFigure);
+
+		}
+
+		/**
+		 * @generated
+		 */
+		private boolean myUseLocalCoordinates = false;
+
+		/**
+		 * @generated
+		 */
+		protected boolean useLocalCoordinates() {
+			return myUseLocalCoordinates;
+		}
+
+		/**
+		 * @generated
+		 */
+		protected void setUseLocalCoordinates(boolean useLocalCoordinates) {
+			myUseLocalCoordinates = useLocalCoordinates;
+		}
+
+		/**
+		 * @generated
+		 */
+		public WrappingLabel getFigureEntityNameFigure() {
+			return fFigureEntityNameFigure;
+		}
+
+	}
+
 	/**
 	 * @generated
 	 */

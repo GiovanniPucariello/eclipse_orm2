@@ -24,11 +24,10 @@ public class EntityRoleItemSemanticEditPolicy extends
 	}
 
 	@Override
-	public Command getCommand(Request request) {		
+	public Command getCommand(Request request) {
 		return super.getCommand(request);
 	}
 
-	
 	/**
 	 * @generated
 	 */

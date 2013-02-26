@@ -69,7 +69,7 @@ public class UniquenessConstraintCreateCommand extends EditElementCommand {
 		if (getContainer() == null) {
 			return false;
 		}
-		return OrmBaseItemSemanticEditPolicy.LinkConstraints
+		return OrmBaseItemSemanticEditPolicy.getLinkConstraints()
 				.canCreateUniquenessConstraint_4002(getContainer(),
 						getSource(), getTarget());
 	}

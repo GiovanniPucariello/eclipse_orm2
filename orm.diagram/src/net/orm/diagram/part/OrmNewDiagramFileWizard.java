@@ -9,6 +9,7 @@ import net.orm.diagram.edit.parts.SchemaEditPart;
 
 import org.eclipse.core.commands.ExecutionException;
 import org.eclipse.core.commands.operations.OperationHistoryFactory;
+import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.IAdaptable;
 import org.eclipse.core.runtime.IPath;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -107,7 +108,7 @@ public class OrmNewDiagramFileWizard extends Wizard {
 	 * @generated
 	 */
 	public boolean performFinish() {
-		List affectedFiles = new LinkedList();
+		LinkedList<IFile> affectedFiles = new LinkedList<IFile>();
 		IPath diagramModelPath = myFileCreationPage.getContainerFullPath()
 				.append(myFileCreationPage.getFileName());
 		URI diagramModelURI = URI.createFileURI(diagramModelPath.toString());

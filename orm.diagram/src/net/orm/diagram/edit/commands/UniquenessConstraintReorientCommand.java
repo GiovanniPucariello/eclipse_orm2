@@ -75,9 +75,9 @@ public class UniquenessConstraintReorientCommand extends EditElementCommand {
 			return false;
 		}
 		Predicate container = (Predicate) getLink().eContainer();
-		return OrmBaseItemSemanticEditPolicy.LinkConstraints
-				.canExistUniquenessConstraint_4002(container, getNewSource(),
-						target);
+		return OrmBaseItemSemanticEditPolicy.getLinkConstraints()
+				.canExistUniquenessConstraint_4002(container, getLink(),
+						getNewSource(), target);
 	}
 
 	/**
@@ -95,9 +95,9 @@ public class UniquenessConstraintReorientCommand extends EditElementCommand {
 			return false;
 		}
 		Predicate container = (Predicate) getLink().eContainer();
-		return OrmBaseItemSemanticEditPolicy.LinkConstraints
-				.canExistUniquenessConstraint_4002(container, source,
-						getNewTarget());
+		return OrmBaseItemSemanticEditPolicy.getLinkConstraints()
+				.canExistUniquenessConstraint_4002(container, getLink(),
+						source, getNewTarget());
 	}
 
 	/**

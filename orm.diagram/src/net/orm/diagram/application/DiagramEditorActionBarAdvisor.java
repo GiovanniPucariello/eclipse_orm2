@@ -284,15 +284,14 @@ public class DiagramEditorActionBarAdvisor extends ActionBarAdvisor {
 					.openError(
 							workbenchWindow.getShell(),
 							Messages.DiagramEditorActionBarAdvisor_DefaultFileEditorTitle,
-							NLS
-									.bind(
-											Messages.DiagramEditorActionBarAdvisor_DefaultFileEditorMessage,
-											fileURI.toFileString()));
+							NLS.bind(
+									Messages.DiagramEditorActionBarAdvisor_DefaultFileEditorMessage,
+									fileURI.toFileString()));
 			return false;
 		} else {
 			try {
-				page.openEditor(new URIEditorInput(fileURI), editorDescriptor
-						.getId());
+				page.openEditor(new URIEditorInput(fileURI),
+						editorDescriptor.getId());
 			} catch (PartInitException exception) {
 				MessageDialog
 						.openError(
@@ -356,8 +355,9 @@ public class DiagramEditorActionBarAdvisor extends ActionBarAdvisor {
 			fileDialog.open();
 			if (fileDialog.getFileName() != null
 					&& fileDialog.getFileName().length() > 0) {
-				openEditor(getWindow().getWorkbench(), URI
-						.createFileURI(fileDialog.getFilterPath()
+				openEditor(
+						getWindow().getWorkbench(),
+						URI.createFileURI(fileDialog.getFilterPath()
 								+ File.separator + fileDialog.getFileName()));
 			}
 		}

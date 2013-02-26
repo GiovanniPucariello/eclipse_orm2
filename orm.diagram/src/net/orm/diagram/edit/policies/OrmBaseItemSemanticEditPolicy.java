@@ -3,10 +3,14 @@ package net.orm.diagram.edit.policies;
 import java.util.Iterator;
 
 import net.orm.Entity;
+import net.orm.EntityRole;
 import net.orm.Predicate;
 import net.orm.Role;
 import net.orm.Schema;
+import net.orm.SubType;
+import net.orm.UniquenessConstraint;
 import net.orm.diagram.edit.helpers.OrmBaseEditHelper;
+import net.orm.diagram.part.OrmDiagramEditorPlugin;
 import net.orm.diagram.part.OrmVisualIDRegistry;
 import net.orm.diagram.providers.OrmElementTypes;
 
@@ -38,6 +42,7 @@ import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientReferenceRelations
 import org.eclipse.gmf.runtime.emf.type.core.requests.ReorientRelationshipRequest;
 import org.eclipse.gmf.runtime.emf.type.core.requests.SetRequest;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.edit.helpers.GeneratedEditHelperBase;
 
 /**
  * @generated
@@ -77,8 +82,8 @@ public class OrmBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 			Object view = ((ReconnectRequest) request).getConnectionEditPart()
 					.getModel();
 			if (view instanceof View) {
-				Integer id = new Integer(OrmVisualIDRegistry
-						.getVisualID((View) view));
+				Integer id = new Integer(
+						OrmVisualIDRegistry.getVisualID((View) view));
 				request.getExtendedData().put(VISUAL_ID_KEY, id);
 			}
 		}
@@ -129,18 +134,16 @@ public class OrmBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 			Command editPolicyCommand) {
 		if (editPolicyCommand != null) {
 			ICommand command = editPolicyCommand instanceof ICommandProxy ? ((ICommandProxy) editPolicyCommand)
-					.getICommand()
-					: new CommandProxy(editPolicyCommand);
-			request
-					.setParameter(OrmBaseEditHelper.EDIT_POLICY_COMMAND,
-							command);
+					.getICommand() : new CommandProxy(editPolicyCommand);
+			request.setParameter(GeneratedEditHelperBase.EDIT_POLICY_COMMAND,
+					command);
 		}
 		IElementType requestContextElementType = getContextElementType(request);
-		request.setParameter(OrmBaseEditHelper.CONTEXT_ELEMENT_TYPE,
+		request.setParameter(GeneratedEditHelperBase.CONTEXT_ELEMENT_TYPE,
 				requestContextElementType);
 		ICommand command = requestContextElementType.getEditCommand(request);
-		request.setParameter(OrmBaseEditHelper.EDIT_POLICY_COMMAND, null);
-		request.setParameter(OrmBaseEditHelper.CONTEXT_ELEMENT_TYPE, null);
+		request.setParameter(GeneratedEditHelperBase.EDIT_POLICY_COMMAND, null);
+		request.setParameter(GeneratedEditHelperBase.CONTEXT_ELEMENT_TYPE, null);
 		if (command != null) {
 			if (!(command instanceof CompositeTransactionalCommand)) {
 				command = new CompositeTransactionalCommand(getEditingDomain(),
@@ -305,69 +308,90 @@ public class OrmBaseItemSemanticEditPolicy extends SemanticEditPolicy {
 	/**
 	 * @generated
 	 */
+	public static LinkConstraints getLinkConstraints() {
+		LinkConstraints cached = OrmDiagramEditorPlugin.getInstance()
+				.getLinkConstraints();
+		if (cached == null) {
+			OrmDiagramEditorPlugin.getInstance().setLinkConstraints(
+					cached = new LinkConstraints());
+		}
+		return cached;
+	}
+
+	/**
+	 * @generated
+	 */
 	public static class LinkConstraints {
 
 		/**
 		 * @generated
 		 */
-		public static boolean canCreateEntityRole_4001(Schema container,
+		LinkConstraints() {
+			// use static method #getLinkConstraints() to access instance
+		}
+
+		/**
+		 * @generated
+		 */
+		public boolean canCreateEntityRole_4001(Schema container,
 				Entity source, Role target) {
-			return canExistEntityRole_4001(container, source, target);
+			return canExistEntityRole_4001(container, null, source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public static boolean canCreateEntityRole_4004(Schema container,
-				Role source, Entity target) {
-			return canExistEntityRole_4004(container, source, target);
+		public boolean canCreateEntityRole_4004(Schema container, Role source,
+				Entity target) {
+			return canExistEntityRole_4004(container, null, source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public static boolean canCreateUniquenessConstraint_4002(
-				Predicate container, Role source, Role target) {
-			return canExistUniquenessConstraint_4002(container, source, target);
+		public boolean canCreateUniquenessConstraint_4002(Predicate container,
+				Role source, Role target) {
+			return canExistUniquenessConstraint_4002(container, null, source,
+					target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public static boolean canCreateSubType_4003(Schema container,
-				Entity source, Entity target) {
-			return canExistSubType_4003(container, source, target);
+		public boolean canCreateSubType_4003(Schema container, Entity source,
+				Entity target) {
+			return canExistSubType_4003(container, null, source, target);
 		}
 
 		/**
 		 * @generated
 		 */
-		public static boolean canExistEntityRole_4001(Schema container,
-				Entity source, Role target) {
+		public boolean canExistEntityRole_4001(Schema container,
+				EntityRole linkInstance, Entity source, Role target) {
 			return true;
 		}
 
 		/**
 		 * @generated
 		 */
-		public static boolean canExistEntityRole_4004(Schema container,
-				Role source, Entity target) {
+		public boolean canExistEntityRole_4004(Schema container,
+				EntityRole linkInstance, Role source, Entity target) {
 			return true;
 		}
 
 		/**
 		 * @generated
 		 */
-		public static boolean canExistUniquenessConstraint_4002(
-				Predicate container, Role source, Role target) {
+		public boolean canExistUniquenessConstraint_4002(Predicate container,
+				UniquenessConstraint linkInstance, Role source, Role target) {
 			return true;
 		}
 
 		/**
 		 * @generated
 		 */
-		public static boolean canExistSubType_4003(Schema container,
-				Entity source, Entity target) {
+		public boolean canExistSubType_4003(Schema container,
+				SubType linkInstance, Entity source, Entity target) {
 			return true;
 		}
 	}

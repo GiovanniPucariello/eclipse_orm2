@@ -30,6 +30,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.gmf.runtime.notation.View;
+import org.eclipse.gmf.tooling.runtime.update.DiagramUpdater;
 
 /**
  * @generated
@@ -39,26 +40,27 @@ public class OrmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List getSemanticChildren(View view) {
+	public static List<OrmNodeDescriptor> getSemanticChildren(View view) {
 		switch (OrmVisualIDRegistry.getVisualID(view)) {
-		case PredicateEditPart.VISUAL_ID:
-			return getPredicate_2001SemanticChildren(view);
 		case SchemaEditPart.VISUAL_ID:
 			return getSchema_1000SemanticChildren(view);
+		case PredicateEditPart.VISUAL_ID:
+			return getPredicate_2001SemanticChildren(view);
 		}
-		return Collections.EMPTY_LIST;
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getPredicate_2001SemanticChildren(View view) {
+	public static List<OrmNodeDescriptor> getPredicate_2001SemanticChildren(
+			View view) {
 		if (!view.isSetElement()) {
-			return Collections.EMPTY_LIST;
+			return Collections.emptyList();
 		}
 		Predicate modelElement = (Predicate) view.getElement();
-		List result = new LinkedList();
-		for (Iterator it = modelElement.getRoles().iterator(); it.hasNext();) {
+		LinkedList<OrmNodeDescriptor> result = new LinkedList<OrmNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getRoles().iterator(); it.hasNext();) {
 			Role childElement = (Role) it.next();
 			int visualID = OrmVisualIDRegistry.getNodeVisualID(view,
 					childElement);
@@ -73,13 +75,14 @@ public class OrmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List getSchema_1000SemanticChildren(View view) {
+	public static List<OrmNodeDescriptor> getSchema_1000SemanticChildren(
+			View view) {
 		if (!view.isSetElement()) {
-			return Collections.EMPTY_LIST;
+			return Collections.emptyList();
 		}
 		Schema modelElement = (Schema) view.getElement();
-		List result = new LinkedList();
-		for (Iterator it = modelElement.getSchemaShapes().iterator(); it
+		LinkedList<OrmNodeDescriptor> result = new LinkedList<OrmNodeDescriptor>();
+		for (Iterator<?> it = modelElement.getSchemaShapes().iterator(); it
 				.hasNext();) {
 			SchemaShape childElement = (SchemaShape) it.next();
 			int visualID = OrmVisualIDRegistry.getNodeVisualID(view,
@@ -99,7 +102,7 @@ public class OrmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List getContainedLinks(View view) {
+	public static List<OrmLinkDescriptor> getContainedLinks(View view) {
 		switch (OrmVisualIDRegistry.getVisualID(view)) {
 		case SchemaEditPart.VISUAL_ID:
 			return getSchema_1000ContainedLinks(view);
@@ -118,13 +121,13 @@ public class OrmDiagramUpdater {
 		case SubTypeEditPart.VISUAL_ID:
 			return getSubType_4003ContainedLinks(view);
 		}
-		return Collections.EMPTY_LIST;
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getIncomingLinks(View view) {
+	public static List<OrmLinkDescriptor> getIncomingLinks(View view) {
 		switch (OrmVisualIDRegistry.getVisualID(view)) {
 		case PredicateEditPart.VISUAL_ID:
 			return getPredicate_2001IncomingLinks(view);
@@ -141,13 +144,13 @@ public class OrmDiagramUpdater {
 		case SubTypeEditPart.VISUAL_ID:
 			return getSubType_4003IncomingLinks(view);
 		}
-		return Collections.EMPTY_LIST;
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getOutgoingLinks(View view) {
+	public static List<OrmLinkDescriptor> getOutgoingLinks(View view) {
 		switch (OrmVisualIDRegistry.getVisualID(view)) {
 		case PredicateEditPart.VISUAL_ID:
 			return getPredicate_2001OutgoingLinks(view);
@@ -164,85 +167,87 @@ public class OrmDiagramUpdater {
 		case SubTypeEditPart.VISUAL_ID:
 			return getSubType_4003OutgoingLinks(view);
 		}
-		return Collections.EMPTY_LIST;
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getSchema_1000ContainedLinks(View view) {
+	public static List<OrmLinkDescriptor> getSchema_1000ContainedLinks(View view) {
 		Schema modelElement = (Schema) view.getElement();
-		List result = new LinkedList();
-		result
-				.addAll(getContainedTypeModelFacetLinks_EntityRole_4001(modelElement));
-		result
-				.addAll(getContainedTypeModelFacetLinks_EntityRole_4004(modelElement));
-		result
-				.addAll(getContainedTypeModelFacetLinks_SubType_4003(modelElement));
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_EntityRole_4001(modelElement));
+		result.addAll(getContainedTypeModelFacetLinks_EntityRole_4004(modelElement));
+		result.addAll(getContainedTypeModelFacetLinks_SubType_4003(modelElement));
 		return result;
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getPredicate_2001ContainedLinks(View view) {
+	public static List<OrmLinkDescriptor> getPredicate_2001ContainedLinks(
+			View view) {
 		Predicate modelElement = (Predicate) view.getElement();
-		List result = new LinkedList();
-		result
-				.addAll(getContainedTypeModelFacetLinks_UniquenessConstraint_4002(modelElement));
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
+		result.addAll(getContainedTypeModelFacetLinks_UniquenessConstraint_4002(modelElement));
 		return result;
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getEntity_2002ContainedLinks(View view) {
-		return Collections.EMPTY_LIST;
+	public static List<OrmLinkDescriptor> getEntity_2002ContainedLinks(View view) {
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getRole_3001ContainedLinks(View view) {
-		return Collections.EMPTY_LIST;
+	public static List<OrmLinkDescriptor> getRole_3001ContainedLinks(View view) {
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getEntityRole_4001ContainedLinks(View view) {
-		return Collections.EMPTY_LIST;
+	public static List<OrmLinkDescriptor> getEntityRole_4001ContainedLinks(
+			View view) {
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getEntityRole_4004ContainedLinks(View view) {
-		return Collections.EMPTY_LIST;
+	public static List<OrmLinkDescriptor> getEntityRole_4004ContainedLinks(
+			View view) {
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getUniquenessConstraint_4002ContainedLinks(View view) {
-		return Collections.EMPTY_LIST;
+	public static List<OrmLinkDescriptor> getUniquenessConstraint_4002ContainedLinks(
+			View view) {
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getSubType_4003ContainedLinks(View view) {
-		return Collections.EMPTY_LIST;
+	public static List<OrmLinkDescriptor> getSubType_4003ContainedLinks(
+			View view) {
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getPredicate_2001IncomingLinks(View view) {
+	public static List<OrmLinkDescriptor> getPredicate_2001IncomingLinks(
+			View view) {
 		Predicate modelElement = (Predicate) view.getElement();
-		Map crossReferences = EcoreUtil.CrossReferencer.find(view.eResource()
-				.getResourceSet().getResources());
-		List result = new LinkedList();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
 		result.addAll(getIncomingTypeModelFacetLinks_EntityRole_4004(
 				modelElement, crossReferences));
 		result.addAll(getIncomingTypeModelFacetLinks_SubType_4003(modelElement,
@@ -253,11 +258,11 @@ public class OrmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List getEntity_2002IncomingLinks(View view) {
+	public static List<OrmLinkDescriptor> getEntity_2002IncomingLinks(View view) {
 		Entity modelElement = (Entity) view.getElement();
-		Map crossReferences = EcoreUtil.CrossReferencer.find(view.eResource()
-				.getResourceSet().getResources());
-		List result = new LinkedList();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
 		result.addAll(getIncomingTypeModelFacetLinks_EntityRole_4004(
 				modelElement, crossReferences));
 		result.addAll(getIncomingTypeModelFacetLinks_SubType_4003(modelElement,
@@ -268,11 +273,11 @@ public class OrmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List getRole_3001IncomingLinks(View view) {
+	public static List<OrmLinkDescriptor> getRole_3001IncomingLinks(View view) {
 		Role modelElement = (Role) view.getElement();
-		Map crossReferences = EcoreUtil.CrossReferencer.find(view.eResource()
-				.getResourceSet().getResources());
-		List result = new LinkedList();
+		Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences = EcoreUtil.CrossReferencer
+				.find(view.eResource().getResourceSet().getResources());
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
 		result.addAll(getIncomingTypeModelFacetLinks_EntityRole_4001(
 				modelElement, crossReferences));
 		result.addAll(getIncomingTypeModelFacetLinks_UniquenessConstraint_4002(
@@ -283,105 +288,106 @@ public class OrmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	public static List getEntityRole_4001IncomingLinks(View view) {
-		return Collections.EMPTY_LIST;
+	public static List<OrmLinkDescriptor> getEntityRole_4001IncomingLinks(
+			View view) {
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getEntityRole_4004IncomingLinks(View view) {
-		return Collections.EMPTY_LIST;
+	public static List<OrmLinkDescriptor> getEntityRole_4004IncomingLinks(
+			View view) {
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getUniquenessConstraint_4002IncomingLinks(View view) {
-		return Collections.EMPTY_LIST;
+	public static List<OrmLinkDescriptor> getUniquenessConstraint_4002IncomingLinks(
+			View view) {
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getSubType_4003IncomingLinks(View view) {
-		return Collections.EMPTY_LIST;
+	public static List<OrmLinkDescriptor> getSubType_4003IncomingLinks(View view) {
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getPredicate_2001OutgoingLinks(View view) {
+	public static List<OrmLinkDescriptor> getPredicate_2001OutgoingLinks(
+			View view) {
 		Predicate modelElement = (Predicate) view.getElement();
-		List result = new LinkedList();
-		result
-				.addAll(getOutgoingTypeModelFacetLinks_EntityRole_4001(modelElement));
-		result
-				.addAll(getOutgoingTypeModelFacetLinks_SubType_4003(modelElement));
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_EntityRole_4001(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_SubType_4003(modelElement));
 		return result;
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getEntity_2002OutgoingLinks(View view) {
+	public static List<OrmLinkDescriptor> getEntity_2002OutgoingLinks(View view) {
 		Entity modelElement = (Entity) view.getElement();
-		List result = new LinkedList();
-		result
-				.addAll(getOutgoingTypeModelFacetLinks_EntityRole_4001(modelElement));
-		result
-				.addAll(getOutgoingTypeModelFacetLinks_SubType_4003(modelElement));
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_EntityRole_4001(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_SubType_4003(modelElement));
 		return result;
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getRole_3001OutgoingLinks(View view) {
+	public static List<OrmLinkDescriptor> getRole_3001OutgoingLinks(View view) {
 		Role modelElement = (Role) view.getElement();
-		List result = new LinkedList();
-		result
-				.addAll(getOutgoingTypeModelFacetLinks_EntityRole_4004(modelElement));
-		result
-				.addAll(getOutgoingTypeModelFacetLinks_UniquenessConstraint_4002(modelElement));
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
+		result.addAll(getOutgoingTypeModelFacetLinks_EntityRole_4004(modelElement));
+		result.addAll(getOutgoingTypeModelFacetLinks_UniquenessConstraint_4002(modelElement));
 		return result;
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getEntityRole_4001OutgoingLinks(View view) {
-		return Collections.EMPTY_LIST;
+	public static List<OrmLinkDescriptor> getEntityRole_4001OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getEntityRole_4004OutgoingLinks(View view) {
-		return Collections.EMPTY_LIST;
+	public static List<OrmLinkDescriptor> getEntityRole_4004OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getUniquenessConstraint_4002OutgoingLinks(View view) {
-		return Collections.EMPTY_LIST;
+	public static List<OrmLinkDescriptor> getUniquenessConstraint_4002OutgoingLinks(
+			View view) {
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	public static List getSubType_4003OutgoingLinks(View view) {
-		return Collections.EMPTY_LIST;
+	public static List<OrmLinkDescriptor> getSubType_4003OutgoingLinks(View view) {
+		return Collections.emptyList();
 	}
 
 	/**
 	 * @generated
 	 */
-	private static Collection getContainedTypeModelFacetLinks_EntityRole_4001(
+	private static Collection<OrmLinkDescriptor> getContainedTypeModelFacetLinks_EntityRole_4001(
 			Schema container) {
-		Collection result = new LinkedList();
-		for (Iterator links = container.getEntityRoles().iterator(); links
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
+		for (Iterator<?> links = container.getEntityRoles().iterator(); links
 				.hasNext();) {
 			EObject linkObject = (EObject) links.next();
 			if (false == linkObject instanceof EntityRole) {
@@ -404,10 +410,10 @@ public class OrmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection getContainedTypeModelFacetLinks_EntityRole_4004(
+	private static Collection<OrmLinkDescriptor> getContainedTypeModelFacetLinks_EntityRole_4004(
 			Schema container) {
-		Collection result = new LinkedList();
-		for (Iterator links = container.getEntityRoles().iterator(); links
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
+		for (Iterator<?> links = container.getEntityRoles().iterator(); links
 				.hasNext();) {
 			EObject linkObject = (EObject) links.next();
 			if (false == linkObject instanceof EntityRole) {
@@ -430,10 +436,10 @@ public class OrmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection getContainedTypeModelFacetLinks_UniquenessConstraint_4002(
+	private static Collection<OrmLinkDescriptor> getContainedTypeModelFacetLinks_UniquenessConstraint_4002(
 			Predicate container) {
-		Collection result = new LinkedList();
-		for (Iterator links = container.getConstraints().iterator(); links
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
+		for (Iterator<?> links = container.getConstraints().iterator(); links
 				.hasNext();) {
 			EObject linkObject = (EObject) links.next();
 			if (false == linkObject instanceof UniquenessConstraint) {
@@ -466,10 +472,10 @@ public class OrmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection getContainedTypeModelFacetLinks_SubType_4003(
+	private static Collection<OrmLinkDescriptor> getContainedTypeModelFacetLinks_SubType_4003(
 			Schema container) {
-		Collection result = new LinkedList();
-		for (Iterator links = container.getSubTypes().iterator(); links
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
+		for (Iterator<?> links = container.getSubTypes().iterator(); links
 				.hasNext();) {
 			EObject linkObject = (EObject) links.next();
 			if (false == linkObject instanceof SubType) {
@@ -491,13 +497,13 @@ public class OrmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection getIncomingTypeModelFacetLinks_EntityRole_4001(
-			Role target, Map crossReferences) {
-		Collection result = new LinkedList();
-		Collection settings = (Collection) crossReferences.get(target);
-		for (Iterator it = settings.iterator(); it.hasNext();) {
-			EStructuralFeature.Setting setting = (EStructuralFeature.Setting) it
-					.next();
+	private static Collection<OrmLinkDescriptor> getIncomingTypeModelFacetLinks_EntityRole_4001(
+			Role target,
+			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
+		Collection<EStructuralFeature.Setting> settings = crossReferences
+				.get(target);
+		for (EStructuralFeature.Setting setting : settings) {
 			if (setting.getEStructuralFeature() != Package.eINSTANCE
 					.getEntityRole_Role()
 					|| false == setting.getEObject() instanceof EntityRole) {
@@ -519,13 +525,13 @@ public class OrmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection getIncomingTypeModelFacetLinks_EntityRole_4004(
-			Entity target, Map crossReferences) {
-		Collection result = new LinkedList();
-		Collection settings = (Collection) crossReferences.get(target);
-		for (Iterator it = settings.iterator(); it.hasNext();) {
-			EStructuralFeature.Setting setting = (EStructuralFeature.Setting) it
-					.next();
+	private static Collection<OrmLinkDescriptor> getIncomingTypeModelFacetLinks_EntityRole_4004(
+			Entity target,
+			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
+		Collection<EStructuralFeature.Setting> settings = crossReferences
+				.get(target);
+		for (EStructuralFeature.Setting setting : settings) {
 			if (setting.getEStructuralFeature() != Package.eINSTANCE
 					.getEntityRole_Entity()
 					|| false == setting.getEObject() instanceof EntityRole) {
@@ -547,13 +553,13 @@ public class OrmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection getIncomingTypeModelFacetLinks_UniquenessConstraint_4002(
-			Role target, Map crossReferences) {
-		Collection result = new LinkedList();
-		Collection settings = (Collection) crossReferences.get(target);
-		for (Iterator it = settings.iterator(); it.hasNext();) {
-			EStructuralFeature.Setting setting = (EStructuralFeature.Setting) it
-					.next();
+	private static Collection<OrmLinkDescriptor> getIncomingTypeModelFacetLinks_UniquenessConstraint_4002(
+			Role target,
+			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
+		Collection<EStructuralFeature.Setting> settings = crossReferences
+				.get(target);
+		for (EStructuralFeature.Setting setting : settings) {
 			if (setting.getEStructuralFeature() != Package.eINSTANCE
 					.getConstraint_Roles()
 					|| false == setting.getEObject() instanceof UniquenessConstraint) {
@@ -581,13 +587,13 @@ public class OrmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection getIncomingTypeModelFacetLinks_SubType_4003(
-			Entity target, Map crossReferences) {
-		Collection result = new LinkedList();
-		Collection settings = (Collection) crossReferences.get(target);
-		for (Iterator it = settings.iterator(); it.hasNext();) {
-			EStructuralFeature.Setting setting = (EStructuralFeature.Setting) it
-					.next();
+	private static Collection<OrmLinkDescriptor> getIncomingTypeModelFacetLinks_SubType_4003(
+			Entity target,
+			Map<EObject, Collection<EStructuralFeature.Setting>> crossReferences) {
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
+		Collection<EStructuralFeature.Setting> settings = crossReferences
+				.get(target);
+		for (EStructuralFeature.Setting setting : settings) {
 			if (setting.getEStructuralFeature() != Package.eINSTANCE
 					.getSubType_Parent()
 					|| false == setting.getEObject() instanceof SubType) {
@@ -608,7 +614,7 @@ public class OrmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection getOutgoingTypeModelFacetLinks_EntityRole_4001(
+	private static Collection<OrmLinkDescriptor> getOutgoingTypeModelFacetLinks_EntityRole_4001(
 			Entity source) {
 		Schema container = null;
 		// Find container element for the link.
@@ -621,10 +627,10 @@ public class OrmDiagramUpdater {
 			}
 		}
 		if (container == null) {
-			return Collections.EMPTY_LIST;
+			return Collections.emptyList();
 		}
-		Collection result = new LinkedList();
-		for (Iterator links = container.getEntityRoles().iterator(); links
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
+		for (Iterator<?> links = container.getEntityRoles().iterator(); links
 				.hasNext();) {
 			EObject linkObject = (EObject) links.next();
 			if (false == linkObject instanceof EntityRole) {
@@ -650,7 +656,7 @@ public class OrmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection getOutgoingTypeModelFacetLinks_EntityRole_4004(
+	private static Collection<OrmLinkDescriptor> getOutgoingTypeModelFacetLinks_EntityRole_4004(
 			Role source) {
 		Schema container = null;
 		// Find container element for the link.
@@ -663,10 +669,10 @@ public class OrmDiagramUpdater {
 			}
 		}
 		if (container == null) {
-			return Collections.EMPTY_LIST;
+			return Collections.emptyList();
 		}
-		Collection result = new LinkedList();
-		for (Iterator links = container.getEntityRoles().iterator(); links
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
+		for (Iterator<?> links = container.getEntityRoles().iterator(); links
 				.hasNext();) {
 			EObject linkObject = (EObject) links.next();
 			if (false == linkObject instanceof EntityRole) {
@@ -692,7 +698,7 @@ public class OrmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection getOutgoingTypeModelFacetLinks_UniquenessConstraint_4002(
+	private static Collection<OrmLinkDescriptor> getOutgoingTypeModelFacetLinks_UniquenessConstraint_4002(
 			Role source) {
 		Predicate container = null;
 		// Find container element for the link.
@@ -705,10 +711,10 @@ public class OrmDiagramUpdater {
 			}
 		}
 		if (container == null) {
-			return Collections.EMPTY_LIST;
+			return Collections.emptyList();
 		}
-		Collection result = new LinkedList();
-		for (Iterator links = container.getConstraints().iterator(); links
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
+		for (Iterator<?> links = container.getConstraints().iterator(); links
 				.hasNext();) {
 			EObject linkObject = (EObject) links.next();
 			if (false == linkObject instanceof UniquenessConstraint) {
@@ -744,7 +750,7 @@ public class OrmDiagramUpdater {
 	/**
 	 * @generated
 	 */
-	private static Collection getOutgoingTypeModelFacetLinks_SubType_4003(
+	private static Collection<OrmLinkDescriptor> getOutgoingTypeModelFacetLinks_SubType_4003(
 			Entity source) {
 		Schema container = null;
 		// Find container element for the link.
@@ -757,10 +763,10 @@ public class OrmDiagramUpdater {
 			}
 		}
 		if (container == null) {
-			return Collections.EMPTY_LIST;
+			return Collections.emptyList();
 		}
-		Collection result = new LinkedList();
-		for (Iterator links = container.getSubTypes().iterator(); links
+		LinkedList<OrmLinkDescriptor> result = new LinkedList<OrmLinkDescriptor>();
+		for (Iterator<?> links = container.getSubTypes().iterator(); links
 				.hasNext();) {
 			EObject linkObject = (EObject) links.next();
 			if (false == linkObject instanceof SubType) {
@@ -781,5 +787,42 @@ public class OrmDiagramUpdater {
 		}
 		return result;
 	}
+
+	/**
+	 * @generated
+	 */
+	public static final DiagramUpdater TYPED_INSTANCE = new DiagramUpdater() {
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<OrmNodeDescriptor> getSemanticChildren(View view) {
+			return OrmDiagramUpdater.getSemanticChildren(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<OrmLinkDescriptor> getContainedLinks(View view) {
+			return OrmDiagramUpdater.getContainedLinks(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<OrmLinkDescriptor> getIncomingLinks(View view) {
+			return OrmDiagramUpdater.getIncomingLinks(view);
+		}
+
+		/**
+		 * @generated
+		 */
+		@Override
+		public List<OrmLinkDescriptor> getOutgoingLinks(View view) {
+			return OrmDiagramUpdater.getOutgoingLinks(view);
+		}
+	};
 
 }

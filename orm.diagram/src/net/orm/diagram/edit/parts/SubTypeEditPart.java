@@ -4,9 +4,12 @@ import net.orm.diagram.edit.policies.SubTypeItemSemanticEditPolicy;
 import net.orm.diagram.figures.SubTypeFigure;
 
 import org.eclipse.draw2d.Connection;
+import org.eclipse.draw2d.PolylineDecoration;
+import org.eclipse.draw2d.RotatableDecoration;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ConnectionNodeEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editparts.ITreeBranchEditPart;
 import org.eclipse.gmf.runtime.diagram.ui.editpolicies.EditPolicyRoles;
+import org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx;
 import org.eclipse.gmf.runtime.notation.View;
 
 /**
@@ -53,6 +56,30 @@ public class SubTypeEditPart extends ConnectionNodeEditPart implements
 	 */
 	public SubTypeFigure getPrimaryShape() {
 		return (SubTypeFigure) getFigure();
+	}
+
+	/**
+	 * @generated
+	 */
+	public class SubTypeFigure extends PolylineConnectionEx {
+
+		/**
+		 * @generated
+		 */
+		public SubTypeFigure() {
+			this.setLineWidth(3);
+
+			setTargetDecoration(createTargetDecoration());
+		}
+
+		/**
+		 * @generated
+		 */
+		private RotatableDecoration createTargetDecoration() {
+			PolylineDecoration df = new PolylineDecoration();
+			return df;
+		}
+
 	}
 
 }
