@@ -1,0 +1,8 @@
+The purpose of this project is to provide a GMF framework for modelling using ORM2.
+
+Eclipse Requirements: (This can vary depending on your version)
+
+Eclipse Plugin SDK
+UML2 
+GMF SDK
+EMF SDK
