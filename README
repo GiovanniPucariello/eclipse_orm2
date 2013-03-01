@@ -1,5 +1,10 @@
 The purpose of this project is to provide a GMF framework for modelling using ORM2.
 
+http://www.orm.net
+
+Started writing this 4 years ago but life has gotten in the way.  
+Looking for some GMF gurus to take this to fruition while I can tinker from time to time.
+Thanks to Дмитрий Пужливый for contributing some time to this in the past.
 Eclipse Requirements: (This can vary depending on your version)
 
 Eclipse Plugin SDK
