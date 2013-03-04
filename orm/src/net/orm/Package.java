@@ -107,14 +107,14 @@ public interface Package extends EPackage {
 	int ROLE_FEATURE_COUNT = SCHEMA_SHAPE_FEATURE_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link net.orm.impl.EntityImpl <em>Entity</em>}' class.
+	 * The meta object id for the '{@link net.orm.impl.ObjectImpl <em>Object</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see net.orm.impl.EntityImpl
-	 * @see net.orm.impl.PackageImpl#getEntity()
+	 * @see net.orm.impl.ObjectImpl
+	 * @see net.orm.impl.PackageImpl#getObject()
 	 * @generated
 	 */
-	int ENTITY = 1;
+	int OBJECT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Occurs Else Where</b></em>' attribute.
@@ -123,7 +123,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__OCCURS_ELSE_WHERE = SCHEMA_SHAPE_FEATURE_COUNT + 0;
+	int OBJECT__OCCURS_ELSE_WHERE = SCHEMA_SHAPE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Is Independent</b></em>' attribute.
@@ -132,7 +132,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__IS_INDEPENDENT = SCHEMA_SHAPE_FEATURE_COUNT + 1;
+	int OBJECT__IS_INDEPENDENT = SCHEMA_SHAPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Reference Scheme</b></em>' reference.
@@ -141,7 +141,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__REFERENCE_SCHEME = SCHEMA_SHAPE_FEATURE_COUNT + 2;
+	int OBJECT__REFERENCE_SCHEME = SCHEMA_SHAPE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -150,7 +150,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__NAME = SCHEMA_SHAPE_FEATURE_COUNT + 3;
+	int OBJECT__NAME = SCHEMA_SHAPE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Is Value Type</b></em>' attribute.
@@ -159,16 +159,16 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY__IS_VALUE_TYPE = SCHEMA_SHAPE_FEATURE_COUNT + 4;
+	int OBJECT__IS_VALUE_TYPE = SCHEMA_SHAPE_FEATURE_COUNT + 4;
 
 	/**
-	 * The number of structural features of the '<em>Entity</em>' class.
+	 * The number of structural features of the '<em>Object</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_FEATURE_COUNT = SCHEMA_SHAPE_FEATURE_COUNT + 5;
+	int OBJECT_FEATURE_COUNT = SCHEMA_SHAPE_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link net.orm.impl.PredicateImpl <em>Predicate</em>}' class.
@@ -244,13 +244,13 @@ public interface Package extends EPackage {
 	int PREDICATE__ROLES = SCHEMA_SHAPE_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Is Entity</b></em>' attribute.
+	 * The feature id for the '<em><b>Is Object</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE__IS_ENTITY = SCHEMA_SHAPE_FEATURE_COUNT + 7;
+	int PREDICATE__IS_OBJECT = SCHEMA_SHAPE_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Arity</b></em>' attribute list.
@@ -299,13 +299,13 @@ public interface Package extends EPackage {
 	int SCHEMA__SCHEMA_SHAPES = 0;
 
 	/**
-	 * The feature id for the '<em><b>Entity Roles</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Object Roles</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEMA__ENTITY_ROLES = 1;
+	int SCHEMA__OBJECT_ROLES = 1;
 
 	/**
 	 * The feature id for the '<em><b>Sub Types</b></em>' containment reference list.
@@ -941,23 +941,23 @@ public interface Package extends EPackage {
 	int SYMMETRIC_FEATURE_COUNT = RING_CONSTRAINT_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link net.orm.impl.EntityRoleImpl <em>Entity Role</em>}' class.
+	 * The meta object id for the '{@link net.orm.impl.ObjectRoleImpl <em>Object Role</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see net.orm.impl.EntityRoleImpl
-	 * @see net.orm.impl.PackageImpl#getEntityRole()
+	 * @see net.orm.impl.ObjectRoleImpl
+	 * @see net.orm.impl.PackageImpl#getObjectRole()
 	 * @generated
 	 */
-	int ENTITY_ROLE = 26;
+	int OBJECT_ROLE = 26;
 
 	/**
-	 * The feature id for the '<em><b>Entity</b></em>' reference.
+	 * The feature id for the '<em><b>Object</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ROLE__ENTITY = 0;
+	int OBJECT_ROLE__OBJECT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Role</b></em>' reference.
@@ -966,7 +966,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ROLE__ROLE = 1;
+	int OBJECT_ROLE__ROLE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Mandatory</b></em>' attribute.
@@ -975,7 +975,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ROLE__MANDATORY = 2;
+	int OBJECT_ROLE__MANDATORY = 2;
 
 	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
@@ -984,17 +984,16 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ROLE__CONSTRAINTS = 3;
+	int OBJECT_ROLE__CONSTRAINTS = 3;
 
 	/**
-	 * The number of structural features of the '<em>Entity Role</em>' class.
+	 * The number of structural features of the '<em>Object Role</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTITY_ROLE_FEATURE_COUNT = 4;
-
+	int OBJECT_ROLE_FEATURE_COUNT = 4;
 
 	/**
 	 * Returns the meta object for class '{@link net.orm.Role <em>Role</em>}'.
@@ -1018,69 +1017,69 @@ public interface Package extends EPackage {
 	EAttribute getRole_Phrase();
 
 	/**
-	 * Returns the meta object for class '{@link net.orm.Entity <em>Entity</em>}'.
+	 * Returns the meta object for class '{@link net.orm.Object <em>Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Entity</em>'.
-	 * @see net.orm.Entity
+	 * @return the meta object for class '<em>Object</em>'.
+	 * @see net.orm.Object
 	 * @generated
 	 */
-	EClass getEntity();
+	EClass getObject();
 
 	/**
-	 * Returns the meta object for the attribute '{@link net.orm.Entity#isOccursElseWhere <em>Occurs Else Where</em>}'.
+	 * Returns the meta object for the attribute '{@link net.orm.Object#isOccursElseWhere <em>Occurs Else Where</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Occurs Else Where</em>'.
-	 * @see net.orm.Entity#isOccursElseWhere()
-	 * @see #getEntity()
+	 * @see net.orm.Object#isOccursElseWhere()
+	 * @see #getObject()
 	 * @generated
 	 */
-	EAttribute getEntity_OccursElseWhere();
+	EAttribute getObject_OccursElseWhere();
 
 	/**
-	 * Returns the meta object for the attribute '{@link net.orm.Entity#isIsIndependent <em>Is Independent</em>}'.
+	 * Returns the meta object for the attribute '{@link net.orm.Object#isIsIndependent <em>Is Independent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Is Independent</em>'.
-	 * @see net.orm.Entity#isIsIndependent()
-	 * @see #getEntity()
+	 * @see net.orm.Object#isIsIndependent()
+	 * @see #getObject()
 	 * @generated
 	 */
-	EAttribute getEntity_IsIndependent();
+	EAttribute getObject_IsIndependent();
 
 	/**
-	 * Returns the meta object for the reference '{@link net.orm.Entity#getReferenceScheme <em>Reference Scheme</em>}'.
+	 * Returns the meta object for the reference '{@link net.orm.Object#getReferenceScheme <em>Reference Scheme</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Reference Scheme</em>'.
-	 * @see net.orm.Entity#getReferenceScheme()
-	 * @see #getEntity()
+	 * @see net.orm.Object#getReferenceScheme()
+	 * @see #getObject()
 	 * @generated
 	 */
-	EReference getEntity_ReferenceScheme();
+	EReference getObject_ReferenceScheme();
 
 	/**
-	 * Returns the meta object for the attribute '{@link net.orm.Entity#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link net.orm.Object#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see net.orm.Entity#getName()
-	 * @see #getEntity()
+	 * @see net.orm.Object#getName()
+	 * @see #getObject()
 	 * @generated
 	 */
-	EAttribute getEntity_Name();
+	EAttribute getObject_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link net.orm.Entity#isIsValueType <em>Is Value Type</em>}'.
+	 * Returns the meta object for the attribute '{@link net.orm.Object#isIsValueType <em>Is Value Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Is Value Type</em>'.
-	 * @see net.orm.Entity#isIsValueType()
-	 * @see #getEntity()
+	 * @see net.orm.Object#isIsValueType()
+	 * @see #getObject()
 	 * @generated
 	 */
-	EAttribute getEntity_IsValueType();
+	EAttribute getObject_IsValueType();
 
 	/**
 	 * Returns the meta object for class '{@link net.orm.Predicate <em>Predicate</em>}'.
@@ -1115,15 +1114,15 @@ public interface Package extends EPackage {
 	EReference getPredicate_Roles();
 
 	/**
-	 * Returns the meta object for the attribute '{@link net.orm.Predicate#isIsEntity <em>Is Entity</em>}'.
+	 * Returns the meta object for the attribute '{@link net.orm.Predicate#isIsObject <em>Is Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Is Entity</em>'.
-	 * @see net.orm.Predicate#isIsEntity()
+	 * @return the meta object for the attribute '<em>Is Object</em>'.
+	 * @see net.orm.Predicate#isIsObject()
 	 * @see #getPredicate()
 	 * @generated
 	 */
-	EAttribute getPredicate_IsEntity();
+	EAttribute getPredicate_IsObject();
 
 	/**
 	 * Returns the meta object for the attribute list '{@link net.orm.Predicate#getArity <em>Arity</em>}'.
@@ -1169,15 +1168,15 @@ public interface Package extends EPackage {
 	EReference getSchema_SchemaShapes();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link net.orm.Schema#getEntityRoles <em>Entity Roles</em>}'.
+	 * Returns the meta object for the containment reference list '{@link net.orm.Schema#getObjectRoles <em>Object Roles</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Entity Roles</em>'.
-	 * @see net.orm.Schema#getEntityRoles()
+	 * @return the meta object for the containment reference list '<em>Object Roles</em>'.
+	 * @see net.orm.Schema#getObjectRoles()
 	 * @see #getSchema()
 	 * @generated
 	 */
-	EReference getSchema_EntityRoles();
+	EReference getSchema_ObjectRoles();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link net.orm.Schema#getSubTypes <em>Sub Types</em>}'.
@@ -1477,58 +1476,58 @@ public interface Package extends EPackage {
 	EClass getSymmetric();
 
 	/**
-	 * Returns the meta object for class '{@link net.orm.EntityRole <em>Entity Role</em>}'.
+	 * Returns the meta object for class '{@link net.orm.ObjectRole <em>Object Role</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Entity Role</em>'.
-	 * @see net.orm.EntityRole
+	 * @return the meta object for class '<em>Object Role</em>'.
+	 * @see net.orm.ObjectRole
 	 * @generated
 	 */
-	EClass getEntityRole();
+	EClass getObjectRole();
 
 	/**
-	 * Returns the meta object for the reference '{@link net.orm.EntityRole#getEntity <em>Entity</em>}'.
+	 * Returns the meta object for the reference '{@link net.orm.ObjectRole#getObject <em>Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Entity</em>'.
-	 * @see net.orm.EntityRole#getEntity()
-	 * @see #getEntityRole()
+	 * @return the meta object for the reference '<em>Object</em>'.
+	 * @see net.orm.ObjectRole#getObject()
+	 * @see #getObjectRole()
 	 * @generated
 	 */
-	EReference getEntityRole_Entity();
+	EReference getObjectRole_Object();
 
 	/**
-	 * Returns the meta object for the reference '{@link net.orm.EntityRole#getRole <em>Role</em>}'.
+	 * Returns the meta object for the reference '{@link net.orm.ObjectRole#getRole <em>Role</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Role</em>'.
-	 * @see net.orm.EntityRole#getRole()
-	 * @see #getEntityRole()
+	 * @see net.orm.ObjectRole#getRole()
+	 * @see #getObjectRole()
 	 * @generated
 	 */
-	EReference getEntityRole_Role();
+	EReference getObjectRole_Role();
 
 	/**
-	 * Returns the meta object for the attribute '{@link net.orm.EntityRole#isMandatory <em>Mandatory</em>}'.
+	 * Returns the meta object for the attribute '{@link net.orm.ObjectRole#isMandatory <em>Mandatory</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Mandatory</em>'.
-	 * @see net.orm.EntityRole#isMandatory()
-	 * @see #getEntityRole()
+	 * @see net.orm.ObjectRole#isMandatory()
+	 * @see #getObjectRole()
 	 * @generated
 	 */
-	EAttribute getEntityRole_Mandatory();
+	EAttribute getObjectRole_Mandatory();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link net.orm.EntityRole#getConstraints <em>Constraints</em>}'.
+	 * Returns the meta object for the containment reference list '{@link net.orm.ObjectRole#getConstraints <em>Constraints</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Constraints</em>'.
-	 * @see net.orm.EntityRole#getConstraints()
-	 * @see #getEntityRole()
+	 * @see net.orm.ObjectRole#getConstraints()
+	 * @see #getObjectRole()
 	 * @generated
 	 */
-	EReference getEntityRole_Constraints();
+	EReference getObjectRole_Constraints();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1571,14 +1570,14 @@ public interface Package extends EPackage {
 		EAttribute ROLE__PHRASE = eINSTANCE.getRole_Phrase();
 
 		/**
-		 * The meta object literal for the '{@link net.orm.impl.EntityImpl <em>Entity</em>}' class.
+		 * The meta object literal for the '{@link net.orm.impl.ObjectImpl <em>Object</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see net.orm.impl.EntityImpl
-		 * @see net.orm.impl.PackageImpl#getEntity()
+		 * @see net.orm.impl.ObjectImpl
+		 * @see net.orm.impl.PackageImpl#getObject()
 		 * @generated
 		 */
-		EClass ENTITY = eINSTANCE.getEntity();
+		EClass OBJECT = eINSTANCE.getObject();
 
 		/**
 		 * The meta object literal for the '<em><b>Occurs Else Where</b></em>' attribute feature.
@@ -1586,7 +1585,7 @@ public interface Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ENTITY__OCCURS_ELSE_WHERE = eINSTANCE.getEntity_OccursElseWhere();
+		EAttribute OBJECT__OCCURS_ELSE_WHERE = eINSTANCE.getObject_OccursElseWhere();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Independent</b></em>' attribute feature.
@@ -1594,7 +1593,7 @@ public interface Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ENTITY__IS_INDEPENDENT = eINSTANCE.getEntity_IsIndependent();
+		EAttribute OBJECT__IS_INDEPENDENT = eINSTANCE.getObject_IsIndependent();
 
 		/**
 		 * The meta object literal for the '<em><b>Reference Scheme</b></em>' reference feature.
@@ -1602,7 +1601,7 @@ public interface Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENTITY__REFERENCE_SCHEME = eINSTANCE.getEntity_ReferenceScheme();
+		EReference OBJECT__REFERENCE_SCHEME = eINSTANCE.getObject_ReferenceScheme();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1610,7 +1609,7 @@ public interface Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ENTITY__NAME = eINSTANCE.getEntity_Name();
+		EAttribute OBJECT__NAME = eINSTANCE.getObject_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Value Type</b></em>' attribute feature.
@@ -1618,7 +1617,7 @@ public interface Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ENTITY__IS_VALUE_TYPE = eINSTANCE.getEntity_IsValueType();
+		EAttribute OBJECT__IS_VALUE_TYPE = eINSTANCE.getObject_IsValueType();
 
 		/**
 		 * The meta object literal for the '{@link net.orm.impl.PredicateImpl <em>Predicate</em>}' class.
@@ -1647,12 +1646,12 @@ public interface Package extends EPackage {
 		EReference PREDICATE__ROLES = eINSTANCE.getPredicate_Roles();
 
 		/**
-		 * The meta object literal for the '<em><b>Is Entity</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Is Object</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute PREDICATE__IS_ENTITY = eINSTANCE.getPredicate_IsEntity();
+		EAttribute PREDICATE__IS_OBJECT = eINSTANCE.getPredicate_IsObject();
 
 		/**
 		 * The meta object literal for the '<em><b>Arity</b></em>' attribute list feature.
@@ -1689,12 +1688,12 @@ public interface Package extends EPackage {
 		EReference SCHEMA__SCHEMA_SHAPES = eINSTANCE.getSchema_SchemaShapes();
 
 		/**
-		 * The meta object literal for the '<em><b>Entity Roles</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Object Roles</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SCHEMA__ENTITY_ROLES = eINSTANCE.getSchema_EntityRoles();
+		EReference SCHEMA__OBJECT_ROLES = eINSTANCE.getSchema_ObjectRoles();
 
 		/**
 		 * The meta object literal for the '<em><b>Sub Types</b></em>' containment reference list feature.
@@ -1973,22 +1972,22 @@ public interface Package extends EPackage {
 		EClass SYMMETRIC = eINSTANCE.getSymmetric();
 
 		/**
-		 * The meta object literal for the '{@link net.orm.impl.EntityRoleImpl <em>Entity Role</em>}' class.
+		 * The meta object literal for the '{@link net.orm.impl.ObjectRoleImpl <em>Object Role</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see net.orm.impl.EntityRoleImpl
-		 * @see net.orm.impl.PackageImpl#getEntityRole()
+		 * @see net.orm.impl.ObjectRoleImpl
+		 * @see net.orm.impl.PackageImpl#getObjectRole()
 		 * @generated
 		 */
-		EClass ENTITY_ROLE = eINSTANCE.getEntityRole();
+		EClass OBJECT_ROLE = eINSTANCE.getObjectRole();
 
 		/**
-		 * The meta object literal for the '<em><b>Entity</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Object</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENTITY_ROLE__ENTITY = eINSTANCE.getEntityRole_Entity();
+		EReference OBJECT_ROLE__OBJECT = eINSTANCE.getObjectRole_Object();
 
 		/**
 		 * The meta object literal for the '<em><b>Role</b></em>' reference feature.
@@ -1996,7 +1995,7 @@ public interface Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENTITY_ROLE__ROLE = eINSTANCE.getEntityRole_Role();
+		EReference OBJECT_ROLE__ROLE = eINSTANCE.getObjectRole_Role();
 
 		/**
 		 * The meta object literal for the '<em><b>Mandatory</b></em>' attribute feature.
@@ -2004,7 +2003,7 @@ public interface Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ENTITY_ROLE__MANDATORY = eINSTANCE.getEntityRole_Mandatory();
+		EAttribute OBJECT_ROLE__MANDATORY = eINSTANCE.getObjectRole_Mandatory();
 
 		/**
 		 * The meta object literal for the '<em><b>Constraints</b></em>' containment reference list feature.
@@ -2012,7 +2011,7 @@ public interface Package extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENTITY_ROLE__CONSTRAINTS = eINSTANCE.getEntityRole_Constraints();
+		EReference OBJECT_ROLE__CONSTRAINTS = eINSTANCE.getObjectRole_Constraints();
 
 	}
 

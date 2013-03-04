@@ -12,8 +12,6 @@ import net.orm.Asymmetric;
 import net.orm.ConstrainingRange;
 import net.orm.ConstrainingValues;
 import net.orm.Constraint;
-import net.orm.Entity;
-import net.orm.EntityRole;
 import net.orm.EqualityConstraint;
 import net.orm.ExclusionConstraint;
 import net.orm.ExternalizableConstraint;
@@ -21,6 +19,7 @@ import net.orm.FrequencyConstraint;
 import net.orm.Intransitive;
 import net.orm.Irreflexive;
 import net.orm.MandatoryConstraint;
+import net.orm.ObjectRole;
 import net.orm.Predicate;
 import net.orm.ReferenceScheme;
 import net.orm.RingConstraint;
@@ -100,8 +99,8 @@ public class AdapterFactory extends AdapterFactoryImpl {
 				return createRoleAdapter();
 			}
 			@Override
-			public Adapter caseEntity(Entity object) {
-				return createEntityAdapter();
+			public Adapter caseObject(net.orm.Object object) {
+				return createObjectAdapter();
 			}
 			@Override
 			public Adapter casePredicate(Predicate object) {
@@ -200,8 +199,8 @@ public class AdapterFactory extends AdapterFactoryImpl {
 				return createSymmetricAdapter();
 			}
 			@Override
-			public Adapter caseEntityRole(EntityRole object) {
-				return createEntityRoleAdapter();
+			public Adapter caseObjectRole(ObjectRole object) {
+				return createObjectRoleAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -209,19 +208,7 @@ public class AdapterFactory extends AdapterFactoryImpl {
 			}
 		};
 
-	/**
-	 * Creates an adapter for the <code>target</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param target the object to adapt.
-	 * @return the adapter for the <code>target</code>.
-	 * @generated
-	 */
-	@Override
-	public Adapter createAdapter(Notifier target) {
-		return modelSwitch.doSwitch((EObject)target);
-	}
-
+	
 
 	/**
 	 * Creates a new adapter for an object of class '{@link net.orm.Role <em>Role</em>}'.
@@ -238,16 +225,16 @@ public class AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link net.orm.Entity <em>Entity</em>}'.
+	 * Creates a new adapter for an object of class '{@link net.orm.Object <em>Object</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see net.orm.Entity
+	 * @see net.orm.Object
 	 * @generated
 	 */
-	public Adapter createEntityAdapter() {
+	public Adapter createObjectAdapter() {
 		return null;
 	}
 
@@ -588,16 +575,16 @@ public class AdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link net.orm.EntityRole <em>Entity Role</em>}'.
+	 * Creates a new adapter for an object of class '{@link net.orm.ObjectRole <em>Object Role</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see net.orm.EntityRole
+	 * @see net.orm.ObjectRole
 	 * @generated
 	 */
-	public Adapter createEntityRoleAdapter() {
+	public Adapter createObjectRoleAdapter() {
 		return null;
 	}
 

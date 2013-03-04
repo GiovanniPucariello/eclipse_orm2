@@ -6,7 +6,6 @@
  */
 package net.orm.impl;
 
-import net.orm.Entity;
 import net.orm.SubType;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -38,7 +37,7 @@ public class SubTypeImpl extends EObjectImpl implements SubType {
 	 * @generated
 	 * @ordered
 	 */
-	protected Entity parent;
+	protected net.orm.Object parent;
 
 	/**
 	 * The cached value of the '{@link #getChild() <em>Child</em>}' reference.
@@ -48,7 +47,7 @@ public class SubTypeImpl extends EObjectImpl implements SubType {
 	 * @generated
 	 * @ordered
 	 */
-	protected Entity child;
+	protected net.orm.Object child;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,10 +73,10 @@ public class SubTypeImpl extends EObjectImpl implements SubType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entity getParent() {
+	public net.orm.Object getParent() {
 		if (parent != null && parent.eIsProxy()) {
 			InternalEObject oldParent = (InternalEObject)parent;
-			parent = (Entity)eResolveProxy(oldParent);
+			parent = (net.orm.Object)eResolveProxy(oldParent);
 			if (parent != oldParent) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, net.orm.Package.SUB_TYPE__PARENT, oldParent, parent));
@@ -91,7 +90,7 @@ public class SubTypeImpl extends EObjectImpl implements SubType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entity basicGetParent() {
+	public net.orm.Object basicGetParent() {
 		return parent;
 	}
 
@@ -100,8 +99,8 @@ public class SubTypeImpl extends EObjectImpl implements SubType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParent(Entity newParent) {
-		Entity oldParent = parent;
+	public void setParent(net.orm.Object newParent) {
+		net.orm.Object oldParent = parent;
 		parent = newParent;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, net.orm.Package.SUB_TYPE__PARENT, oldParent, parent));
@@ -112,10 +111,10 @@ public class SubTypeImpl extends EObjectImpl implements SubType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entity getChild() {
+	public net.orm.Object getChild() {
 		if (child != null && child.eIsProxy()) {
 			InternalEObject oldChild = (InternalEObject)child;
-			child = (Entity)eResolveProxy(oldChild);
+			child = (net.orm.Object)eResolveProxy(oldChild);
 			if (child != oldChild) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, net.orm.Package.SUB_TYPE__CHILD, oldChild, child));
@@ -129,7 +128,7 @@ public class SubTypeImpl extends EObjectImpl implements SubType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entity basicGetChild() {
+	public net.orm.Object basicGetChild() {
 		return child;
 	}
 
@@ -138,8 +137,8 @@ public class SubTypeImpl extends EObjectImpl implements SubType {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setChild(Entity newChild) {
-		Entity oldChild = child;
+	public void setChild(net.orm.Object newChild) {
+		net.orm.Object oldChild = child;
 		child = newChild;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, net.orm.Package.SUB_TYPE__CHILD, oldChild, child));
@@ -172,10 +171,10 @@ public class SubTypeImpl extends EObjectImpl implements SubType {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case net.orm.Package.SUB_TYPE__PARENT:
-				setParent((Entity)newValue);
+				setParent((net.orm.Object)newValue);
 				return;
 			case net.orm.Package.SUB_TYPE__CHILD:
-				setChild((Entity)newValue);
+				setChild((net.orm.Object)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -190,10 +189,10 @@ public class SubTypeImpl extends EObjectImpl implements SubType {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case net.orm.Package.SUB_TYPE__PARENT:
-				setParent((Entity)null);
+				setParent((net.orm.Object)null);
 				return;
 			case net.orm.Package.SUB_TYPE__CHILD:
-				setChild((Entity)null);
+				setChild((net.orm.Object)null);
 				return;
 		}
 		super.eUnset(featureID);

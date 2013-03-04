@@ -6,16 +6,12 @@
  */
 package net.orm.util;
 
-import java.util.List;
-
 import net.orm.Acyclic;
 import net.orm.AntiSymmetric;
 import net.orm.Asymmetric;
 import net.orm.ConstrainingRange;
 import net.orm.ConstrainingValues;
 import net.orm.Constraint;
-import net.orm.Entity;
-import net.orm.EntityRole;
 import net.orm.EqualityConstraint;
 import net.orm.ExclusionConstraint;
 import net.orm.ExternalizableConstraint;
@@ -23,6 +19,7 @@ import net.orm.FrequencyConstraint;
 import net.orm.Intransitive;
 import net.orm.Irreflexive;
 import net.orm.MandatoryConstraint;
+import net.orm.ObjectRole;
 import net.orm.Predicate;
 import net.orm.ReferenceScheme;
 import net.orm.RingConstraint;
@@ -36,8 +33,8 @@ import net.orm.Symmetric;
 import net.orm.UniquenessConstraint;
 import net.orm.ValueConstraint;
 
-import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -52,7 +49,7 @@ import org.eclipse.emf.ecore.EObject;
  * @see net.orm.Package
  * @generated
  */
-public class Switch<T> {
+public class Switch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -74,247 +71,6 @@ public class Switch<T> {
 	}
 
 	/**
-	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the first non-null result returned by a <code>caseXXX</code> call.
-	 * @generated
-	 */
-	public T doSwitch(EObject theEObject) {
-		return doSwitch(theEObject.eClass(), theEObject);
-	}
-
-	/**
-	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the first non-null result returned by a <code>caseXXX</code> call.
-	 * @generated
-	 */
-	protected T doSwitch(EClass theEClass, EObject theEObject) {
-		if (theEClass.eContainer() == modelPackage) {
-			return doSwitch(theEClass.getClassifierID(), theEObject);
-		}
-		else {
-			List<EClass> eSuperTypes = theEClass.getESuperTypes();
-			return
-				eSuperTypes.isEmpty() ?
-					defaultCase(theEObject) :
-					doSwitch(eSuperTypes.get(0), theEObject);
-		}
-	}
-
-	/**
-	 * Calls <code>caseXXX</code> for each class of the model until one returns a non null result; it yields that result.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the first non-null result returned by a <code>caseXXX</code> call.
-	 * @generated
-	 */
-	protected T doSwitch(int classifierID, EObject theEObject) {
-		switch (classifierID) {
-			case net.orm.Package.ROLE: {
-				Role role = (Role)theEObject;
-				T result = caseRole(role);
-				if (result == null) result = caseSchemaShape(role);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.ENTITY: {
-				Entity entity = (Entity)theEObject;
-				T result = caseEntity(entity);
-				if (result == null) result = caseSchemaShape(entity);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.PREDICATE: {
-				Predicate predicate = (Predicate)theEObject;
-				T result = casePredicate(predicate);
-				if (result == null) result = caseSchemaShape(predicate);
-				if (result == null) result = caseEntity(predicate);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.SCHEMA: {
-				Schema schema = (Schema)theEObject;
-				T result = caseSchema(schema);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.SCHEMA_SHAPE: {
-				SchemaShape schemaShape = (SchemaShape)theEObject;
-				T result = caseSchemaShape(schemaShape);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.CONSTRAINT: {
-				Constraint constraint = (Constraint)theEObject;
-				T result = caseConstraint(constraint);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.MANDATORY_CONSTRAINT: {
-				MandatoryConstraint mandatoryConstraint = (MandatoryConstraint)theEObject;
-				T result = caseMandatoryConstraint(mandatoryConstraint);
-				if (result == null) result = caseExternalizableConstraint(mandatoryConstraint);
-				if (result == null) result = caseConstraint(mandatoryConstraint);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.UNIQUENESS_CONSTRAINT: {
-				UniquenessConstraint uniquenessConstraint = (UniquenessConstraint)theEObject;
-				T result = caseUniquenessConstraint(uniquenessConstraint);
-				if (result == null) result = caseExternalizableConstraint(uniquenessConstraint);
-				if (result == null) result = caseConstraint(uniquenessConstraint);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.REFERENCE_SCHEME: {
-				ReferenceScheme referenceScheme = (ReferenceScheme)theEObject;
-				T result = caseReferenceScheme(referenceScheme);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.VALUE_CONSTRAINT: {
-				ValueConstraint valueConstraint = (ValueConstraint)theEObject;
-				T result = caseValueConstraint(valueConstraint);
-				if (result == null) result = caseConstraint(valueConstraint);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.EXTERNALIZABLE_CONSTRAINT: {
-				ExternalizableConstraint externalizableConstraint = (ExternalizableConstraint)theEObject;
-				T result = caseExternalizableConstraint(externalizableConstraint);
-				if (result == null) result = caseConstraint(externalizableConstraint);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.SET_COMPARISON_CONSTRAINT: {
-				SetComparisonConstraint setComparisonConstraint = (SetComparisonConstraint)theEObject;
-				T result = caseSetComparisonConstraint(setComparisonConstraint);
-				if (result == null) result = caseConstraint(setComparisonConstraint);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.CONSTRAINING_VALUES: {
-				ConstrainingValues constrainingValues = (ConstrainingValues)theEObject;
-				T result = caseConstrainingValues(constrainingValues);
-				if (result == null) result = caseValueConstraint(constrainingValues);
-				if (result == null) result = caseConstraint(constrainingValues);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.CONSTRAINING_RANGE: {
-				ConstrainingRange constrainingRange = (ConstrainingRange)theEObject;
-				T result = caseConstrainingRange(constrainingRange);
-				if (result == null) result = caseValueConstraint(constrainingRange);
-				if (result == null) result = caseConstraint(constrainingRange);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.SUB_SET_CONSTRAINT: {
-				SubSetConstraint subSetConstraint = (SubSetConstraint)theEObject;
-				T result = caseSubSetConstraint(subSetConstraint);
-				if (result == null) result = caseSetComparisonConstraint(subSetConstraint);
-				if (result == null) result = caseConstraint(subSetConstraint);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.EQUALITY_CONSTRAINT: {
-				EqualityConstraint equalityConstraint = (EqualityConstraint)theEObject;
-				T result = caseEqualityConstraint(equalityConstraint);
-				if (result == null) result = caseSetComparisonConstraint(equalityConstraint);
-				if (result == null) result = caseConstraint(equalityConstraint);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.EXCLUSION_CONSTRAINT: {
-				ExclusionConstraint exclusionConstraint = (ExclusionConstraint)theEObject;
-				T result = caseExclusionConstraint(exclusionConstraint);
-				if (result == null) result = caseSetComparisonConstraint(exclusionConstraint);
-				if (result == null) result = caseConstraint(exclusionConstraint);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.SUB_TYPE: {
-				SubType subType = (SubType)theEObject;
-				T result = caseSubType(subType);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.FREQUENCY_CONSTRAINT: {
-				FrequencyConstraint frequencyConstraint = (FrequencyConstraint)theEObject;
-				T result = caseFrequencyConstraint(frequencyConstraint);
-				if (result == null) result = caseConstraint(frequencyConstraint);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.RING_CONSTRAINT: {
-				RingConstraint ringConstraint = (RingConstraint)theEObject;
-				T result = caseRingConstraint(ringConstraint);
-				if (result == null) result = caseConstraint(ringConstraint);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.ACYCLIC: {
-				Acyclic acyclic = (Acyclic)theEObject;
-				T result = caseAcyclic(acyclic);
-				if (result == null) result = caseRingConstraint(acyclic);
-				if (result == null) result = caseConstraint(acyclic);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.IRREFLEXIVE: {
-				Irreflexive irreflexive = (Irreflexive)theEObject;
-				T result = caseIrreflexive(irreflexive);
-				if (result == null) result = caseRingConstraint(irreflexive);
-				if (result == null) result = caseConstraint(irreflexive);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.INTRANSITIVE: {
-				Intransitive intransitive = (Intransitive)theEObject;
-				T result = caseIntransitive(intransitive);
-				if (result == null) result = caseRingConstraint(intransitive);
-				if (result == null) result = caseConstraint(intransitive);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.ASYMMETRIC: {
-				Asymmetric asymmetric = (Asymmetric)theEObject;
-				T result = caseAsymmetric(asymmetric);
-				if (result == null) result = caseRingConstraint(asymmetric);
-				if (result == null) result = caseConstraint(asymmetric);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.ANTI_SYMMETRIC: {
-				AntiSymmetric antiSymmetric = (AntiSymmetric)theEObject;
-				T result = caseAntiSymmetric(antiSymmetric);
-				if (result == null) result = caseRingConstraint(antiSymmetric);
-				if (result == null) result = caseConstraint(antiSymmetric);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.SYMMETRIC: {
-				Symmetric symmetric = (Symmetric)theEObject;
-				T result = caseSymmetric(symmetric);
-				if (result == null) result = caseRingConstraint(symmetric);
-				if (result == null) result = caseConstraint(symmetric);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case net.orm.Package.ENTITY_ROLE: {
-				EntityRole entityRole = (EntityRole)theEObject;
-				T result = caseEntityRole(entityRole);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			default: return defaultCase(theEObject);
-		}
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Role</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -330,17 +86,17 @@ public class Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Object</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Object</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEntity(Entity object) {
+	public T caseObject(net.orm.Object object) {
 		return null;
 	}
 
@@ -705,17 +461,17 @@ public class Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Entity Role</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Object Role</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Entity Role</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Object Role</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEntityRole(EntityRole object) {
+	public T caseObjectRole(ObjectRole object) {
 		return null;
 	}
 
@@ -730,6 +486,7 @@ public class Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject)
 	 * @generated
 	 */
+	@Override
 	public T defaultCase(EObject object) {
 		return null;
 	}

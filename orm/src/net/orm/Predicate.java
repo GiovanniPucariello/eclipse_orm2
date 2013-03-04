@@ -18,7 +18,7 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link net.orm.Predicate#getNameSpace <em>Name Space</em>}</li>
  *   <li>{@link net.orm.Predicate#getRoles <em>Roles</em>}</li>
- *   <li>{@link net.orm.Predicate#isIsEntity <em>Is Entity</em>}</li>
+ *   <li>{@link net.orm.Predicate#isIsObject <em>Is Object</em>}</li>
  *   <li>{@link net.orm.Predicate#getArity <em>Arity</em>}</li>
  *   <li>{@link net.orm.Predicate#getConstraints <em>Constraints</em>}</li>
  * </ul>
@@ -28,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Predicate extends SchemaShape, Entity {
+public interface Predicate extends SchemaShape, net.orm.Object {
 	/**
 	 * Returns the value of the '<em><b>Name Space</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -72,30 +72,30 @@ public interface Predicate extends SchemaShape, Entity {
 	EList<Role> getRoles();
 
 	/**
-	 * Returns the value of the '<em><b>Is Entity</b></em>' attribute.
+	 * Returns the value of the '<em><b>Is Object</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Is Entity</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Is Object</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Is Entity</em>' attribute.
-	 * @see #setIsEntity(boolean)
-	 * @see net.orm.Package#getPredicate_IsEntity()
+	 * @return the value of the '<em>Is Object</em>' attribute.
+	 * @see #setIsObject(boolean)
+	 * @see net.orm.Package#getPredicate_IsObject()
 	 * @model
 	 * @generated
 	 */
-	boolean isIsEntity();
+	boolean isIsObject();
 
 	/**
-	 * Sets the value of the '{@link net.orm.Predicate#isIsEntity <em>Is Entity</em>}' attribute.
+	 * Sets the value of the '{@link net.orm.Predicate#isIsObject <em>Is Object</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Is Entity</em>' attribute.
-	 * @see #isIsEntity()
+	 * @param value the new value of the '<em>Is Object</em>' attribute.
+	 * @see #isIsObject()
 	 * @generated
 	 */
-	void setIsEntity(boolean value);
+	void setIsObject(boolean value);
 
 	/**
 	 * Returns the value of the '<em><b>Arity</b></em>' attribute list.

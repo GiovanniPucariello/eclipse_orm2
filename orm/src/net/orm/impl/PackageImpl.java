@@ -12,8 +12,6 @@ import net.orm.Asymmetric;
 import net.orm.ConstrainingRange;
 import net.orm.ConstrainingValues;
 import net.orm.Constraint;
-import net.orm.Entity;
-import net.orm.EntityRole;
 import net.orm.EqualityConstraint;
 import net.orm.ExclusionConstraint;
 import net.orm.ExternalizableConstraint;
@@ -22,6 +20,7 @@ import net.orm.FrequencyConstraint;
 import net.orm.Intransitive;
 import net.orm.Irreflexive;
 import net.orm.MandatoryConstraint;
+import net.orm.ObjectRole;
 import net.orm.Predicate;
 import net.orm.ReferenceScheme;
 import net.orm.RingConstraint;
@@ -60,7 +59,7 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass entityEClass = null;
+	private EClass objectEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -235,7 +234,7 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass entityRoleEClass = null;
+	private EClass objectRoleEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -321,8 +320,8 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEntity() {
-		return entityEClass;
+	public EClass getObject() {
+		return objectEClass;
 	}
 
 	/**
@@ -330,8 +329,8 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEntity_OccursElseWhere() {
-		return (EAttribute)entityEClass.getEStructuralFeatures().get(0);
+	public EAttribute getObject_OccursElseWhere() {
+		return (EAttribute)objectEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -339,8 +338,8 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEntity_IsIndependent() {
-		return (EAttribute)entityEClass.getEStructuralFeatures().get(1);
+	public EAttribute getObject_IsIndependent() {
+		return (EAttribute)objectEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -348,8 +347,8 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEntity_ReferenceScheme() {
-		return (EReference)entityEClass.getEStructuralFeatures().get(2);
+	public EReference getObject_ReferenceScheme() {
+		return (EReference)objectEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -357,8 +356,8 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEntity_Name() {
-		return (EAttribute)entityEClass.getEStructuralFeatures().get(3);
+	public EAttribute getObject_Name() {
+		return (EAttribute)objectEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -366,8 +365,8 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEntity_IsValueType() {
-		return (EAttribute)entityEClass.getEStructuralFeatures().get(4);
+	public EAttribute getObject_IsValueType() {
+		return (EAttribute)objectEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -402,7 +401,7 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getPredicate_IsEntity() {
+	public EAttribute getPredicate_IsObject() {
 		return (EAttribute)predicateEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -447,7 +446,7 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSchema_EntityRoles() {
+	public EReference getSchema_ObjectRoles() {
 		return (EReference)schemaEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -717,8 +716,8 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEntityRole() {
-		return entityRoleEClass;
+	public EClass getObjectRole() {
+		return objectRoleEClass;
 	}
 
 	/**
@@ -726,8 +725,8 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEntityRole_Entity() {
-		return (EReference)entityRoleEClass.getEStructuralFeatures().get(0);
+	public EReference getObjectRole_Object() {
+		return (EReference)objectRoleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -735,8 +734,8 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEntityRole_Role() {
-		return (EReference)entityRoleEClass.getEStructuralFeatures().get(1);
+	public EReference getObjectRole_Role() {
+		return (EReference)objectRoleEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -744,8 +743,8 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEntityRole_Mandatory() {
-		return (EAttribute)entityRoleEClass.getEStructuralFeatures().get(2);
+	public EAttribute getObjectRole_Mandatory() {
+		return (EAttribute)objectRoleEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -753,8 +752,8 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEntityRole_Constraints() {
-		return (EReference)entityRoleEClass.getEStructuralFeatures().get(3);
+	public EReference getObjectRole_Constraints() {
+		return (EReference)objectRoleEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -788,23 +787,23 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 		roleEClass = createEClass(ROLE);
 		createEAttribute(roleEClass, ROLE__PHRASE);
 
-		entityEClass = createEClass(ENTITY);
-		createEAttribute(entityEClass, ENTITY__OCCURS_ELSE_WHERE);
-		createEAttribute(entityEClass, ENTITY__IS_INDEPENDENT);
-		createEReference(entityEClass, ENTITY__REFERENCE_SCHEME);
-		createEAttribute(entityEClass, ENTITY__NAME);
-		createEAttribute(entityEClass, ENTITY__IS_VALUE_TYPE);
+		objectEClass = createEClass(OBJECT);
+		createEAttribute(objectEClass, OBJECT__OCCURS_ELSE_WHERE);
+		createEAttribute(objectEClass, OBJECT__IS_INDEPENDENT);
+		createEReference(objectEClass, OBJECT__REFERENCE_SCHEME);
+		createEAttribute(objectEClass, OBJECT__NAME);
+		createEAttribute(objectEClass, OBJECT__IS_VALUE_TYPE);
 
 		predicateEClass = createEClass(PREDICATE);
 		createEAttribute(predicateEClass, PREDICATE__NAME_SPACE);
 		createEReference(predicateEClass, PREDICATE__ROLES);
-		createEAttribute(predicateEClass, PREDICATE__IS_ENTITY);
+		createEAttribute(predicateEClass, PREDICATE__IS_OBJECT);
 		createEAttribute(predicateEClass, PREDICATE__ARITY);
 		createEReference(predicateEClass, PREDICATE__CONSTRAINTS);
 
 		schemaEClass = createEClass(SCHEMA);
 		createEReference(schemaEClass, SCHEMA__SCHEMA_SHAPES);
-		createEReference(schemaEClass, SCHEMA__ENTITY_ROLES);
+		createEReference(schemaEClass, SCHEMA__OBJECT_ROLES);
 		createEReference(schemaEClass, SCHEMA__SUB_TYPES);
 		createEReference(schemaEClass, SCHEMA__CONSTRAINTS);
 
@@ -857,11 +856,11 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 
 		symmetricEClass = createEClass(SYMMETRIC);
 
-		entityRoleEClass = createEClass(ENTITY_ROLE);
-		createEReference(entityRoleEClass, ENTITY_ROLE__ENTITY);
-		createEReference(entityRoleEClass, ENTITY_ROLE__ROLE);
-		createEAttribute(entityRoleEClass, ENTITY_ROLE__MANDATORY);
-		createEReference(entityRoleEClass, ENTITY_ROLE__CONSTRAINTS);
+		objectRoleEClass = createEClass(OBJECT_ROLE);
+		createEReference(objectRoleEClass, OBJECT_ROLE__OBJECT);
+		createEReference(objectRoleEClass, OBJECT_ROLE__ROLE);
+		createEAttribute(objectRoleEClass, OBJECT_ROLE__MANDATORY);
+		createEReference(objectRoleEClass, OBJECT_ROLE__CONSTRAINTS);
 	}
 
 	/**
@@ -893,9 +892,9 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 
 		// Add supertypes to classes
 		roleEClass.getESuperTypes().add(this.getSchemaShape());
-		entityEClass.getESuperTypes().add(this.getSchemaShape());
+		objectEClass.getESuperTypes().add(this.getSchemaShape());
 		predicateEClass.getESuperTypes().add(this.getSchemaShape());
-		predicateEClass.getESuperTypes().add(this.getEntity());
+		predicateEClass.getESuperTypes().add(this.getObject());
 		mandatoryConstraintEClass.getESuperTypes().add(this.getExternalizableConstraint());
 		uniquenessConstraintEClass.getESuperTypes().add(this.getExternalizableConstraint());
 		valueConstraintEClass.getESuperTypes().add(this.getConstraint());
@@ -919,23 +918,23 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 		initEClass(roleEClass, Role.class, "Role", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRole_Phrase(), ecorePackage.getEString(), "phrase", null, 0, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(entityEClass, Entity.class, "Entity", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEntity_OccursElseWhere(), ecorePackage.getEBoolean(), "occursElseWhere", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEntity_IsIndependent(), ecorePackage.getEBoolean(), "isIndependent", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEntity_ReferenceScheme(), this.getReferenceScheme(), null, "ReferenceScheme", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEntity_Name(), ecorePackage.getEString(), "Name", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getEntity_IsValueType(), ecorePackage.getEBoolean(), "isValueType", null, 0, 1, Entity.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(objectEClass, net.orm.Object.class, "Object", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getObject_OccursElseWhere(), ecorePackage.getEBoolean(), "occursElseWhere", null, 0, 1, net.orm.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getObject_IsIndependent(), ecorePackage.getEBoolean(), "isIndependent", null, 0, 1, net.orm.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getObject_ReferenceScheme(), this.getReferenceScheme(), null, "ReferenceScheme", null, 0, 1, net.orm.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getObject_Name(), ecorePackage.getEString(), "Name", null, 0, 1, net.orm.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getObject_IsValueType(), ecorePackage.getEBoolean(), "isValueType", null, 0, 1, net.orm.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(predicateEClass, Predicate.class, "Predicate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPredicate_NameSpace(), ecorePackage.getEString(), "nameSpace", null, 0, 1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPredicate_Roles(), this.getRole(), null, "Roles", null, 0, -1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getPredicate_IsEntity(), ecorePackage.getEBoolean(), "isEntity", null, 0, 1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPredicate_IsObject(), ecorePackage.getEBoolean(), "isObject", null, 0, 1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPredicate_Arity(), ecorePackage.getEInt(), "Arity", null, 1, -1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPredicate_Constraints(), this.getConstraint(), null, "Constraints", null, 0, -1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(schemaEClass, Schema.class, "Schema", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSchema_SchemaShapes(), this.getSchemaShape(), null, "schemaShapes", null, 0, -1, Schema.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSchema_EntityRoles(), this.getEntityRole(), null, "EntityRoles", null, 0, -1, Schema.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSchema_ObjectRoles(), this.getObjectRole(), null, "ObjectRoles", null, 0, -1, Schema.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSchema_SubTypes(), this.getSubType(), null, "SubTypes", null, 0, -1, Schema.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSchema_Constraints(), this.getConstraint(), null, "Constraints", null, 0, -1, Schema.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -971,8 +970,8 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 		initEClass(exclusionConstraintEClass, ExclusionConstraint.class, "ExclusionConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(subTypeEClass, SubType.class, "SubType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSubType_Parent(), this.getEntity(), null, "Parent", null, 1, 1, SubType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSubType_Child(), this.getEntity(), null, "Child", null, 1, 1, SubType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSubType_Parent(), this.getObject(), null, "Parent", null, 1, 1, SubType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSubType_Child(), this.getObject(), null, "Child", null, 1, 1, SubType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(frequencyConstraintEClass, FrequencyConstraint.class, "FrequencyConstraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -990,11 +989,11 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 
 		initEClass(symmetricEClass, Symmetric.class, "Symmetric", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(entityRoleEClass, EntityRole.class, "EntityRole", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEntityRole_Entity(), this.getEntity(), null, "Entity", null, 1, 1, EntityRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEntityRole_Role(), this.getRole(), null, "Role", null, 1, 1, EntityRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEntityRole_Mandatory(), ecorePackage.getEBoolean(), "Mandatory", "false", 0, 1, EntityRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getEntityRole_Constraints(), this.getConstraint(), null, "Constraints", null, 0, -1, EntityRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(objectRoleEClass, ObjectRole.class, "ObjectRole", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getObjectRole_Object(), this.getObject(), null, "Object", null, 1, 1, ObjectRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getObjectRole_Role(), this.getRole(), null, "Role", null, 1, 1, ObjectRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getObjectRole_Mandatory(), ecorePackage.getEBoolean(), "Mandatory", "false", 0, 1, ObjectRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getObjectRole_Constraints(), this.getConstraint(), null, "Constraints", null, 0, -1, ObjectRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

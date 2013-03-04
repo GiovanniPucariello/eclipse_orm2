@@ -12,8 +12,6 @@ import net.orm.Asymmetric;
 import net.orm.ConstrainingRange;
 import net.orm.ConstrainingValues;
 import net.orm.Constraint;
-import net.orm.Entity;
-import net.orm.EntityRole;
 import net.orm.EqualityConstraint;
 import net.orm.ExclusionConstraint;
 import net.orm.ExternalizableConstraint;
@@ -22,6 +20,7 @@ import net.orm.FrequencyConstraint;
 import net.orm.Intransitive;
 import net.orm.Irreflexive;
 import net.orm.MandatoryConstraint;
+import net.orm.ObjectRole;
 import net.orm.Package;
 import net.orm.Predicate;
 import net.orm.ReferenceScheme;
@@ -83,32 +82,32 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case Package.ROLE: return createRole();
-			case Package.ENTITY: return createEntity();
-			case Package.PREDICATE: return createPredicate();
-			case Package.SCHEMA: return createSchema();
-			case Package.CONSTRAINT: return createConstraint();
-			case Package.MANDATORY_CONSTRAINT: return createMandatoryConstraint();
-			case Package.UNIQUENESS_CONSTRAINT: return createUniquenessConstraint();
-			case Package.REFERENCE_SCHEME: return createReferenceScheme();
-			case Package.VALUE_CONSTRAINT: return createValueConstraint();
-			case Package.EXTERNALIZABLE_CONSTRAINT: return createExternalizableConstraint();
-			case Package.SET_COMPARISON_CONSTRAINT: return createSetComparisonConstraint();
-			case Package.CONSTRAINING_VALUES: return createConstrainingValues();
-			case Package.CONSTRAINING_RANGE: return createConstrainingRange();
-			case Package.SUB_SET_CONSTRAINT: return createSubSetConstraint();
-			case Package.EQUALITY_CONSTRAINT: return createEqualityConstraint();
-			case Package.EXCLUSION_CONSTRAINT: return createExclusionConstraint();
-			case Package.SUB_TYPE: return createSubType();
-			case Package.FREQUENCY_CONSTRAINT: return createFrequencyConstraint();
-			case Package.RING_CONSTRAINT: return createRingConstraint();
-			case Package.ACYCLIC: return createAcyclic();
-			case Package.IRREFLEXIVE: return createIrreflexive();
-			case Package.INTRANSITIVE: return createIntransitive();
-			case Package.ASYMMETRIC: return createAsymmetric();
-			case Package.ANTI_SYMMETRIC: return createAntiSymmetric();
-			case Package.SYMMETRIC: return createSymmetric();
-			case Package.ENTITY_ROLE: return createEntityRole();
+			case net.orm.Package.ROLE: return createRole();
+			case net.orm.Package.OBJECT: return createObject();
+			case net.orm.Package.PREDICATE: return createPredicate();
+			case net.orm.Package.SCHEMA: return createSchema();
+			case net.orm.Package.CONSTRAINT: return createConstraint();
+			case net.orm.Package.MANDATORY_CONSTRAINT: return createMandatoryConstraint();
+			case net.orm.Package.UNIQUENESS_CONSTRAINT: return createUniquenessConstraint();
+			case net.orm.Package.REFERENCE_SCHEME: return createReferenceScheme();
+			case net.orm.Package.VALUE_CONSTRAINT: return createValueConstraint();
+			case net.orm.Package.EXTERNALIZABLE_CONSTRAINT: return createExternalizableConstraint();
+			case net.orm.Package.SET_COMPARISON_CONSTRAINT: return createSetComparisonConstraint();
+			case net.orm.Package.CONSTRAINING_VALUES: return createConstrainingValues();
+			case net.orm.Package.CONSTRAINING_RANGE: return createConstrainingRange();
+			case net.orm.Package.SUB_SET_CONSTRAINT: return createSubSetConstraint();
+			case net.orm.Package.EQUALITY_CONSTRAINT: return createEqualityConstraint();
+			case net.orm.Package.EXCLUSION_CONSTRAINT: return createExclusionConstraint();
+			case net.orm.Package.SUB_TYPE: return createSubType();
+			case net.orm.Package.FREQUENCY_CONSTRAINT: return createFrequencyConstraint();
+			case net.orm.Package.RING_CONSTRAINT: return createRingConstraint();
+			case net.orm.Package.ACYCLIC: return createAcyclic();
+			case net.orm.Package.IRREFLEXIVE: return createIrreflexive();
+			case net.orm.Package.INTRANSITIVE: return createIntransitive();
+			case net.orm.Package.ASYMMETRIC: return createAsymmetric();
+			case net.orm.Package.ANTI_SYMMETRIC: return createAntiSymmetric();
+			case net.orm.Package.SYMMETRIC: return createSymmetric();
+			case net.orm.Package.OBJECT_ROLE: return createObjectRole();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -124,12 +123,13 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entity createEntity() {
-		EntityImpl entity = new EntityImpl();
-		return entity;
+	public net.orm.Object createObject() {
+		ObjectImpl object = new ObjectImpl();
+		return object;
 	}
 
 	/**
@@ -340,12 +340,13 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntityRole createEntityRole() {
-		EntityRoleImpl entityRole = new EntityRoleImpl();
-		return entityRole;
+	public ObjectRole createObjectRole() {
+		ObjectRoleImpl objectRole = new ObjectRoleImpl();
+		return objectRole;
 	}
 
 	/**
@@ -353,10 +354,9 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Package getPackage() {
-		return (Package)getEPackage();
+	public net.orm.Package getPackage() {
+		return (net.orm.Package)getEPackage();
 	}
-
 
 
 } // FactoryImpl

@@ -9,7 +9,6 @@ package net.orm.impl;
 import java.util.Collection;
 
 import net.orm.Constraint;
-import net.orm.Entity;
 import net.orm.Predicate;
 import net.orm.ReferenceScheme;
 import net.orm.Role;
@@ -38,7 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link net.orm.impl.PredicateImpl#isIsValueType <em>Is Value Type</em>}</li>
  *   <li>{@link net.orm.impl.PredicateImpl#getNameSpace <em>Name Space</em>}</li>
  *   <li>{@link net.orm.impl.PredicateImpl#getRoles <em>Roles</em>}</li>
- *   <li>{@link net.orm.impl.PredicateImpl#isIsEntity <em>Is Entity</em>}</li>
+ *   <li>{@link net.orm.impl.PredicateImpl#isIsObject <em>Is Object</em>}</li>
  *   <li>{@link net.orm.impl.PredicateImpl#getArity <em>Arity</em>}</li>
  *   <li>{@link net.orm.impl.PredicateImpl#getConstraints <em>Constraints</em>}</li>
  * </ul>
@@ -168,24 +167,24 @@ public class PredicateImpl extends SchemaShapeImpl implements Predicate {
 	protected EList<Role> roles;
 
 	/**
-	 * The default value of the '{@link #isIsEntity() <em>Is Entity</em>}' attribute.
+	 * The default value of the '{@link #isIsObject() <em>Is Object</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIsEntity()
+	 * @see #isIsObject()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final boolean IS_ENTITY_EDEFAULT = false;
+	protected static final boolean IS_OBJECT_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #isIsEntity() <em>Is Entity</em>}' attribute.
+	 * The cached value of the '{@link #isIsObject() <em>Is Object</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #isIsEntity()
+	 * @see #isIsObject()
 	 * @generated
 	 * @ordered
 	 */
-	protected boolean isEntity = IS_ENTITY_EDEFAULT;
+	protected boolean isObject = IS_OBJECT_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getArity() <em>Arity</em>}' attribute list.
@@ -386,8 +385,8 @@ public class PredicateImpl extends SchemaShapeImpl implements Predicate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public boolean isIsEntity() {
-		return isEntity;
+	public boolean isIsObject() {
+		return isObject;
 	}
 
 	/**
@@ -395,11 +394,11 @@ public class PredicateImpl extends SchemaShapeImpl implements Predicate {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIsEntity(boolean newIsEntity) {
-		boolean oldIsEntity = isEntity;
-		isEntity = newIsEntity;
+	public void setIsObject(boolean newIsObject) {
+		boolean oldIsObject = isObject;
+		isObject = newIsObject;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, net.orm.Package.PREDICATE__IS_ENTITY, oldIsEntity, isEntity));
+			eNotify(new ENotificationImpl(this, Notification.SET, net.orm.Package.PREDICATE__IS_OBJECT, oldIsObject, isObject));
 	}
 
 	/**
@@ -465,8 +464,8 @@ public class PredicateImpl extends SchemaShapeImpl implements Predicate {
 				return getNameSpace();
 			case net.orm.Package.PREDICATE__ROLES:
 				return getRoles();
-			case net.orm.Package.PREDICATE__IS_ENTITY:
-				return isIsEntity();
+			case net.orm.Package.PREDICATE__IS_OBJECT:
+				return isIsObject();
 			case net.orm.Package.PREDICATE__ARITY:
 				return getArity();
 			case net.orm.Package.PREDICATE__CONSTRAINTS:
@@ -506,8 +505,8 @@ public class PredicateImpl extends SchemaShapeImpl implements Predicate {
 				getRoles().clear();
 				getRoles().addAll((Collection<? extends Role>)newValue);
 				return;
-			case net.orm.Package.PREDICATE__IS_ENTITY:
-				setIsEntity((Boolean)newValue);
+			case net.orm.Package.PREDICATE__IS_OBJECT:
+				setIsObject((Boolean)newValue);
 				return;
 			case net.orm.Package.PREDICATE__ARITY:
 				getArity().clear();
@@ -550,8 +549,8 @@ public class PredicateImpl extends SchemaShapeImpl implements Predicate {
 			case net.orm.Package.PREDICATE__ROLES:
 				getRoles().clear();
 				return;
-			case net.orm.Package.PREDICATE__IS_ENTITY:
-				setIsEntity(IS_ENTITY_EDEFAULT);
+			case net.orm.Package.PREDICATE__IS_OBJECT:
+				setIsObject(IS_OBJECT_EDEFAULT);
 				return;
 			case net.orm.Package.PREDICATE__ARITY:
 				getArity().clear();
@@ -585,8 +584,8 @@ public class PredicateImpl extends SchemaShapeImpl implements Predicate {
 				return NAME_SPACE_EDEFAULT == null ? nameSpace != null : !NAME_SPACE_EDEFAULT.equals(nameSpace);
 			case net.orm.Package.PREDICATE__ROLES:
 				return roles != null && !roles.isEmpty();
-			case net.orm.Package.PREDICATE__IS_ENTITY:
-				return isEntity != IS_ENTITY_EDEFAULT;
+			case net.orm.Package.PREDICATE__IS_OBJECT:
+				return isObject != IS_OBJECT_EDEFAULT;
 			case net.orm.Package.PREDICATE__ARITY:
 				return arity != null && !arity.isEmpty();
 			case net.orm.Package.PREDICATE__CONSTRAINTS:
@@ -602,13 +601,13 @@ public class PredicateImpl extends SchemaShapeImpl implements Predicate {
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Entity.class) {
+		if (baseClass == net.orm.Object.class) {
 			switch (derivedFeatureID) {
-				case net.orm.Package.PREDICATE__OCCURS_ELSE_WHERE: return net.orm.Package.ENTITY__OCCURS_ELSE_WHERE;
-				case net.orm.Package.PREDICATE__IS_INDEPENDENT: return net.orm.Package.ENTITY__IS_INDEPENDENT;
-				case net.orm.Package.PREDICATE__REFERENCE_SCHEME: return net.orm.Package.ENTITY__REFERENCE_SCHEME;
-				case net.orm.Package.PREDICATE__NAME: return net.orm.Package.ENTITY__NAME;
-				case net.orm.Package.PREDICATE__IS_VALUE_TYPE: return net.orm.Package.ENTITY__IS_VALUE_TYPE;
+				case net.orm.Package.PREDICATE__OCCURS_ELSE_WHERE: return net.orm.Package.OBJECT__OCCURS_ELSE_WHERE;
+				case net.orm.Package.PREDICATE__IS_INDEPENDENT: return net.orm.Package.OBJECT__IS_INDEPENDENT;
+				case net.orm.Package.PREDICATE__REFERENCE_SCHEME: return net.orm.Package.OBJECT__REFERENCE_SCHEME;
+				case net.orm.Package.PREDICATE__NAME: return net.orm.Package.OBJECT__NAME;
+				case net.orm.Package.PREDICATE__IS_VALUE_TYPE: return net.orm.Package.OBJECT__IS_VALUE_TYPE;
 				default: return -1;
 			}
 		}
@@ -622,13 +621,13 @@ public class PredicateImpl extends SchemaShapeImpl implements Predicate {
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Entity.class) {
+		if (baseClass == net.orm.Object.class) {
 			switch (baseFeatureID) {
-				case net.orm.Package.ENTITY__OCCURS_ELSE_WHERE: return net.orm.Package.PREDICATE__OCCURS_ELSE_WHERE;
-				case net.orm.Package.ENTITY__IS_INDEPENDENT: return net.orm.Package.PREDICATE__IS_INDEPENDENT;
-				case net.orm.Package.ENTITY__REFERENCE_SCHEME: return net.orm.Package.PREDICATE__REFERENCE_SCHEME;
-				case net.orm.Package.ENTITY__NAME: return net.orm.Package.PREDICATE__NAME;
-				case net.orm.Package.ENTITY__IS_VALUE_TYPE: return net.orm.Package.PREDICATE__IS_VALUE_TYPE;
+				case net.orm.Package.OBJECT__OCCURS_ELSE_WHERE: return net.orm.Package.PREDICATE__OCCURS_ELSE_WHERE;
+				case net.orm.Package.OBJECT__IS_INDEPENDENT: return net.orm.Package.PREDICATE__IS_INDEPENDENT;
+				case net.orm.Package.OBJECT__REFERENCE_SCHEME: return net.orm.Package.PREDICATE__REFERENCE_SCHEME;
+				case net.orm.Package.OBJECT__NAME: return net.orm.Package.PREDICATE__NAME;
+				case net.orm.Package.OBJECT__IS_VALUE_TYPE: return net.orm.Package.PREDICATE__IS_VALUE_TYPE;
 				default: return -1;
 			}
 		}
@@ -655,8 +654,8 @@ public class PredicateImpl extends SchemaShapeImpl implements Predicate {
 		result.append(isValueType);
 		result.append(", nameSpace: ");
 		result.append(nameSpace);
-		result.append(", isEntity: ");
-		result.append(isEntity);
+		result.append(", isObject: ");
+		result.append(isObject);
 		result.append(", Arity: ");
 		result.append(arity);
 		result.append(')');

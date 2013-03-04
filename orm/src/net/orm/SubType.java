@@ -36,12 +36,12 @@ public interface SubType extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parent</em>' reference.
-	 * @see #setParent(Entity)
+	 * @see #setParent(net.orm.Object)
 	 * @see net.orm.Package#getSubType_Parent()
 	 * @model required="true"
 	 * @generated
 	 */
-	Entity getParent();
+	net.orm.Object getParent();
 
 	/**
 	 * Sets the value of the '{@link net.orm.SubType#getParent <em>Parent</em>}' reference.
@@ -51,7 +51,7 @@ public interface SubType extends EObject {
 	 * @see #getParent()
 	 * @generated
 	 */
-	void setParent(Entity value);
+	void setParent(net.orm.Object value);
 
 	/**
 	 * Returns the value of the '<em><b>Child</b></em>' reference.
@@ -62,12 +62,12 @@ public interface SubType extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Child</em>' reference.
-	 * @see #setChild(Entity)
+	 * @see #setChild(net.orm.Object)
 	 * @see net.orm.Package#getSubType_Child()
 	 * @model required="true"
 	 * @generated
 	 */
-	Entity getChild();
+	net.orm.Object getChild();
 
 	/**
 	 * Sets the value of the '{@link net.orm.SubType#getChild <em>Child</em>}' reference.
@@ -77,6 +77,6 @@ public interface SubType extends EObject {
 	 * @see #getChild()
 	 * @generated
 	 */
-	void setChild(Entity value);
+	void setChild(net.orm.Object value);
 
 } // SubType

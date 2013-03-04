@@ -35,13 +35,13 @@ public interface Factory extends EFactory {
 	Role createRole();
 
 	/**
-	 * Returns a new object of class '<em>Entity</em>'.
+	 * Returns a new object of class '<em>Object</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Entity</em>'.
+	 * @return a new object of class '<em>Object</em>'.
 	 * @generated
 	 */
-	Entity createEntity();
+	Object createObject();
 
 	/**
 	 * Returns a new object of class '<em>Predicate</em>'.
@@ -251,13 +251,13 @@ public interface Factory extends EFactory {
 	Symmetric createSymmetric();
 
 	/**
-	 * Returns a new object of class '<em>Entity Role</em>'.
+	 * Returns a new object of class '<em>Object Role</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Entity Role</em>'.
+	 * @return a new object of class '<em>Object Role</em>'.
 	 * @generated
 	 */
-	EntityRole createEntityRole();
+	ObjectRole createObjectRole();
 
 	/**
 	 * Returns the package supported by this factory.

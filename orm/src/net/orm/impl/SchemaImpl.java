@@ -9,7 +9,7 @@ package net.orm.impl;
 import java.util.Collection;
 
 import net.orm.Constraint;
-import net.orm.EntityRole;
+import net.orm.ObjectRole;
 import net.orm.Schema;
 import net.orm.SchemaShape;
 import net.orm.SubType;
@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link net.orm.impl.SchemaImpl#getSchemaShapes <em>Schema Shapes</em>}</li>
- *   <li>{@link net.orm.impl.SchemaImpl#getEntityRoles <em>Entity Roles</em>}</li>
+ *   <li>{@link net.orm.impl.SchemaImpl#getObjectRoles <em>Object Roles</em>}</li>
  *   <li>{@link net.orm.impl.SchemaImpl#getSubTypes <em>Sub Types</em>}</li>
  *   <li>{@link net.orm.impl.SchemaImpl#getConstraints <em>Constraints</em>}</li>
  * </ul>
@@ -50,14 +50,14 @@ public class SchemaImpl extends EObjectImpl implements Schema {
 	protected EList<SchemaShape> schemaShapes;
 
 	/**
-	 * The cached value of the '{@link #getEntityRoles() <em>Entity Roles</em>}' containment reference list.
+	 * The cached value of the '{@link #getObjectRoles() <em>Object Roles</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEntityRoles()
+	 * @see #getObjectRoles()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<EntityRole> entityRoles;
+	protected EList<ObjectRole> objectRoles;
 
 	/**
 	 * The cached value of the '{@link #getSubTypes() <em>Sub Types</em>}' containment reference list.
@@ -115,11 +115,11 @@ public class SchemaImpl extends EObjectImpl implements Schema {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<EntityRole> getEntityRoles() {
-		if (entityRoles == null) {
-			entityRoles = new EObjectContainmentEList<EntityRole>(EntityRole.class, this, net.orm.Package.SCHEMA__ENTITY_ROLES);
+	public EList<ObjectRole> getObjectRoles() {
+		if (objectRoles == null) {
+			objectRoles = new EObjectContainmentEList<ObjectRole>(ObjectRole.class, this, net.orm.Package.SCHEMA__OBJECT_ROLES);
 		}
-		return entityRoles;
+		return objectRoles;
 	}
 
 	/**
@@ -156,8 +156,8 @@ public class SchemaImpl extends EObjectImpl implements Schema {
 		switch (featureID) {
 			case net.orm.Package.SCHEMA__SCHEMA_SHAPES:
 				return ((InternalEList<?>)getSchemaShapes()).basicRemove(otherEnd, msgs);
-			case net.orm.Package.SCHEMA__ENTITY_ROLES:
-				return ((InternalEList<?>)getEntityRoles()).basicRemove(otherEnd, msgs);
+			case net.orm.Package.SCHEMA__OBJECT_ROLES:
+				return ((InternalEList<?>)getObjectRoles()).basicRemove(otherEnd, msgs);
 			case net.orm.Package.SCHEMA__SUB_TYPES:
 				return ((InternalEList<?>)getSubTypes()).basicRemove(otherEnd, msgs);
 			case net.orm.Package.SCHEMA__CONSTRAINTS:
@@ -176,8 +176,8 @@ public class SchemaImpl extends EObjectImpl implements Schema {
 		switch (featureID) {
 			case net.orm.Package.SCHEMA__SCHEMA_SHAPES:
 				return getSchemaShapes();
-			case net.orm.Package.SCHEMA__ENTITY_ROLES:
-				return getEntityRoles();
+			case net.orm.Package.SCHEMA__OBJECT_ROLES:
+				return getObjectRoles();
 			case net.orm.Package.SCHEMA__SUB_TYPES:
 				return getSubTypes();
 			case net.orm.Package.SCHEMA__CONSTRAINTS:
@@ -199,9 +199,9 @@ public class SchemaImpl extends EObjectImpl implements Schema {
 				getSchemaShapes().clear();
 				getSchemaShapes().addAll((Collection<? extends SchemaShape>)newValue);
 				return;
-			case net.orm.Package.SCHEMA__ENTITY_ROLES:
-				getEntityRoles().clear();
-				getEntityRoles().addAll((Collection<? extends EntityRole>)newValue);
+			case net.orm.Package.SCHEMA__OBJECT_ROLES:
+				getObjectRoles().clear();
+				getObjectRoles().addAll((Collection<? extends ObjectRole>)newValue);
 				return;
 			case net.orm.Package.SCHEMA__SUB_TYPES:
 				getSubTypes().clear();
@@ -226,8 +226,8 @@ public class SchemaImpl extends EObjectImpl implements Schema {
 			case net.orm.Package.SCHEMA__SCHEMA_SHAPES:
 				getSchemaShapes().clear();
 				return;
-			case net.orm.Package.SCHEMA__ENTITY_ROLES:
-				getEntityRoles().clear();
+			case net.orm.Package.SCHEMA__OBJECT_ROLES:
+				getObjectRoles().clear();
 				return;
 			case net.orm.Package.SCHEMA__SUB_TYPES:
 				getSubTypes().clear();
@@ -249,8 +249,8 @@ public class SchemaImpl extends EObjectImpl implements Schema {
 		switch (featureID) {
 			case net.orm.Package.SCHEMA__SCHEMA_SHAPES:
 				return schemaShapes != null && !schemaShapes.isEmpty();
-			case net.orm.Package.SCHEMA__ENTITY_ROLES:
-				return entityRoles != null && !entityRoles.isEmpty();
+			case net.orm.Package.SCHEMA__OBJECT_ROLES:
+				return objectRoles != null && !objectRoles.isEmpty();
 			case net.orm.Package.SCHEMA__SUB_TYPES:
 				return subTypes != null && !subTypes.isEmpty();
 			case net.orm.Package.SCHEMA__CONSTRAINTS:
