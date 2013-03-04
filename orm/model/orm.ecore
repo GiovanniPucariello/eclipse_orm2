@@ -13,7 +13,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Predicate" eSuperTypes="#//SchemaShape #//Object">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameSpace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="Roles" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Roles" lowerBound="1" upperBound="-1"
         eType="#//Role" containment="true" resolveProxies="false"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isObject" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Arity" lowerBound="1" upperBound="-1"

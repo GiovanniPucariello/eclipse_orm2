@@ -635,7 +635,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_QmdKEcwjEd2LT5VXnQ0V4A" fontName="Segoe UI"/>
     <element xmi:type="ecore:EClass" href="orm.ecore#//ObjectRole"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QmdKEswjEd2LT5VXnQ0V4A" x="1092" y="324"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QmdKEswjEd2LT5VXnQ0V4A" x="1071" y="315"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_Zi3EYMwjEd2LT5VXnQ0V4A" type="Note">
     <children xmi:type="notation:Node" xmi:id="_Zi4SgMwjEd2LT5VXnQ0V4A" type="DiagramName">

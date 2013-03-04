@@ -66,7 +66,7 @@ public interface Predicate extends SchemaShape, net.orm.Object {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Roles</em>' containment reference list.
 	 * @see net.orm.Package#getPredicate_Roles()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<Role> getRoles();

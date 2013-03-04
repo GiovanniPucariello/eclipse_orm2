@@ -25,6 +25,7 @@
         visualID="3001"
         editPartClassName="RoleEditPart"
         itemSemanticEditPolicyClassName="RoleItemSemanticEditPolicy"
+        notationViewFactoryClassName="RoleViewFactory"
         canonicalEditPolicyClassName="RoleCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="RoleGraphicalNodeEditPolicy"
         createCommandClassName="RoleCreateCommand"
@@ -51,6 +52,7 @@
         visualID="2001"
         editPartClassName="PredicateEditPart"
         itemSemanticEditPolicyClassName="PredicateItemSemanticEditPolicy"
+        notationViewFactoryClassName="PredicateViewFactory"
         canonicalEditPolicyClassName="PredicateCanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.0"
         graphicalNodeEditPolicyClassName="PredicateGraphicalNodeEditPolicy"
@@ -78,6 +80,7 @@
         visualID="2002"
         editPartClassName="ObjectEditPart"
         itemSemanticEditPolicyClassName="ObjectItemSemanticEditPolicy"
+        notationViewFactoryClassName="ObjectViewFactory"
         canonicalEditPolicyClassName="ObjectCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="ObjectGraphicalNodeEditPolicy"
         createCommandClassName="ObjectCreateCommand">
@@ -102,6 +105,7 @@
           visualID="5001"
           editPartClassName="ObjectNameEditPart"
           itemSemanticEditPolicyClassName="ObjectNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="ObjectNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -124,6 +128,7 @@
         visualID="4001"
         editPartClassName="ObjectRoleEditPart"
         itemSemanticEditPolicyClassName="ObjectRoleItemSemanticEditPolicy"
+        notationViewFactoryClassName="ObjectRoleViewFactory"
         createCommandClassName="ObjectRoleCreateCommand"
         reorientCommandClassName="ObjectRoleReorientCommand">
       <diagramRunTimeClass
@@ -153,6 +158,7 @@
         visualID="4004"
         editPartClassName="ObjectRole2EditPart"
         itemSemanticEditPolicyClassName="ObjectRole2ItemSemanticEditPolicy"
+        notationViewFactoryClassName="ObjectRoleViewFactory"
         createCommandClassName="ObjectRole2CreateCommand"
         reorientCommandClassName="ObjectRole2ReorientCommand">
       <diagramRunTimeClass
@@ -182,6 +188,7 @@
         visualID="4002"
         editPartClassName="UniquenessConstraintEditPart"
         itemSemanticEditPolicyClassName="UniquenessConstraintItemSemanticEditPolicy"
+        notationViewFactoryClassName="UniquenessConstraintViewFactory"
         createCommandClassName="UniquenessConstraintCreateCommand"
         reorientCommandClassName="UniquenessConstraintReorientCommand">
       <diagramRunTimeClass
@@ -210,6 +217,7 @@
         visualID="4003"
         editPartClassName="SubTypeEditPart"
         itemSemanticEditPolicyClassName="SubTypeItemSemanticEditPolicy"
+        notationViewFactoryClassName="SubTypeViewFactory"
         createCommandClassName="SubTypeCreateCommand"
         reorientCommandClassName="SubTypeReorientCommand">
       <diagramRunTimeClass
@@ -338,183 +346,6 @@
     <requiredPlugins>org.eclipse.gmf.runtime.draw2d.ui</requiredPlugins>
   </plugin>
   <editor/>
-  <navigator>
-    <childReferences
-        child="//@diagram"/>
-    <childReferences
-        parent="//@diagram/@topLevelNodes.0"
-        child="//@diagram/@childNodes.0"/>
-    <childReferences
-        parent="//@diagram"
-        child="//@diagram/@topLevelNodes.0"/>
-    <childReferences
-        parent="//@diagram"
-        child="//@diagram/@topLevelNodes.1"/>
-    <childReferences
-        parent="//@diagram"
-        child="//@diagram/@links.0"
-        groupName="links"
-        groupIcon="icons/linksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.0"
-        child="//@diagram/@childNodes.0"
-        referenceType="out_target"
-        groupName="target"
-        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.0"
-        child="//@diagram/@links.0"
-        referenceType="in_source"
-        groupName="incoming links"
-        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.0"
-        child="//@diagram/@topLevelNodes.0"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@topLevelNodes.0"
-        child="//@diagram/@links.0"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.0"
-        child="//@diagram/@topLevelNodes.1"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@topLevelNodes.1"
-        child="//@diagram/@links.0"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram"
-        child="//@diagram/@links.1"
-        groupName="links"
-        groupIcon="icons/linksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.1"
-        child="//@diagram/@topLevelNodes.0"
-        referenceType="out_target"
-        groupName="target"
-        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@topLevelNodes.0"
-        child="//@diagram/@links.1"
-        referenceType="in_source"
-        groupName="incoming links"
-        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.1"
-        child="//@diagram/@topLevelNodes.1"
-        referenceType="out_target"
-        groupName="target"
-        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@topLevelNodes.1"
-        child="//@diagram/@links.1"
-        referenceType="in_source"
-        groupName="incoming links"
-        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.1"
-        child="//@diagram/@childNodes.0"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.0"
-        child="//@diagram/@links.1"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram"
-        child="//@diagram/@links.2"
-        groupName="links"
-        groupIcon="icons/linksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.2"
-        child="//@diagram/@childNodes.0"
-        referenceType="out_target"
-        groupName="target"
-        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.0"
-        child="//@diagram/@links.2"
-        referenceType="in_source"
-        groupName="incoming links"
-        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.2"
-        child="//@diagram/@childNodes.0"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@childNodes.0"
-        child="//@diagram/@links.2"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram"
-        child="//@diagram/@links.3"
-        groupName="links"
-        groupIcon="icons/linksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.3"
-        child="//@diagram/@topLevelNodes.0"
-        referenceType="out_target"
-        groupName="target"
-        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@topLevelNodes.0"
-        child="//@diagram/@links.3"
-        referenceType="in_source"
-        groupName="incoming links"
-        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.3"
-        child="//@diagram/@topLevelNodes.1"
-        referenceType="out_target"
-        groupName="target"
-        groupIcon="icons/linkTargetNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@topLevelNodes.1"
-        child="//@diagram/@links.3"
-        referenceType="in_source"
-        groupName="incoming links"
-        groupIcon="icons/incomingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.3"
-        child="//@diagram/@topLevelNodes.0"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@topLevelNodes.0"
-        child="//@diagram/@links.3"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@links.3"
-        child="//@diagram/@topLevelNodes.1"
-        referenceType="in_source"
-        groupName="source"
-        groupIcon="icons/linkSourceNavigatorGroup.gif"/>
-    <childReferences
-        parent="//@diagram/@topLevelNodes.1"
-        child="//@diagram/@links.3"
-        referenceType="out_target"
-        groupName="outgoing links"
-        groupIcon="icons/outgoingLinksNavigatorGroup.gif"/>
-  </navigator>
   <diagramUpdater/>
   <propertySheet>
     <tabs
@@ -531,10 +362,239 @@
           xsi:type="gmfgen:TypeTabFilter">
         <types>org.eclipse.gmf.runtime.notation.View</types>
         <types>org.eclipse.gef.EditPart</types>
-        <generatedTypes>abstractNavigatorItem</generatedTypes>
       </filter>
     </tabs>
   </propertySheet>
+  <application>
+    <sharedContributionItems
+        xsi:type="gmfgen:GenActionFactoryContributionItem"
+        name="CLOSE"/>
+    <sharedContributionItems
+        xsi:type="gmfgen:GenActionFactoryContributionItem"
+        name="CLOSE_ALL"/>
+    <sharedContributionItems
+        xsi:type="gmfgen:GenActionFactoryContributionItem"
+        name="SAVE"/>
+    <sharedContributionItems
+        xsi:type="gmfgen:GenActionFactoryContributionItem"
+        name="SAVE_AS"/>
+    <sharedContributionItems
+        xsi:type="gmfgen:GenActionFactoryContributionItem"
+        name="SAVE_ALL"/>
+    <sharedContributionItems
+        xsi:type="gmfgen:GenActionFactoryContributionItem"
+        name="QUIT"/>
+    <sharedContributionItems
+        xsi:type="gmfgen:GenActionFactoryContributionItem"
+        name="UNDO"/>
+    <sharedContributionItems
+        xsi:type="gmfgen:GenActionFactoryContributionItem"
+        name="REDO"/>
+    <sharedContributionItems
+        xsi:type="gmfgen:GenActionFactoryContributionItem"
+        name="CUT"/>
+    <sharedContributionItems
+        xsi:type="gmfgen:GenActionFactoryContributionItem"
+        name="COPY"/>
+    <sharedContributionItems
+        xsi:type="gmfgen:GenActionFactoryContributionItem"
+        name="PASTE"/>
+    <sharedContributionItems
+        xsi:type="gmfgen:GenActionFactoryContributionItem"
+        name="DELETE"/>
+    <sharedContributionItems
+        xsi:type="gmfgen:GenActionFactoryContributionItem"
+        name="SELECT_ALL"/>
+    <sharedContributionItems
+        xsi:type="gmfgen:GenActionFactoryContributionItem"
+        name="OPEN_NEW_WINDOW"/>
+    <sharedContributionItems
+        xsi:type="gmfgen:GenActionFactoryContributionItem"
+        name="PRINT"/>
+    <mainMenu>
+      <items
+          xsi:type="gmfgen:GenMenuManager"
+          iD="org.eclipse.ui.IWorkbenchActionConstants.M_FILE"
+          name="&amp;File">
+        <items
+            xsi:type="gmfgen:GenGroupMarker"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.FILE_START"/>
+        <items
+            xsi:type="gmfgen:GenMenuManager"
+            iD="&quot;new&quot;"
+            name="&amp;New">
+          <items
+              xsi:type="gmfgen:GenGroupMarker"
+              groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
+        </items>
+        <items
+            xsi:type="gmfgen:GenSeparator"/>
+        <items
+            xsi:type="gmfgen:GenGroupMarker"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
+        <items
+            xsi:type="gmfgen:GenSeparator"/>
+        <items
+            xsi:type="gmfgen:GenSharedContributionItem"
+            actualItem="//@application/@sharedContributionItems.0"/>
+        <items
+            xsi:type="gmfgen:GenSharedContributionItem"
+            actualItem="//@application/@sharedContributionItems.1"/>
+        <items
+            xsi:type="gmfgen:GenSeparator"/>
+        <items
+            xsi:type="gmfgen:GenSharedContributionItem"
+            actualItem="//@application/@sharedContributionItems.2"/>
+        <items
+            xsi:type="gmfgen:GenSharedContributionItem"
+            actualItem="//@application/@sharedContributionItems.3"/>
+        <items
+            xsi:type="gmfgen:GenSharedContributionItem"
+            actualItem="//@application/@sharedContributionItems.4"/>
+        <items
+            xsi:type="gmfgen:GenSeparator"/>
+        <items
+            xsi:type="gmfgen:GenSharedContributionItem"
+            actualItem="//@application/@sharedContributionItems.5"/>
+        <items
+            xsi:type="gmfgen:GenGroupMarker"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.FILE_END"/>
+      </items>
+      <items
+          xsi:type="gmfgen:GenMenuManager"
+          iD="org.eclipse.ui.IWorkbenchActionConstants.M_EDIT"
+          name="&amp;Edit">
+        <items
+            xsi:type="gmfgen:GenGroupMarker"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.EDIT_START"/>
+        <items
+            xsi:type="gmfgen:GenSharedContributionItem"
+            actualItem="//@application/@sharedContributionItems.6"/>
+        <items
+            xsi:type="gmfgen:GenSharedContributionItem"
+            actualItem="//@application/@sharedContributionItems.7"/>
+        <items
+            xsi:type="gmfgen:GenGroupMarker"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.UNDO_EXT"/>
+        <items
+            xsi:type="gmfgen:GenSeparator"/>
+        <items
+            xsi:type="gmfgen:GenSharedContributionItem"
+            actualItem="//@application/@sharedContributionItems.8"/>
+        <items
+            xsi:type="gmfgen:GenSharedContributionItem"
+            actualItem="//@application/@sharedContributionItems.9"/>
+        <items
+            xsi:type="gmfgen:GenSharedContributionItem"
+            actualItem="//@application/@sharedContributionItems.10"/>
+        <items
+            xsi:type="gmfgen:GenGroupMarker"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.CUT_EXT"/>
+        <items
+            xsi:type="gmfgen:GenSeparator"/>
+        <items
+            xsi:type="gmfgen:GenSharedContributionItem"
+            actualItem="//@application/@sharedContributionItems.11"/>
+        <items
+            xsi:type="gmfgen:GenSharedContributionItem"
+            actualItem="//@application/@sharedContributionItems.12"/>
+        <items
+            xsi:type="gmfgen:GenSeparator"/>
+        <items
+            xsi:type="gmfgen:GenGroupMarker"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.ADD_EXT"/>
+        <items
+            xsi:type="gmfgen:GenGroupMarker"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.EDIT_END"/>
+        <items
+            xsi:type="gmfgen:GenSeparator"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
+      </items>
+      <items
+          xsi:type="gmfgen:GenGroupMarker"
+          groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
+      <items
+          xsi:type="gmfgen:GenMenuManager"
+          iD="org.eclipse.ui.IWorkbenchActionConstants.M_WINDOW"
+          name="&amp;Window">
+        <items
+            xsi:type="gmfgen:GenSharedContributionItem"
+            actualItem="//@application/@sharedContributionItems.13"/>
+        <items
+            xsi:type="gmfgen:GenGroupMarker"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
+      </items>
+      <items
+          xsi:type="gmfgen:GenMenuManager"
+          iD="org.eclipse.ui.IWorkbenchActionConstants.M_HELP"
+          name="&amp;Help">
+        <items
+            xsi:type="gmfgen:GenGroupMarker"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.HELP_START"/>
+        <items
+            xsi:type="gmfgen:GenGroupMarker"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.HELP_END"/>
+        <items
+            xsi:type="gmfgen:GenGroupMarker"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
+      </items>
+    </mainMenu>
+    <mainToolBar>
+      <items
+          xsi:type="gmfgen:GenGroupMarker"
+          groupName="&quot;group.file&quot;"/>
+      <items
+          xsi:type="gmfgen:GenToolBarManager"
+          iD="org.eclipse.ui.IWorkbenchActionConstants.TOOLBAR_FILE">
+        <items
+            xsi:type="gmfgen:GenSeparator"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.NEW_GROUP"/>
+        <items
+            xsi:type="gmfgen:GenGroupMarker"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.NEW_EXT"/>
+        <items
+            xsi:type="gmfgen:GenGroupMarker"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.SAVE_GROUP"/>
+        <items
+            xsi:type="gmfgen:GenSharedContributionItem"
+            actualItem="//@application/@sharedContributionItems.2"/>
+        <items
+            xsi:type="gmfgen:GenGroupMarker"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.SAVE_EXT"/>
+        <items
+            xsi:type="gmfgen:GenSharedContributionItem"
+            actualItem="//@application/@sharedContributionItems.14"/>
+        <items
+            xsi:type="gmfgen:GenGroupMarker"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.PRINT_EXT"/>
+        <items
+            xsi:type="gmfgen:GenSeparator"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
+      </items>
+      <items
+          xsi:type="gmfgen:GenGroupMarker"
+          groupName="org.eclipse.ui.IWorkbenchActionConstants.MB_ADDITIONS"/>
+      <items
+          xsi:type="gmfgen:GenGroupMarker"
+          groupName="&quot;group.nav&quot;"/>
+      <items
+          xsi:type="gmfgen:GenGroupMarker"
+          groupName="org.eclipse.ui.IWorkbenchActionConstants.GROUP_EDITOR"/>
+      <items
+          xsi:type="gmfgen:GenGroupMarker"
+          groupName="org.eclipse.ui.IWorkbenchActionConstants.GROUP_HELP"/>
+      <items
+          xsi:type="gmfgen:GenToolBarManager"
+          iD="org.eclipse.ui.IWorkbenchActionConstants.TOOLBAR_HELP">
+        <items
+            xsi:type="gmfgen:GenSeparator"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.GROUP_HELP"/>
+        <items
+            xsi:type="gmfgen:GenGroupMarker"
+            groupName="org.eclipse.ui.IWorkbenchActionConstants.GROUP_APP"/>
+      </items>
+    </mainToolBar>
+  </application>
   <domainGenModel
       href="orm.genmodel#/"/>
   <labelParsers
