@@ -17,7 +17,7 @@
           value="black"/>
     </figures>
     <descriptors
-        name="EntityFigure">
+        name="ObjectFigure">
       <actualFigure
           xsi:type="gmfgraph:RoundedRectangle"
           lineKind="LINE_DASH"
@@ -27,7 +27,7 @@
             xsi:type="gmfgraph:GridLayout"/>
         <children
             xsi:type="gmfgraph:Label"
-            name="EntityNameFigure"
+            name="ObjectNameFigure"
             text="&lt;...>">
           <layoutData
               xsi:type="gmfgraph:GridLayoutData"
@@ -56,10 +56,10 @@
           figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors
-        name="EntityRoleFigure">
+        name="ObjectRoleFigure">
       <actualFigure
           xsi:type="gmfgraph:PolylineConnection"
-          name="EntityRoleFigure">
+          name="ObjectRoleFigure">
         <children
             xsi:type="gmfgraph:PolygonDecoration"
             name="MandatoryConstraintDecoration"/>
@@ -98,8 +98,8 @@
       name="Role"
       figure="RoleFigure"/>
   <nodes
-      name="Entity"
-      figure="EntityFigure"/>
+      name="Object"
+      figure="ObjectFigure"/>
   <nodes
       name="Predicate"
       figure="PredicateFigure"/>
@@ -110,10 +110,10 @@
       name="UniquenessConstraint"
       figure="UniquenessConstraintFigure"/>
   <connections
-      name="EntityRole"
-      figure="EntityRoleFigure"/>
+      name="ObjectRole"
+      figure="ObjectRoleFigure"/>
   <labels
-      name="EntityName"
-      figure="EntityFigure"
+      name="ObjectName"
+      figure="ObjectFigure"
       accessor="//@figures.0/@descriptors.0/@accessors.0"/>
 </gmfgraph:Canvas>

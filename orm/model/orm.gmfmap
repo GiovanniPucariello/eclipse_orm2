@@ -39,57 +39,57 @@
         href="orm.ecore#//Schema/schemaShapes"/>
     <ownedChild>
       <domainMetaElement
-          href="orm.ecore#//Entity"/>
+          href="orm.ecore#//Object"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping"
           viewPattern=""
           editorPattern=""
           editPattern="">
         <diagramLabel
-            href="orm.gmfgraph#EntityName"/>
+            href="orm.gmfgraph#ObjectName"/>
         <features
-            href="orm.ecore#//Entity/Name"/>
+            href="orm.ecore#//Object/Name"/>
       </labelMappings>
       <tool
           xsi:type="gmftool:CreationTool"
           href="orm.gmftool#//@palette/@tools.0/@tools.0"/>
       <diagramNode
-          href="orm.gmfgraph#Entity"/>
+          href="orm.gmfgraph#Object"/>
     </ownedChild>
   </nodes>
   <links>
     <domainMetaElement
-        href="orm.ecore#//EntityRole"/>
+        href="orm.ecore#//ObjectRole"/>
     <containmentFeature
-        href="orm.ecore#//Schema/EntityRoles"/>
+        href="orm.ecore#//Schema/ObjectRoles"/>
     <tool
         xsi:type="gmftool:CreationTool"
         href="orm.gmftool#//@palette/@tools.2/@tools.5"/>
     <diagramLink
-        href="orm.gmfgraph#EntityRole"/>
+        href="orm.gmfgraph#ObjectRole"/>
     <sourceMetaFeature
         xsi:type="ecore:EReference"
-        href="orm.ecore#//EntityRole/Entity"/>
+        href="orm.ecore#//ObjectRole/Entity"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="orm.ecore#//EntityRole/Role"/>
+        href="orm.ecore#//ObjectRole/Role"/>
   </links>
   <links>
     <domainMetaElement
-        href="orm.ecore#//EntityRole"/>
+        href="orm.ecore#//ObjectRole"/>
     <containmentFeature
-        href="orm.ecore#//Schema/EntityRoles"/>
+        href="orm.ecore#//Schema/ObjectRoles"/>
     <tool
         xsi:type="gmftool:CreationTool"
         href="orm.gmftool#//@palette/@tools.2/@tools.5"/>
     <diagramLink
-        href="orm.gmfgraph#EntityRole"/>
+        href="orm.gmfgraph#ObjectRole"/>
     <sourceMetaFeature
         xsi:type="ecore:EReference"
-        href="orm.ecore#//EntityRole/Role"/>
+        href="orm.ecore#//ObjectRole/Role"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="orm.ecore#//EntityRole/Entity"/>
+        href="orm.ecore#//ObjectRole/Entity"/>
   </links>
   <links>
     <domainMetaElement

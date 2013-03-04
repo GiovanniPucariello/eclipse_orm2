@@ -7,13 +7,13 @@
       title="ormPalette">
     <tools
         xsi:type="gmftool:ToolGroup"
-        title="Entity Value Creation"
+        title="Object Value Creation"
         description="Value Entiy Options"
         collapsible="true">
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Entity"
-          description="Create Entity Type">
+          title="Object"
+          description="Create Object Type">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
       </tools>
@@ -75,8 +75,8 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="EntityRole"
-          description="Create new EntityRole">
+          title="ObjectRole"
+          description="Create new ObjectRole">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
       </tools>
