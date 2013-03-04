@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gmfmap:Mapping xmi:version="2.0"
+<gmfmap:Mapping
+    xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
@@ -69,7 +70,7 @@
         href="orm.gmfgraph#ObjectRole"/>
     <sourceMetaFeature
         xsi:type="ecore:EReference"
-        href="orm.ecore#//ObjectRole/Entity"/>
+        href="orm.ecore#//ObjectRole/Object"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="orm.ecore#//ObjectRole/Role"/>
@@ -89,7 +90,7 @@
         href="orm.ecore#//ObjectRole/Role"/>
     <linkMetaFeature
         xsi:type="ecore:EReference"
-        href="orm.ecore#//ObjectRole/Entity"/>
+        href="orm.ecore#//ObjectRole/Object"/>
   </links>
   <links>
     <domainMetaElement
