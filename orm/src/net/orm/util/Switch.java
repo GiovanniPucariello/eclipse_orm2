@@ -49,7 +49,7 @@ import org.eclipse.emf.ecore.EPackage;
  * @see net.orm.Package
  * @generated
  */
-public class Switch<T> extends Switch<T> {
+public class Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -475,20 +475,6 @@ public class Switch<T> extends Switch<T> {
 		return null;
 	}
 
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch, but this is the last case anyway.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>EObject</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject)
-	 * @generated
-	 */
-	@Override
-	public T defaultCase(EObject object) {
-		return null;
-	}
+	
 
 } //Switch

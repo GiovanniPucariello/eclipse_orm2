@@ -202,10 +202,7 @@ public class AdapterFactory extends AdapterFactoryImpl {
 			public Adapter caseObjectRole(ObjectRole object) {
 				return createObjectRoleAdapter();
 			}
-			@Override
-			public Adapter defaultCase(EObject object) {
-				return createEObjectAdapter();
-			}
+			
 		};
 
 	
