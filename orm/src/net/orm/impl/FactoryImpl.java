@@ -21,7 +21,6 @@ import net.orm.Intransitive;
 import net.orm.Irreflexive;
 import net.orm.MandatoryConstraint;
 import net.orm.ObjectRole;
-import net.orm.Package;
 import net.orm.Predicate;
 import net.orm.ReferenceScheme;
 import net.orm.RingConstraint;
