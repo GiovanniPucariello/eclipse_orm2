@@ -11,35 +11,6 @@
         href="orm.ecore#//Schema/schemaShapes"/>
     <ownedChild>
       <domainMetaElement
-          href="orm.ecore#//Predicate"/>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="orm.gmftool#//@palette/@tools.2/@tools.3"/>
-      <diagramNode
-          href="orm.gmfgraph#Predicate"/>
-      <children
-          referencedChild="//@nodes.0/@ownedChild/@children.0/@ownedChild">
-        <containmentFeature
-            href="orm.ecore#//Predicate/Roles"/>
-        <childrenFeature
-            href="orm.ecore#//Predicate/Roles"/>
-        <ownedChild>
-          <domainMetaElement
-              href="orm.ecore#//Role"/>
-          <tool
-              xsi:type="gmftool:CreationTool"
-              href="orm.gmftool#//@palette/@tools.2/@tools.4"/>
-          <diagramNode
-              href="orm.gmfgraph#Role"/>
-        </ownedChild>
-      </children>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="orm.ecore#//Schema/schemaShapes"/>
-    <ownedChild>
-      <domainMetaElement
           href="orm.ecore#//Object"/>
       <labelMappings
           xsi:type="gmfmap:FeatureLabelMapping"

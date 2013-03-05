@@ -22,7 +22,6 @@
         name="ObjectFigure">
       <actualFigure
           xsi:type="gmfgraph:RoundedRectangle"
-          lineKind="LINE_DASH"
           cornerWidth="16"
           cornerHeight="16">
         <layout
@@ -52,7 +51,8 @@
             minorSpacing="1"/>
         <children
             xsi:type="gmfgraph:Rectangle"
-            name="RoleFigure"/>
+            name="RoleFigure"
+            lineKind="LINE_DASH"/>
       </actualFigure>
       <accessors
           figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
@@ -102,9 +102,6 @@
   <nodes
       name="Object"
       figure="ObjectFigure"/>
-  <nodes
-      name="Predicate"
-      figure="PredicateFigure"/>
   <connections
       name="SubType"
       figure="SubTypeFigure"/>
@@ -114,6 +111,9 @@
   <connections
       name="ObjectRole"
       figure="ObjectRoleFigure"/>
+  <compartments
+      name="Predicate"
+      figure="PredicateFigure"/>
   <labels
       name="ObjectName"
       figure="ObjectFigure"

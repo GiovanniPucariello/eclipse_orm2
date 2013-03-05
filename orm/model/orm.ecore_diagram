@@ -63,7 +63,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_WDLQAbavEd2ezYC4YEnv8w" fontName="Segoe UI"/>
     <element xmi:type="ecore:EClass" href="orm.ecore#//Object"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WDLQAravEd2ezYC4YEnv8w" x="1128" y="144"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WDLQAravEd2ezYC4YEnv8w" x="1152" y="144"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_WDPhcLavEd2ezYC4YEnv8w" type="2001">
     <children xmi:type="notation:Node" xmi:id="_WDQIgLavEd2ezYC4YEnv8w" type="5001"/>
@@ -96,7 +96,7 @@
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_WDPhcbavEd2ezYC4YEnv8w" fontName="Segoe UI"/>
     <element xmi:type="ecore:EClass" href="orm.ecore#//Predicate"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WDPhcravEd2ezYC4YEnv8w" x="852" y="288"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WDPhcravEd2ezYC4YEnv8w" x="774" y="288"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_WDXdQLavEd2ezYC4YEnv8w" type="2001">
     <children xmi:type="notation:Node" xmi:id="_WDYEULavEd2ezYC4YEnv8w" type="5001"/>
