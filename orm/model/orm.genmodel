@@ -4,63 +4,63 @@
     complianceLevel="6.0" copyrightFields="false">
   <foreignModel>orm.ecore</foreignModel>
   <genPackages prefix="" basePackage="net" disposableProviderFactory="true" ecorePackage="orm.ecore#/">
-    <genClasses ecoreClass="orm.ecore#//Role">
+    <genClasses image="false" ecoreClass="orm.ecore#//Role">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Role/phrase"/>
     </genClasses>
-    <genClasses ecoreClass="orm.ecore#//Object">
+    <genClasses image="false" ecoreClass="orm.ecore#//Object">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Object/occursElseWhere"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Object/isIndependent"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference orm.ecore#//Object/ReferenceScheme"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Object/Name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Object/isValueType"/>
     </genClasses>
-    <genClasses ecoreClass="orm.ecore#//Predicate">
+    <genClasses image="false" ecoreClass="orm.ecore#//Predicate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Predicate/nameSpace"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Predicate/Roles"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Predicate/isObject"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Predicate/Arity"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Predicate/Constraints"/>
     </genClasses>
-    <genClasses ecoreClass="orm.ecore#//Schema">
+    <genClasses image="false" ecoreClass="orm.ecore#//Schema">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Schema/schemaShapes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Schema/ObjectRoles"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Schema/SubTypes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Schema/Constraints"/>
     </genClasses>
     <genClasses image="false" ecoreClass="orm.ecore#//SchemaShape"/>
-    <genClasses ecoreClass="orm.ecore#//Constraint">
+    <genClasses image="false" ecoreClass="orm.ecore#//Constraint">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference orm.ecore#//Constraint/Roles"/>
     </genClasses>
-    <genClasses ecoreClass="orm.ecore#//MandatoryConstraint">
+    <genClasses image="false" ecoreClass="orm.ecore#//MandatoryConstraint">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//MandatoryConstraint/isDisjunctive"/>
     </genClasses>
-    <genClasses ecoreClass="orm.ecore#//UniquenessConstraint">
+    <genClasses image="false" ecoreClass="orm.ecore#//UniquenessConstraint">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//UniquenessConstraint/isPrimary"/>
     </genClasses>
-    <genClasses ecoreClass="orm.ecore#//ReferenceScheme"/>
-    <genClasses ecoreClass="orm.ecore#//ValueConstraint"/>
-    <genClasses ecoreClass="orm.ecore#//ExternalizableConstraint">
+    <genClasses image="false" ecoreClass="orm.ecore#//ReferenceScheme"/>
+    <genClasses image="false" ecoreClass="orm.ecore#//ValueConstraint"/>
+    <genClasses image="false" ecoreClass="orm.ecore#//ExternalizableConstraint">
       <genOperations ecoreOperation="orm.ecore#//ExternalizableConstraint/isExternal"/>
     </genClasses>
-    <genClasses ecoreClass="orm.ecore#//SetComparisonConstraint"/>
-    <genClasses ecoreClass="orm.ecore#//ConstrainingValues"/>
-    <genClasses ecoreClass="orm.ecore#//ConstrainingRange"/>
-    <genClasses ecoreClass="orm.ecore#//SubSetConstraint"/>
-    <genClasses ecoreClass="orm.ecore#//EqualityConstraint"/>
-    <genClasses ecoreClass="orm.ecore#//ExclusionConstraint"/>
-    <genClasses ecoreClass="orm.ecore#//SubType">
+    <genClasses image="false" ecoreClass="orm.ecore#//SetComparisonConstraint"/>
+    <genClasses image="false" ecoreClass="orm.ecore#//ConstrainingValues"/>
+    <genClasses image="false" ecoreClass="orm.ecore#//ConstrainingRange"/>
+    <genClasses image="false" ecoreClass="orm.ecore#//SubSetConstraint"/>
+    <genClasses image="false" ecoreClass="orm.ecore#//EqualityConstraint"/>
+    <genClasses image="false" ecoreClass="orm.ecore#//ExclusionConstraint"/>
+    <genClasses image="false" ecoreClass="orm.ecore#//SubType">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference orm.ecore#//SubType/Parent"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference orm.ecore#//SubType/Child"/>
     </genClasses>
-    <genClasses ecoreClass="orm.ecore#//FrequencyConstraint"/>
-    <genClasses ecoreClass="orm.ecore#//RingConstraint"/>
-    <genClasses ecoreClass="orm.ecore#//Acyclic"/>
-    <genClasses ecoreClass="orm.ecore#//Irreflexive"/>
-    <genClasses ecoreClass="orm.ecore#//Intransitive"/>
-    <genClasses ecoreClass="orm.ecore#//Asymmetric"/>
-    <genClasses ecoreClass="orm.ecore#//AntiSymmetric"/>
-    <genClasses ecoreClass="orm.ecore#//Symmetric"/>
-    <genClasses ecoreClass="orm.ecore#//ObjectRole">
+    <genClasses image="false"  ecoreClass="orm.ecore#//FrequencyConstraint"/>
+    <genClasses image="false" ecoreClass="orm.ecore#//RingConstraint"/>
+    <genClasses image="false" ecoreClass="orm.ecore#//Acyclic"/>
+    <genClasses image="false" ecoreClass="orm.ecore#//Irreflexive"/>
+    <genClasses image="false" ecoreClass="orm.ecore#//Intransitive"/>
+    <genClasses image="false" ecoreClass="orm.ecore#//Asymmetric"/>
+    <genClasses image="false" ecoreClass="orm.ecore#//AntiSymmetric"/>
+    <genClasses image="false" ecoreClass="orm.ecore#//Symmetric"/>
+    <genClasses image="false" ecoreClass="orm.ecore#//ObjectRole">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference orm.ecore#//ObjectRole/Object"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference orm.ecore#//ObjectRole/Role"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ObjectRole/Mandatory"/>
