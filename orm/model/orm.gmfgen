@@ -69,6 +69,31 @@
         </modelFacet>
       </labels>
     </topLevelNodes>
+    <topLevelNodes
+        visualID="2003"
+        editPartClassName="Object2EditPart"
+        itemSemanticEditPolicyClassName="Object2ItemSemanticEditPolicy"
+        canonicalEditPolicyClassName="Object2CanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="Object2GraphicalNodeEditPolicy"
+        createCommandClassName="Object2CreateCommand">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:SpecializationType"
+          metamodelType="//@diagram/@topLevelNodes.0/@elementType"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="RoleFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class RoleFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public RoleFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;org.eclipse.draw2d.PolylineDecoration uniquenessConsraintDecorator0 = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#xA;&#xA;this.add(uniquenessConsraintDecorator0);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass
+            href="orm.genmodel#//orm/Object"/>
+        <containmentMetaFeature
+            href="orm.genmodel#//orm/Schema/schemaShapes"/>
+        <childMetaFeature
+            href="orm.genmodel#//orm/Schema/schemaShapes"/>
+      </modelFacet>
+    </topLevelNodes>
     <links
         visualID="4001"
         editPartClassName="ObjectRoleEditPart"
@@ -205,7 +230,7 @@
             xsi:type="gmfgen:ToolEntry"
             title="Object"
             description="Create Object Type"
-            genNodes="//@diagram/@topLevelNodes.0"/>
+            genNodes="//@diagram/@topLevelNodes.0 //@diagram/@topLevelNodes.1"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Value"

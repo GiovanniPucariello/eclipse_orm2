@@ -29,6 +29,19 @@
           href="orm.gmfgraph#Object"/>
     </ownedChild>
   </nodes>
+  <nodes>
+    <containmentFeature
+        href="orm.ecore#//Schema/schemaShapes"/>
+    <ownedChild>
+      <domainMetaElement
+          href="orm.ecore#//Object"/>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="orm.gmftool#//@palette/@tools.0/@tools.0"/>
+      <diagramNode
+          href="orm.gmfgraph#Role"/>
+    </ownedChild>
+  </nodes>
   <links>
     <domainMetaElement
         href="orm.ecore#//ObjectRole"/>
