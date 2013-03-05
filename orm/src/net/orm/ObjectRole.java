@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ObjectRole extends EObject {
+public interface ObjectRole extends SchemaDiagramMember {
 	/**
 	 * Returns the value of the '<em><b>Object</b></em>' reference.
 	 * <!-- begin-user-doc -->

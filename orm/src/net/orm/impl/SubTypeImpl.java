@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public class SubTypeImpl extends EObjectImpl implements SubType {
+public class SubTypeImpl extends SchemaDiagramMemberImpl implements SubType {
 	/**
 	 * The cached value of the '{@link #getParent() <em>Parent</em>}' reference.
 	 * <!-- begin-user-doc -->

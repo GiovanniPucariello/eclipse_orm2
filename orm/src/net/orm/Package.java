@@ -60,25 +60,6 @@ public interface Package extends EPackage {
 	Package eINSTANCE = net.orm.impl.PackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link net.orm.impl.SchemaShapeImpl <em>Schema Shape</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see net.orm.impl.SchemaShapeImpl
-	 * @see net.orm.impl.PackageImpl#getSchemaShape()
-	 * @generated
-	 */
-	int SCHEMA_SHAPE = 4;
-
-	/**
-	 * The number of structural features of the '<em>Schema Shape</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEMA_SHAPE_FEATURE_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link net.orm.impl.RoleImpl <em>Role</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -95,7 +76,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROLE__PHRASE = SCHEMA_SHAPE_FEATURE_COUNT + 0;
+	int ROLE__PHRASE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Role</em>' class.
@@ -104,7 +85,26 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ROLE_FEATURE_COUNT = SCHEMA_SHAPE_FEATURE_COUNT + 1;
+	int ROLE_FEATURE_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link net.orm.impl.SchemaDiagramMemberImpl <em>Schema Diagram Member</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see net.orm.impl.SchemaDiagramMemberImpl
+	 * @see net.orm.impl.PackageImpl#getSchemaDiagramMember()
+	 * @generated
+	 */
+	int SCHEMA_DIAGRAM_MEMBER = 26;
+
+	/**
+	 * The number of structural features of the '<em>Schema Diagram Member</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCHEMA_DIAGRAM_MEMBER_FEATURE_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link net.orm.impl.ObjectImpl <em>Object</em>}' class.
@@ -123,7 +123,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT__OCCURS_ELSE_WHERE = SCHEMA_SHAPE_FEATURE_COUNT + 0;
+	int OBJECT__OCCURS_ELSE_WHERE = SCHEMA_DIAGRAM_MEMBER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Is Independent</b></em>' attribute.
@@ -132,7 +132,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT__IS_INDEPENDENT = SCHEMA_SHAPE_FEATURE_COUNT + 1;
+	int OBJECT__IS_INDEPENDENT = SCHEMA_DIAGRAM_MEMBER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Reference Scheme</b></em>' reference.
@@ -141,7 +141,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT__REFERENCE_SCHEME = SCHEMA_SHAPE_FEATURE_COUNT + 2;
+	int OBJECT__REFERENCE_SCHEME = SCHEMA_DIAGRAM_MEMBER_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -150,7 +150,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT__NAME = SCHEMA_SHAPE_FEATURE_COUNT + 3;
+	int OBJECT__NAME = SCHEMA_DIAGRAM_MEMBER_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Is Value Type</b></em>' attribute.
@@ -159,7 +159,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT__IS_VALUE_TYPE = SCHEMA_SHAPE_FEATURE_COUNT + 4;
+	int OBJECT__IS_VALUE_TYPE = SCHEMA_DIAGRAM_MEMBER_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Object</em>' class.
@@ -168,7 +168,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT_FEATURE_COUNT = SCHEMA_SHAPE_FEATURE_COUNT + 5;
+	int OBJECT_FEATURE_COUNT = SCHEMA_DIAGRAM_MEMBER_FEATURE_COUNT + 5;
 
 	/**
 	 * The meta object id for the '{@link net.orm.impl.PredicateImpl <em>Predicate</em>}' class.
@@ -187,7 +187,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE__OCCURS_ELSE_WHERE = SCHEMA_SHAPE_FEATURE_COUNT + 0;
+	int PREDICATE__OCCURS_ELSE_WHERE = OBJECT__OCCURS_ELSE_WHERE;
 
 	/**
 	 * The feature id for the '<em><b>Is Independent</b></em>' attribute.
@@ -196,7 +196,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE__IS_INDEPENDENT = SCHEMA_SHAPE_FEATURE_COUNT + 1;
+	int PREDICATE__IS_INDEPENDENT = OBJECT__IS_INDEPENDENT;
 
 	/**
 	 * The feature id for the '<em><b>Reference Scheme</b></em>' reference.
@@ -205,7 +205,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE__REFERENCE_SCHEME = SCHEMA_SHAPE_FEATURE_COUNT + 2;
+	int PREDICATE__REFERENCE_SCHEME = OBJECT__REFERENCE_SCHEME;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -214,7 +214,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE__NAME = SCHEMA_SHAPE_FEATURE_COUNT + 3;
+	int PREDICATE__NAME = OBJECT__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Is Value Type</b></em>' attribute.
@@ -223,7 +223,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE__IS_VALUE_TYPE = SCHEMA_SHAPE_FEATURE_COUNT + 4;
+	int PREDICATE__IS_VALUE_TYPE = OBJECT__IS_VALUE_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Name Space</b></em>' attribute.
@@ -232,7 +232,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE__NAME_SPACE = SCHEMA_SHAPE_FEATURE_COUNT + 5;
+	int PREDICATE__NAME_SPACE = OBJECT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' containment reference list.
@@ -241,7 +241,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE__ROLES = SCHEMA_SHAPE_FEATURE_COUNT + 6;
+	int PREDICATE__ROLES = OBJECT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Is Object</b></em>' attribute.
@@ -250,7 +250,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE__IS_OBJECT = SCHEMA_SHAPE_FEATURE_COUNT + 7;
+	int PREDICATE__IS_OBJECT = OBJECT_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Arity</b></em>' attribute list.
@@ -259,7 +259,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE__ARITY = SCHEMA_SHAPE_FEATURE_COUNT + 8;
+	int PREDICATE__ARITY = OBJECT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
@@ -268,7 +268,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE__CONSTRAINTS = SCHEMA_SHAPE_FEATURE_COUNT + 9;
+	int PREDICATE__CONSTRAINTS = OBJECT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Predicate</em>' class.
@@ -277,62 +277,35 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PREDICATE_FEATURE_COUNT = SCHEMA_SHAPE_FEATURE_COUNT + 10;
+	int PREDICATE_FEATURE_COUNT = OBJECT_FEATURE_COUNT + 5;
 
 	/**
-	 * The meta object id for the '{@link net.orm.impl.SchemaImpl <em>Schema</em>}' class.
+	 * The meta object id for the '{@link net.orm.impl.SchemaDiagramImpl <em>Schema Diagram</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see net.orm.impl.SchemaImpl
-	 * @see net.orm.impl.PackageImpl#getSchema()
+	 * @see net.orm.impl.SchemaDiagramImpl
+	 * @see net.orm.impl.PackageImpl#getSchemaDiagram()
 	 * @generated
 	 */
-	int SCHEMA = 3;
+	int SCHEMA_DIAGRAM = 3;
 
 	/**
-	 * The feature id for the '<em><b>Schema Shapes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEMA__SCHEMA_SHAPES = 0;
-
-	/**
-	 * The feature id for the '<em><b>Object Roles</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Schema Diagram Members</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEMA__OBJECT_ROLES = 1;
+	int SCHEMA_DIAGRAM__SCHEMA_DIAGRAM_MEMBERS = 0;
 
 	/**
-	 * The feature id for the '<em><b>Sub Types</b></em>' containment reference list.
+	 * The number of structural features of the '<em>Schema Diagram</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCHEMA__SUB_TYPES = 2;
-
-	/**
-	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEMA__CONSTRAINTS = 3;
-
-	/**
-	 * The number of structural features of the '<em>Schema</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCHEMA_FEATURE_COUNT = 4;
+	int SCHEMA_DIAGRAM_FEATURE_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link net.orm.impl.ConstraintImpl <em>Constraint</em>}' class.
@@ -342,7 +315,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getConstraint()
 	 * @generated
 	 */
-	int CONSTRAINT = 5;
+	int CONSTRAINT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' reference list.
@@ -370,7 +343,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getMandatoryConstraint()
 	 * @generated
 	 */
-	int MANDATORY_CONSTRAINT = 6;
+	int MANDATORY_CONSTRAINT = 5;
 
 	/**
 	 * The meta object id for the '{@link net.orm.impl.ExternalizableConstraintImpl <em>Externalizable Constraint</em>}' class.
@@ -380,7 +353,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getExternalizableConstraint()
 	 * @generated
 	 */
-	int EXTERNALIZABLE_CONSTRAINT = 10;
+	int EXTERNALIZABLE_CONSTRAINT = 9;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' reference list.
@@ -435,7 +408,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getUniquenessConstraint()
 	 * @generated
 	 */
-	int UNIQUENESS_CONSTRAINT = 7;
+	int UNIQUENESS_CONSTRAINT = 6;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' reference list.
@@ -472,7 +445,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getReferenceScheme()
 	 * @generated
 	 */
-	int REFERENCE_SCHEME = 8;
+	int REFERENCE_SCHEME = 7;
 
 	/**
 	 * The number of structural features of the '<em>Reference Scheme</em>' class.
@@ -491,7 +464,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getValueConstraint()
 	 * @generated
 	 */
-	int VALUE_CONSTRAINT = 9;
+	int VALUE_CONSTRAINT = 8;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' reference list.
@@ -519,7 +492,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getSetComparisonConstraint()
 	 * @generated
 	 */
-	int SET_COMPARISON_CONSTRAINT = 11;
+	int SET_COMPARISON_CONSTRAINT = 10;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' reference list.
@@ -547,7 +520,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getConstrainingValues()
 	 * @generated
 	 */
-	int CONSTRAINING_VALUES = 12;
+	int CONSTRAINING_VALUES = 11;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' reference list.
@@ -575,7 +548,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getConstrainingRange()
 	 * @generated
 	 */
-	int CONSTRAINING_RANGE = 13;
+	int CONSTRAINING_RANGE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' reference list.
@@ -603,7 +576,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getSubSetConstraint()
 	 * @generated
 	 */
-	int SUB_SET_CONSTRAINT = 14;
+	int SUB_SET_CONSTRAINT = 13;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' reference list.
@@ -631,7 +604,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getEqualityConstraint()
 	 * @generated
 	 */
-	int EQUALITY_CONSTRAINT = 15;
+	int EQUALITY_CONSTRAINT = 14;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' reference list.
@@ -659,7 +632,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getExclusionConstraint()
 	 * @generated
 	 */
-	int EXCLUSION_CONSTRAINT = 16;
+	int EXCLUSION_CONSTRAINT = 15;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' reference list.
@@ -687,7 +660,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getSubType()
 	 * @generated
 	 */
-	int SUB_TYPE = 17;
+	int SUB_TYPE = 16;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' reference.
@@ -696,7 +669,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_TYPE__PARENT = 0;
+	int SUB_TYPE__PARENT = SCHEMA_DIAGRAM_MEMBER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Child</b></em>' reference.
@@ -705,7 +678,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_TYPE__CHILD = 1;
+	int SUB_TYPE__CHILD = SCHEMA_DIAGRAM_MEMBER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Sub Type</em>' class.
@@ -714,7 +687,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUB_TYPE_FEATURE_COUNT = 2;
+	int SUB_TYPE_FEATURE_COUNT = SCHEMA_DIAGRAM_MEMBER_FEATURE_COUNT + 2;
 
 	/**
 	 * The meta object id for the '{@link net.orm.impl.FrequencyConstraintImpl <em>Frequency Constraint</em>}' class.
@@ -724,7 +697,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getFrequencyConstraint()
 	 * @generated
 	 */
-	int FREQUENCY_CONSTRAINT = 18;
+	int FREQUENCY_CONSTRAINT = 17;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' reference list.
@@ -752,7 +725,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getRingConstraint()
 	 * @generated
 	 */
-	int RING_CONSTRAINT = 19;
+	int RING_CONSTRAINT = 18;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' reference list.
@@ -780,7 +753,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getAcyclic()
 	 * @generated
 	 */
-	int ACYCLIC = 20;
+	int ACYCLIC = 19;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' reference list.
@@ -808,7 +781,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getIrreflexive()
 	 * @generated
 	 */
-	int IRREFLEXIVE = 21;
+	int IRREFLEXIVE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' reference list.
@@ -836,7 +809,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getIntransitive()
 	 * @generated
 	 */
-	int INTRANSITIVE = 22;
+	int INTRANSITIVE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' reference list.
@@ -864,7 +837,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getAsymmetric()
 	 * @generated
 	 */
-	int ASYMMETRIC = 23;
+	int ASYMMETRIC = 22;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' reference list.
@@ -892,7 +865,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getAntiSymmetric()
 	 * @generated
 	 */
-	int ANTI_SYMMETRIC = 24;
+	int ANTI_SYMMETRIC = 23;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' reference list.
@@ -920,7 +893,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getSymmetric()
 	 * @generated
 	 */
-	int SYMMETRIC = 25;
+	int SYMMETRIC = 24;
 
 	/**
 	 * The feature id for the '<em><b>Roles</b></em>' reference list.
@@ -948,7 +921,7 @@ public interface Package extends EPackage {
 	 * @see net.orm.impl.PackageImpl#getObjectRole()
 	 * @generated
 	 */
-	int OBJECT_ROLE = 26;
+	int OBJECT_ROLE = 25;
 
 	/**
 	 * The feature id for the '<em><b>Object</b></em>' reference.
@@ -957,7 +930,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT_ROLE__OBJECT = 0;
+	int OBJECT_ROLE__OBJECT = SCHEMA_DIAGRAM_MEMBER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Role</b></em>' reference.
@@ -966,7 +939,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT_ROLE__ROLE = 1;
+	int OBJECT_ROLE__ROLE = SCHEMA_DIAGRAM_MEMBER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Mandatory</b></em>' attribute.
@@ -975,7 +948,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT_ROLE__MANDATORY = 2;
+	int OBJECT_ROLE__MANDATORY = SCHEMA_DIAGRAM_MEMBER_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' containment reference list.
@@ -984,7 +957,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT_ROLE__CONSTRAINTS = 3;
+	int OBJECT_ROLE__CONSTRAINTS = SCHEMA_DIAGRAM_MEMBER_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Object Role</em>' class.
@@ -993,7 +966,7 @@ public interface Package extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int OBJECT_ROLE_FEATURE_COUNT = 4;
+	int OBJECT_ROLE_FEATURE_COUNT = SCHEMA_DIAGRAM_MEMBER_FEATURE_COUNT + 4;
 
 	/**
 	 * Returns the meta object for class '{@link net.orm.Role <em>Role</em>}'.
@@ -1147,68 +1120,25 @@ public interface Package extends EPackage {
 	EReference getPredicate_Constraints();
 
 	/**
-	 * Returns the meta object for class '{@link net.orm.Schema <em>Schema</em>}'.
+	 * Returns the meta object for class '{@link net.orm.SchemaDiagram <em>Schema Diagram</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Schema</em>'.
-	 * @see net.orm.Schema
+	 * @return the meta object for class '<em>Schema Diagram</em>'.
+	 * @see net.orm.SchemaDiagram
 	 * @generated
 	 */
-	EClass getSchema();
+	EClass getSchemaDiagram();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link net.orm.Schema#getSchemaShapes <em>Schema Shapes</em>}'.
+	 * Returns the meta object for the containment reference list '{@link net.orm.SchemaDiagram#getSchemaDiagramMembers <em>Schema Diagram Members</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Schema Shapes</em>'.
-	 * @see net.orm.Schema#getSchemaShapes()
-	 * @see #getSchema()
+	 * @return the meta object for the containment reference list '<em>Schema Diagram Members</em>'.
+	 * @see net.orm.SchemaDiagram#getSchemaDiagramMembers()
+	 * @see #getSchemaDiagram()
 	 * @generated
 	 */
-	EReference getSchema_SchemaShapes();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link net.orm.Schema#getObjectRoles <em>Object Roles</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Object Roles</em>'.
-	 * @see net.orm.Schema#getObjectRoles()
-	 * @see #getSchema()
-	 * @generated
-	 */
-	EReference getSchema_ObjectRoles();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link net.orm.Schema#getSubTypes <em>Sub Types</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sub Types</em>'.
-	 * @see net.orm.Schema#getSubTypes()
-	 * @see #getSchema()
-	 * @generated
-	 */
-	EReference getSchema_SubTypes();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link net.orm.Schema#getConstraints <em>Constraints</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Constraints</em>'.
-	 * @see net.orm.Schema#getConstraints()
-	 * @see #getSchema()
-	 * @generated
-	 */
-	EReference getSchema_Constraints();
-
-	/**
-	 * Returns the meta object for class '{@link net.orm.SchemaShape <em>Schema Shape</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Schema Shape</em>'.
-	 * @see net.orm.SchemaShape
-	 * @generated
-	 */
-	EClass getSchemaShape();
+	EReference getSchemaDiagram_SchemaDiagramMembers();
 
 	/**
 	 * Returns the meta object for class '{@link net.orm.Constraint <em>Constraint</em>}'.
@@ -1530,6 +1460,16 @@ public interface Package extends EPackage {
 	EReference getObjectRole_Constraints();
 
 	/**
+	 * Returns the meta object for class '{@link net.orm.SchemaDiagramMember <em>Schema Diagram Member</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Schema Diagram Member</em>'.
+	 * @see net.orm.SchemaDiagramMember
+	 * @generated
+	 */
+	EClass getSchemaDiagramMember();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1670,56 +1610,22 @@ public interface Package extends EPackage {
 		EReference PREDICATE__CONSTRAINTS = eINSTANCE.getPredicate_Constraints();
 
 		/**
-		 * The meta object literal for the '{@link net.orm.impl.SchemaImpl <em>Schema</em>}' class.
+		 * The meta object literal for the '{@link net.orm.impl.SchemaDiagramImpl <em>Schema Diagram</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see net.orm.impl.SchemaImpl
-		 * @see net.orm.impl.PackageImpl#getSchema()
+		 * @see net.orm.impl.SchemaDiagramImpl
+		 * @see net.orm.impl.PackageImpl#getSchemaDiagram()
 		 * @generated
 		 */
-		EClass SCHEMA = eINSTANCE.getSchema();
+		EClass SCHEMA_DIAGRAM = eINSTANCE.getSchemaDiagram();
 
 		/**
-		 * The meta object literal for the '<em><b>Schema Shapes</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Schema Diagram Members</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SCHEMA__SCHEMA_SHAPES = eINSTANCE.getSchema_SchemaShapes();
-
-		/**
-		 * The meta object literal for the '<em><b>Object Roles</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCHEMA__OBJECT_ROLES = eINSTANCE.getSchema_ObjectRoles();
-
-		/**
-		 * The meta object literal for the '<em><b>Sub Types</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCHEMA__SUB_TYPES = eINSTANCE.getSchema_SubTypes();
-
-		/**
-		 * The meta object literal for the '<em><b>Constraints</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCHEMA__CONSTRAINTS = eINSTANCE.getSchema_Constraints();
-
-		/**
-		 * The meta object literal for the '{@link net.orm.impl.SchemaShapeImpl <em>Schema Shape</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see net.orm.impl.SchemaShapeImpl
-		 * @see net.orm.impl.PackageImpl#getSchemaShape()
-		 * @generated
-		 */
-		EClass SCHEMA_SHAPE = eINSTANCE.getSchemaShape();
+		EReference SCHEMA_DIAGRAM__SCHEMA_DIAGRAM_MEMBERS = eINSTANCE.getSchemaDiagram_SchemaDiagramMembers();
 
 		/**
 		 * The meta object literal for the '{@link net.orm.impl.ConstraintImpl <em>Constraint</em>}' class.
@@ -2012,6 +1918,16 @@ public interface Package extends EPackage {
 		 * @generated
 		 */
 		EReference OBJECT_ROLE__CONSTRAINTS = eINSTANCE.getObjectRole_Constraints();
+
+		/**
+		 * The meta object literal for the '{@link net.orm.impl.SchemaDiagramMemberImpl <em>Schema Diagram Member</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see net.orm.impl.SchemaDiagramMemberImpl
+		 * @see net.orm.impl.PackageImpl#getSchemaDiagramMember()
+		 * @generated
+		 */
+		EClass SCHEMA_DIAGRAM_MEMBER = eINSTANCE.getSchemaDiagramMember();
 
 	}
 

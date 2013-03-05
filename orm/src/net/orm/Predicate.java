@@ -28,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Predicate extends SchemaShape, net.orm.Object {
+public interface Predicate extends net.orm.Object, SchemaDiagramMember {
 	/**
 	 * Returns the value of the '<em><b>Name Space</b></em>' attribute.
 	 * <!-- begin-user-doc -->

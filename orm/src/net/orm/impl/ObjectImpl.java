@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ObjectImpl extends SchemaShapeImpl implements net.orm.Object {
+public class ObjectImpl extends SchemaDiagramMemberImpl implements net.orm.Object {
 	/**
 	 * The default value of the '{@link #isOccursElseWhere() <em>Occurs Else Where</em>}' attribute.
 	 * <!-- begin-user-doc -->

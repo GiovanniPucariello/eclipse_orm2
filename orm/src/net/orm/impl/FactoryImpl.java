@@ -25,6 +25,8 @@ import net.orm.Predicate;
 import net.orm.ReferenceScheme;
 import net.orm.RingConstraint;
 import net.orm.Role;
+import net.orm.SchemaDiagram;
+import net.orm.SchemaDiagramMember;
 import net.orm.Schema;
 import net.orm.SetComparisonConstraint;
 import net.orm.SubSetConstraint;
@@ -84,7 +86,7 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 			case net.orm.Package.ROLE: return createRole();
 			case net.orm.Package.OBJECT: return createObject();
 			case net.orm.Package.PREDICATE: return createPredicate();
-			case net.orm.Package.SCHEMA: return createSchema();
+			case net.orm.Package.SCHEMA_DIAGRAM: return createSchemaDiagram();
 			case net.orm.Package.CONSTRAINT: return createConstraint();
 			case net.orm.Package.MANDATORY_CONSTRAINT: return createMandatoryConstraint();
 			case net.orm.Package.UNIQUENESS_CONSTRAINT: return createUniquenessConstraint();
@@ -107,6 +109,7 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 			case net.orm.Package.ANTI_SYMMETRIC: return createAntiSymmetric();
 			case net.orm.Package.SYMMETRIC: return createSymmetric();
 			case net.orm.Package.OBJECT_ROLE: return createObjectRole();
+			case net.orm.Package.SCHEMA_DIAGRAM_MEMBER: return createSchemaDiagramMember();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -141,12 +144,13 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Schema createSchema() {
-		SchemaImpl schema = new SchemaImpl();
-		return schema;
+	public SchemaDiagram createSchemaDiagram() {
+		SchemaDiagramImpl schemaDiagram = new SchemaDiagramImpl();
+		return schemaDiagram;
 	}
 
 	/**
@@ -353,9 +357,20 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public SchemaDiagramMember createSchemaDiagramMember() {
+		SchemaDiagramMemberImpl schemaDiagramMember = new SchemaDiagramMemberImpl();
+		return schemaDiagramMember;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public net.orm.Package getPackage() {
 		return (net.orm.Package)getEPackage();
 	}
+	
 
 
 

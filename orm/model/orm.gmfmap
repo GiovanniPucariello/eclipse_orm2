@@ -8,7 +8,7 @@
     xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
   <nodes>
     <containmentFeature
-        href="orm.ecore#//Schema/SchemaMember"/>
+        href="orm.ecore#//SchemaDiagram/SchemaDiagramMembers"/>
     <ownedChild>
       <domainMetaElement
           href="orm.ecore#//Object"/>
@@ -29,24 +29,11 @@
           href="orm.gmfgraph#Object"/>
     </ownedChild>
   </nodes>
-  <nodes>
-    <containmentFeature
-        href="orm.ecore#//Schema/SchemaMember"/>
-    <ownedChild>
-      <domainMetaElement
-          href="orm.ecore#//Object"/>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="orm.gmftool#//@palette/@tools.0/@tools.0"/>
-      <diagramNode
-          href="orm.gmfgraph#Role"/>
-    </ownedChild>
-  </nodes>
   <links>
     <domainMetaElement
         href="orm.ecore#//ObjectRole"/>
     <containmentFeature
-        href="orm.ecore#//Schema/SchemaMember"/>
+        href="orm.ecore#//SchemaDiagram/SchemaDiagramMembers"/>
     <tool
         xsi:type="gmftool:CreationTool"
         href="orm.gmftool#//@palette/@tools.2/@tools.5"/>
@@ -58,46 +45,12 @@
     <linkMetaFeature
         xsi:type="ecore:EReference"
         href="orm.ecore#//ObjectRole/Role"/>
-  </links>
-  <links>
-    <domainMetaElement
-        href="orm.ecore#//ObjectRole"/>
-    <containmentFeature
-        href="orm.ecore#//Schema/SchemaMember"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="orm.gmftool#//@palette/@tools.2/@tools.5"/>
-    <diagramLink
-        href="orm.gmfgraph#ObjectRole"/>
-    <sourceMetaFeature
-        xsi:type="ecore:EReference"
-        href="orm.ecore#//ObjectRole/Role"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="orm.ecore#//ObjectRole/Object"/>
-  </links>
-  <links>
-    <domainMetaElement
-        href="orm.ecore#//UniquenessConstraint"/>
-    <containmentFeature
-        href="orm.ecore#//Predicate/Constraints"/>
-    <tool
-        xsi:type="gmftool:CreationTool"
-        href="orm.gmftool#//@palette/@tools.4/@tools.0"/>
-    <diagramLink
-        href="orm.gmfgraph#UniquenessConstraint"/>
-    <sourceMetaFeature
-        xsi:type="ecore:EReference"
-        href="orm.ecore#//Constraint/Roles"/>
-    <linkMetaFeature
-        xsi:type="ecore:EReference"
-        href="orm.ecore#//Constraint/Roles"/>
   </links>
   <links>
     <domainMetaElement
         href="orm.ecore#//SubType"/>
     <containmentFeature
-        href="orm.ecore#//Schema/SchemaMember"/>
+        href="orm.ecore#//SchemaDiagram/SchemaDiagramMembers"/>
     <tool
         xsi:type="gmftool:CreationTool"
         href="orm.gmftool#//@palette/@tools.4/@tools.1"/>
@@ -116,7 +69,7 @@
     <domainModel
         href="orm.ecore#/"/>
     <domainMetaElement
-        href="orm.ecore#//Schema"/>
+        href="orm.ecore#//SchemaDiagram"/>
     <palette
         href="orm.gmftool#//@palette"/>
   </diagram>

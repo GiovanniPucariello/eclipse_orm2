@@ -53,13 +53,13 @@ public interface Factory extends EFactory {
 	Predicate createPredicate();
 
 	/**
-	 * Returns a new object of class '<em>Schema</em>'.
+	 * Returns a new object of class '<em>Schema Diagram</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Schema</em>'.
+	 * @return a new object of class '<em>Schema Diagram</em>'.
 	 * @generated
 	 */
-	Schema createSchema();
+	SchemaDiagram createSchemaDiagram();
 
 	/**
 	 * Returns a new object of class '<em>Constraint</em>'.
@@ -258,6 +258,15 @@ public interface Factory extends EFactory {
 	 * @generated
 	 */
 	ObjectRole createObjectRole();
+
+	/**
+	 * Returns a new object of class '<em>Schema Diagram Member</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Schema Diagram Member</em>'.
+	 * @generated
+	 */
+	SchemaDiagramMember createSchemaDiagramMember();
 
 	/**
 	 * Returns the package supported by this factory.

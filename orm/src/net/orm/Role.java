@@ -6,6 +6,8 @@
  */
 package net.orm;
 
+import org.eclipse.emf.ecore.EObject;
+
 
 
 /**
@@ -24,7 +26,7 @@ package net.orm;
  * @model
  * @generated
  */
-public interface Role extends SchemaShape {
+public interface Role extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Phrase</b></em>' attribute.
 	 * <!-- begin-user-doc -->

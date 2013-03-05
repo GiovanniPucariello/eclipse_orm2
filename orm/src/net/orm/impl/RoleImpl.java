@@ -11,6 +11,7 @@ import net.orm.Role;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.EObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class RoleImpl extends SchemaShapeImpl implements Role {
+public class RoleImpl extends EObjectImpl implements Role {
 	/**
 	 * The default value of the '{@link #getPhrase() <em>Phrase</em>}' attribute.
 	 * <!-- begin-user-doc -->

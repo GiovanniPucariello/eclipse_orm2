@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ObjectRoleImpl extends EObjectImpl implements ObjectRole {
+public class ObjectRoleImpl extends SchemaDiagramMemberImpl implements ObjectRole {
 	/**
 	 * The cached value of the '{@link #getObject() <em>Object</em>}' reference.
 	 * <!-- begin-user-doc -->
