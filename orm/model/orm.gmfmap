@@ -29,6 +29,31 @@
           href="orm.gmfgraph#Object"/>
     </ownedChild>
   </nodes>
+  <nodes>
+    <containmentFeature
+        href="orm.ecore#//SchemaDiagram/SchemaDiagramMembers"/>
+    <ownedChild>
+      <domainMetaElement
+          href="orm.ecore#//Predicate"/>
+      <tool
+          xsi:type="gmftool:CreationTool"
+          href="orm.gmftool#//@palette/@tools.2/@tools.3"/>
+      <diagramNode
+          href="orm.gmfgraph#Predicate"/>
+      <children
+          compartment="//@nodes.1/@ownedChild/@compartments.0">
+        <containmentFeature
+            href="orm.ecore#//Predicate/Roles"/>
+        <childrenFeature
+            href="orm.ecore#//Predicate/Roles"/>
+      </children>
+      <compartments
+          children="//@nodes.1/@ownedChild/@children.0">
+        <compartment
+            href="orm.gmfgraph#Predicate"/>
+      </compartments>
+    </ownedChild>
+  </nodes>
   <links>
     <domainMetaElement
         href="orm.ecore#//ObjectRole"/>
