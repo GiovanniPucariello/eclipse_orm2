@@ -8,7 +8,7 @@
     xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
   <nodes>
     <containmentFeature
-        href="orm.ecore#//Schema/schemaShapes"/>
+        href="orm.ecore#//Schema/SchemaMember"/>
     <ownedChild>
       <domainMetaElement
           href="orm.ecore#//Object"/>
@@ -31,7 +31,7 @@
   </nodes>
   <nodes>
     <containmentFeature
-        href="orm.ecore#//Schema/schemaShapes"/>
+        href="orm.ecore#//Schema/SchemaMember"/>
     <ownedChild>
       <domainMetaElement
           href="orm.ecore#//Object"/>
@@ -46,7 +46,7 @@
     <domainMetaElement
         href="orm.ecore#//ObjectRole"/>
     <containmentFeature
-        href="orm.ecore#//Schema/ObjectRoles"/>
+        href="orm.ecore#//Schema/SchemaMember"/>
     <tool
         xsi:type="gmftool:CreationTool"
         href="orm.gmftool#//@palette/@tools.2/@tools.5"/>
@@ -63,7 +63,7 @@
     <domainMetaElement
         href="orm.ecore#//ObjectRole"/>
     <containmentFeature
-        href="orm.ecore#//Schema/ObjectRoles"/>
+        href="orm.ecore#//Schema/SchemaMember"/>
     <tool
         xsi:type="gmftool:CreationTool"
         href="orm.gmftool#//@palette/@tools.2/@tools.5"/>
@@ -97,7 +97,7 @@
     <domainMetaElement
         href="orm.ecore#//SubType"/>
     <containmentFeature
-        href="orm.ecore#//Schema/SubTypes"/>
+        href="orm.ecore#//Schema/SchemaMember"/>
     <tool
         xsi:type="gmftool:CreationTool"
         href="orm.gmftool#//@palette/@tools.4/@tools.1"/>

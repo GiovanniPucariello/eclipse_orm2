@@ -69,15 +69,15 @@
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="Role"
-          description="Create new Role">
+          title="ObjectRole"
+          description="Create new ObjectRole">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
       </tools>
       <tools
           xsi:type="gmftool:CreationTool"
-          title="ObjectRole"
-          description="Create new ObjectRole">
+          title="Role"
+          description="Create new Role">
         <smallIcon
             xsi:type="gmftool:DefaultImage"/>
       </tools>

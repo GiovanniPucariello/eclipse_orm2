@@ -55,6 +55,7 @@
             lineKind="LINE_DASH"/>
       </actualFigure>
       <accessors
+          accessor="getRoleFigure"
           figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
     </descriptors>
     <descriptors

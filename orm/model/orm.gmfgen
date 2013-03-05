@@ -22,13 +22,12 @@
     <domainDiagramElement
         href="orm.genmodel#//orm/Schema"/>
     <topLevelNodes
-        visualID="2002"
-        editPartClassName="ObjectEditPart"
-        itemSemanticEditPolicyClassName="ObjectItemSemanticEditPolicy"
-        notationViewFactoryClassName="ObjectViewFactory"
-        canonicalEditPolicyClassName="ObjectCanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="ObjectGraphicalNodeEditPolicy"
-        createCommandClassName="ObjectCreateCommand">
+        visualID="2001"
+        editPartClassName="Object2EditPart"
+        itemSemanticEditPolicyClassName="Object2ItemSemanticEditPolicy"
+        canonicalEditPolicyClassName="Object2CanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="Object2GraphicalNodeEditPolicy"
+        createCommandClassName="Object2CreateCommand">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
@@ -42,15 +41,14 @@
         <metaClass
             href="orm.genmodel#//orm/Object"/>
         <containmentMetaFeature
-            href="orm.genmodel#//orm/Schema/schemaShapes"/>
+            href="orm.genmodel#//orm/Schema/SchemaMember"/>
         <childMetaFeature
-            href="orm.genmodel#//orm/Schema/schemaShapes"/>
+            href="orm.genmodel#//orm/Schema/SchemaMember"/>
       </modelFacet>
       <labels
           visualID="5001"
           editPartClassName="ObjectNameEditPart"
           itemSemanticEditPolicyClassName="ObjectNameItemSemanticEditPolicy"
-          notationViewFactoryClassName="ObjectNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -70,12 +68,13 @@
       </labels>
     </topLevelNodes>
     <topLevelNodes
-        visualID="2003"
-        editPartClassName="Object2EditPart"
-        itemSemanticEditPolicyClassName="Object2ItemSemanticEditPolicy"
-        canonicalEditPolicyClassName="Object2CanonicalEditPolicy"
-        graphicalNodeEditPolicyClassName="Object2GraphicalNodeEditPolicy"
-        createCommandClassName="Object2CreateCommand">
+        visualID="2002"
+        editPartClassName="ObjectEditPart"
+        itemSemanticEditPolicyClassName="ObjectItemSemanticEditPolicy"
+        notationViewFactoryClassName="ObjectViewFactory"
+        canonicalEditPolicyClassName="ObjectCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="ObjectGraphicalNodeEditPolicy"
+        createCommandClassName="ObjectCreateCommand">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
@@ -89,9 +88,9 @@
         <metaClass
             href="orm.genmodel#//orm/Object"/>
         <containmentMetaFeature
-            href="orm.genmodel#//orm/Schema/schemaShapes"/>
+            href="orm.genmodel#//orm/Schema/SchemaMember"/>
         <childMetaFeature
-            href="orm.genmodel#//orm/Schema/schemaShapes"/>
+            href="orm.genmodel#//orm/Schema/SchemaMember"/>
       </modelFacet>
     </topLevelNodes>
     <links
@@ -115,9 +114,9 @@
         <metaClass
             href="orm.genmodel#//orm/ObjectRole"/>
         <containmentMetaFeature
-            href="orm.genmodel#//orm/Schema/ObjectRoles"/>
+            href="orm.genmodel#//orm/Schema/SchemaMember"/>
         <childMetaFeature
-            href="orm.genmodel#//orm/Schema/ObjectRoles"/>
+            href="orm.genmodel#//orm/Schema/SchemaMember"/>
         <sourceMetaFeature
             href="orm.genmodel#//orm/ObjectRole/Object"/>
         <targetMetaFeature
@@ -125,12 +124,12 @@
       </modelFacet>
     </links>
     <links
-        visualID="4004"
-        editPartClassName="ObjectRole2EditPart"
-        itemSemanticEditPolicyClassName="ObjectRole2ItemSemanticEditPolicy"
-        notationViewFactoryClassName="ObjectRoleViewFactory"
-        createCommandClassName="ObjectRole2CreateCommand"
-        reorientCommandClassName="ObjectRole2ReorientCommand">
+        visualID="4002"
+        editPartClassName="UniquenessConstraintEditPart"
+        itemSemanticEditPolicyClassName="UniquenessConstraintItemSemanticEditPolicy"
+        notationViewFactoryClassName="UniquenessConstraintViewFactory"
+        createCommandClassName="UniquenessConstraintCreateCommand"
+        reorientCommandClassName="UniquenessConstraintReorientCommand">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
       <elementType
@@ -145,9 +144,9 @@
         <metaClass
             href="orm.genmodel#//orm/ObjectRole"/>
         <containmentMetaFeature
-            href="orm.genmodel#//orm/Schema/ObjectRoles"/>
+            href="orm.genmodel#//orm/Schema/SchemaMember"/>
         <childMetaFeature
-            href="orm.genmodel#//orm/Schema/ObjectRoles"/>
+            href="orm.genmodel#//orm/Schema/SchemaMember"/>
         <sourceMetaFeature
             href="orm.genmodel#//orm/ObjectRole/Role"/>
         <targetMetaFeature
@@ -155,17 +154,17 @@
       </modelFacet>
     </links>
     <links
-        visualID="4002"
-        editPartClassName="UniquenessConstraintEditPart"
-        itemSemanticEditPolicyClassName="UniquenessConstraintItemSemanticEditPolicy"
-        notationViewFactoryClassName="UniquenessConstraintViewFactory"
-        createCommandClassName="UniquenessConstraintCreateCommand"
-        reorientCommandClassName="UniquenessConstraintReorientCommand">
+        visualID="4003"
+        editPartClassName="SubTypeEditPart"
+        itemSemanticEditPolicyClassName="SubTypeItemSemanticEditPolicy"
+        notationViewFactoryClassName="SubTypeViewFactory"
+        createCommandClassName="SubTypeCreateCommand"
+        reorientCommandClassName="SubTypeReorientCommand">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="UniquenessConstraintEditHelper"/>
+          editHelperClassName="SubTypeEditHelper"/>
       <viewmap
           xsi:type="gmfgen:FigureViewmap"
           figureQualifiedClassName="org.eclipse.gmf.runtime.draw2d.ui.figures.PolylineConnectionEx"/>
@@ -184,17 +183,17 @@
       </modelFacet>
     </links>
     <links
-        visualID="4003"
-        editPartClassName="SubTypeEditPart"
-        itemSemanticEditPolicyClassName="SubTypeItemSemanticEditPolicy"
-        notationViewFactoryClassName="SubTypeViewFactory"
-        createCommandClassName="SubTypeCreateCommand"
-        reorientCommandClassName="SubTypeReorientCommand">
+        visualID="4004"
+        editPartClassName="ObjectRole2EditPart"
+        itemSemanticEditPolicyClassName="ObjectRole2ItemSemanticEditPolicy"
+        notationViewFactoryClassName="ObjectRoleViewFactory"
+        createCommandClassName="ObjectRole2CreateCommand"
+        reorientCommandClassName="ObjectRole2ReorientCommand">
       <diagramRunTimeClass
           href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
-          editHelperClassName="SubTypeEditHelper"/>
+          editHelperClassName="SubType2EditHelper"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="SubTypeFigure"
@@ -204,9 +203,9 @@
         <metaClass
             href="orm.genmodel#//orm/SubType"/>
         <containmentMetaFeature
-            href="orm.genmodel#//orm/Schema/SubTypes"/>
+            href="orm.genmodel#//orm/Schema/SchemaMember"/>
         <childMetaFeature
-            href="orm.genmodel#//orm/Schema/SubTypes"/>
+            href="orm.genmodel#//orm/Schema/SchemaMember"/>
         <sourceMetaFeature
             href="orm.genmodel#//orm/SubType/Child"/>
         <targetMetaFeature
@@ -259,12 +258,12 @@
             description="Create Arbitrary Predicate"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
-            title="Role"
-            description="Create new Role"/>
+            title="ObjectRole"
+            description="Create new ObjectRole"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
-            title="ObjectRole"
-            description="Create new ObjectRole"
+            title="Role"
+            description="Create new Role"
             genLinks="//@diagram/@links.0 //@diagram/@links.1"/>
       </groups>
       <groups
