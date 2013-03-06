@@ -116,7 +116,7 @@
       <styles xmi:type="notation:FilteringStyle" xmi:id="_WDZ5g7avEd2ezYC4YEnv8w"/>
     </children>
     <styles xmi:type="notation:ShapeStyle" xmi:id="_WDXdQbavEd2ezYC4YEnv8w" fontName="Segoe UI"/>
-    <element xmi:type="ecore:EClass" href="orm.ecore#//SchemaDiagram"/>
+    <element xmi:type="ecore:EClass" href="orm.ecore#//Schema"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WDXdQravEd2ezYC4YEnv8w" x="1530" y="666"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_7X9Q8La2Ed214bJz1W875Q" type="2001">
@@ -643,7 +643,7 @@
       <styles xmi:type="notation:SortingStyle" xmi:id="_EDyLp4W-EeKfz5-JRYY5cA"/>
       <styles xmi:type="notation:FilteringStyle" xmi:id="_EDyLqIW-EeKfz5-JRYY5cA"/>
     </children>
-    <element xmi:type="ecore:EClass" href="orm.ecore#//SchemaDiagramMember"/>
+    <element xmi:type="ecore:EClass" href="orm.ecore#//SchemaMember"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EDw9gYW-EeKfz5-JRYY5cA" x="1665" y="468"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_rtxScaxiEd2bD8QPcxzqtQ"/>
@@ -979,15 +979,9 @@
       <layoutConstraint xmi:type="notation:Location" xmi:id="_dDYf84XCEeKfz5-JRYY5cA" y="60"/>
     </children>
     <styles xmi:type="notation:FontStyle" xmi:id="_dDX44YXCEeKfz5-JRYY5cA" fontName="Lucida Grande"/>
-    <element xmi:type="ecore:EReference" href="orm.ecore#//SchemaDiagram/SchemaDiagramMembers"/>
+    <element xmi:type="ecore:EReference" href="orm.ecore#//Schema/SchemaDiagramMembers"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_dDX44oXCEeKfz5-JRYY5cA" points="[0, 0, -138, -115]$[38, 54, -100, -61]$[138, 115, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_rF53UIX1EeK0AJ1nDJxitg" id="(0.5,1.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_rF6eYIX1EeK0AJ1nDJxitg" id="(0.16,0.0)"/>
-  </edges>
-  <edges xmi:type="notation:Connector" xmi:id="_5ko_gIX6EeK_ULwhSyfs-g" type="4004" source="_WCnPULavEd2ezYC4YEnv8w" target="_EDw9gIW-EeKfz5-JRYY5cA">
-    <styles xmi:type="notation:FontStyle" xmi:id="_5ko_gYX6EeK_ULwhSyfs-g" fontName="Lucida Grande"/>
-    <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_5ko_goX6EeK_ULwhSyfs-g" points="[49, -2, -205, 9]$[230, -16, -24, -5]"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5ksp4IX6EeK_ULwhSyfs-g" id="(0.192,0.34615384615384615)"/>
   </edges>
 </notation:Diagram>

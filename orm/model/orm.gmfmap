@@ -8,7 +8,7 @@
     xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition">
   <nodes>
     <containmentFeature
-        href="orm.ecore#//SchemaDiagram/SchemaDiagramMembers"/>
+        href="orm.ecore#//Schema/SchemaDiagramMembers"/>
     <ownedChild>
       <domainMetaElement
           href="orm.ecore#//Object"/>
@@ -31,7 +31,9 @@
   </nodes>
   <nodes>
     <containmentFeature
-        href="orm.ecore#//SchemaDiagram/SchemaDiagramMembers"/>
+        href="orm.ecore#//Schema/SchemaDiagramMembers"/>
+    <childrenFeature
+        href="orm.ecore#//ObjectRole/Object"/>
     <ownedChild>
       <domainMetaElement
           href="orm.ecore#//Predicate"/>
@@ -40,24 +42,29 @@
           href="orm.gmftool#//@palette/@tools.2/@tools.3"/>
       <diagramNode
           href="orm.gmfgraph#Predicate"/>
-    </ownedChild>
-  </nodes>
-  <nodes>
-    <containmentFeature
-        href="orm.ecore#//SchemaDiagram/SchemaDiagramMembers"/>
-    <ownedChild>
-      <tool
-          xsi:type="gmftool:CreationTool"
-          href="orm.gmftool#//@palette/@tools.2/@tools.5"/>
-      <diagramNode
-          href="orm.gmfgraph#Role"/>
+      <children
+          referencedChild="//@nodes.1/@ownedChild/@children.0/@ownedChild">
+        <containmentFeature
+            href="orm.ecore#//Predicate/Roles"/>
+        <childrenFeature
+            href="orm.ecore#//Predicate/Roles"/>
+        <ownedChild>
+          <domainMetaElement
+              href="orm.ecore#//Role"/>
+          <tool
+              xsi:type="gmftool:CreationTool"
+              href="orm.gmftool#//@palette/@tools.2/@tools.5"/>
+          <diagramNode
+              href="orm.gmfgraph#Role"/>
+        </ownedChild>
+      </children>
     </ownedChild>
   </nodes>
   <links>
     <domainMetaElement
         href="orm.ecore#//ObjectRole"/>
     <containmentFeature
-        href="orm.ecore#//SchemaDiagram/SchemaDiagramMembers"/>
+        href="orm.ecore#//Schema/SchemaDiagramMembers"/>
     <tool
         xsi:type="gmftool:CreationTool"
         href="orm.gmftool#//@palette/@tools.2/@tools.5"/>
@@ -74,7 +81,7 @@
     <domainMetaElement
         href="orm.ecore#//SubType"/>
     <containmentFeature
-        href="orm.ecore#//SchemaDiagram/SchemaDiagramMembers"/>
+        href="orm.ecore#//Schema/SchemaDiagramMembers"/>
     <tool
         xsi:type="gmftool:CreationTool"
         href="orm.gmftool#//@palette/@tools.4/@tools.1"/>
@@ -93,7 +100,7 @@
     <domainModel
         href="orm.ecore#/"/>
     <domainMetaElement
-        href="orm.ecore#//SchemaDiagram"/>
+        href="orm.ecore#//Schema"/>
     <palette
         href="orm.gmftool#//@palette"/>
   </diagram>

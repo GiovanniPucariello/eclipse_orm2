@@ -21,8 +21,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//Predicate/Arity"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Predicate/Constraints"/>
     </genClasses>
-    <genClasses ecoreClass="orm.ecore#//SchemaDiagram">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//SchemaDiagram/SchemaDiagramMembers"/>
+    <genClasses ecoreClass="orm.ecore#//Schema">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//Schema/SchemaDiagramMembers"/>
     </genClasses>
     <genClasses image="false" ecoreClass="orm.ecore#//Constraint">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference orm.ecore#//Constraint/Roles"/>
@@ -62,6 +62,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute orm.ecore#//ObjectRole/Mandatory"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference orm.ecore#//ObjectRole/Constraints"/>
     </genClasses>
-    <genClasses ecoreClass="orm.ecore#//SchemaDiagramMember"/>
+    <genClasses ecoreClass="orm.ecore#//SchemaMember"/>
   </genPackages>
 </genmodel:GenModel>

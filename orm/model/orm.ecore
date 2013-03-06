@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="orm" nsURI="http:///net.orm/orm.ecore" nsPrefix="net.orm">
-  <eClassifiers xsi:type="ecore:EClass" name="Role" eSuperTypes="#//SchemaDiagramMember">
+  <eClassifiers xsi:type="ecore:EClass" name="Role">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="phrase" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Object" eSuperTypes="#//SchemaDiagramMember">
+  <eClassifiers xsi:type="ecore:EClass" name="Object" eSuperTypes="#//SchemaMember">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="occursElseWhere" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isIndependent" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ReferenceScheme" eType="#//ReferenceScheme"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" ordered="false" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isValueType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Predicate" eSuperTypes="#//Object #//SchemaDiagramMember">
+  <eClassifiers xsi:type="ecore:EClass" name="Predicate" eSuperTypes="#//Object #//SchemaMember">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameSpace" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Roles" lowerBound="1" upperBound="-1"
         eType="#//Role" containment="true" resolveProxies="false"/>
@@ -21,9 +21,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Constraints" upperBound="-1"
         eType="#//Constraint" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SchemaDiagram">
+  <eClassifiers xsi:type="ecore:EClass" name="Schema">
     <eStructuralFeatures xsi:type="ecore:EReference" name="SchemaDiagramMembers" upperBound="-1"
-        eType="#//SchemaDiagramMember" containment="true"/>
+        eType="#//SchemaMember" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Constraint">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Roles" upperBound="-1"
@@ -46,7 +46,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="SubSetConstraint" eSuperTypes="#//SetComparisonConstraint"/>
   <eClassifiers xsi:type="ecore:EClass" name="EqualityConstraint" eSuperTypes="#//SetComparisonConstraint"/>
   <eClassifiers xsi:type="ecore:EClass" name="ExclusionConstraint" eSuperTypes="#//SetComparisonConstraint"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SubType" eSuperTypes="#//SchemaDiagramMember">
+  <eClassifiers xsi:type="ecore:EClass" name="SubType" eSuperTypes="#//SchemaMember">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Parent" lowerBound="1"
         eType="#//Object"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Child" lowerBound="1" eType="#//Object"/>
@@ -59,7 +59,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Asymmetric" eSuperTypes="#//RingConstraint"/>
   <eClassifiers xsi:type="ecore:EClass" name="AntiSymmetric" eSuperTypes="#//RingConstraint"/>
   <eClassifiers xsi:type="ecore:EClass" name="Symmetric" eSuperTypes="#//RingConstraint"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ObjectRole" eSuperTypes="#//SchemaDiagramMember">
+  <eClassifiers xsi:type="ecore:EClass" name="ObjectRole" eSuperTypes="#//SchemaMember">
     <eStructuralFeatures xsi:type="ecore:EReference" name="Object" unique="false"
         lowerBound="1" eType="#//Object"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Role" lowerBound="1" eType="#//Role"/>
@@ -68,5 +68,5 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="Constraints" upperBound="-1"
         eType="#//Constraint" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SchemaDiagramMember"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SchemaMember"/>
 </ecore:EPackage>

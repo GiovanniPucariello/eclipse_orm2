@@ -50,13 +50,10 @@
             majorSpacing="1"
             minorSpacing="1"/>
         <children
-            xsi:type="gmfgraph:Rectangle"
-            name="RoleFigure"
-            lineKind="LINE_DASH"/>
+            xsi:type="gmfgraph:InvisibleRectangle"/>
       </actualFigure>
       <accessors
-          accessor="getRoleFigure"
-          figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+          accessor="getRoleFigure"/>
     </descriptors>
     <descriptors
         name="ObjectRoleFigure">
