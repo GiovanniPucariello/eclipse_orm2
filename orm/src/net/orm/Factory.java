@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package net.orm;
 
@@ -53,13 +49,13 @@ public interface Factory extends EFactory {
 	Predicate createPredicate();
 
 	/**
-	 * Returns a new object of class '<em>Schema Diagram</em>'.
+	 * Returns a new object of class '<em>Schema</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Schema Diagram</em>'.
+	 * @return a new object of class '<em>Schema</em>'.
 	 * @generated
 	 */
-	SchemaDiagram createSchemaDiagram();
+	Schema createSchema();
 
 	/**
 	 * Returns a new object of class '<em>Constraint</em>'.
@@ -260,13 +256,13 @@ public interface Factory extends EFactory {
 	ObjectRole createObjectRole();
 
 	/**
-	 * Returns a new object of class '<em>Schema Diagram Member</em>'.
+	 * Returns a new object of class '<em>Schema Member</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Schema Diagram Member</em>'.
+	 * @return a new object of class '<em>Schema Member</em>'.
 	 * @generated
 	 */
-	SchemaDiagramMember createSchemaDiagramMember();
+	SchemaMember createSchemaMember();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -1,12 +1,6 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package net.orm;
-
-import org.eclipse.emf.ecore.EObject;
 
 
 /**
@@ -26,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface SubType extends SchemaDiagramMember {
+public interface SubType extends SchemaMember {
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' reference.
 	 * <!-- begin-user-doc -->

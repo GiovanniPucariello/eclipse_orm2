@@ -14,7 +14,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.EObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -34,7 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ObjectRoleImpl extends SchemaDiagramMemberImpl implements ObjectRole {
+public class ObjectRoleImpl extends SchemaMemberImpl implements ObjectRole {
 	/**
 	 * The cached value of the '{@link #getObject() <em>Object</em>}' reference.
 	 * <!-- begin-user-doc -->

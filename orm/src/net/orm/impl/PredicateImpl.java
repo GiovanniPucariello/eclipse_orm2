@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package net.orm.impl;
 
@@ -10,7 +6,6 @@ import java.util.Collection;
 
 import net.orm.Constraint;
 import net.orm.Predicate;
-import net.orm.ReferenceScheme;
 import net.orm.Role;
 
 import org.eclipse.emf.common.notify.Notification;

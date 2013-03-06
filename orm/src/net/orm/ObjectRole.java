@@ -3,7 +3,6 @@
 package net.orm;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface ObjectRole extends SchemaDiagramMember {
+public interface ObjectRole extends SchemaMember {
 	/**
 	 * Returns the value of the '<em><b>Object</b></em>' reference.
 	 * <!-- begin-user-doc -->

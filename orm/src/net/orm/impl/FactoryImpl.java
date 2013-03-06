@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package net.orm.impl;
 
@@ -25,9 +21,8 @@ import net.orm.Predicate;
 import net.orm.ReferenceScheme;
 import net.orm.RingConstraint;
 import net.orm.Role;
-import net.orm.SchemaDiagram;
-import net.orm.SchemaDiagramMember;
 import net.orm.Schema;
+import net.orm.SchemaMember;
 import net.orm.SetComparisonConstraint;
 import net.orm.SubSetConstraint;
 import net.orm.SubType;
@@ -42,15 +37,16 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model <b>Factory</b>. <!--
- * end-user-doc -->
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Factory</b>.
+ * <!-- end-user-doc -->
  * @generated
  */
 public class FactoryImpl extends EFactoryImpl implements Factory {
 	/**
 	 * Creates the default factory implementation.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public static Factory init() {
@@ -68,8 +64,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 
 	/**
 	 * Creates an instance of the factory.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public FactoryImpl() {
@@ -77,7 +73,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
@@ -86,7 +83,7 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 			case net.orm.Package.ROLE: return createRole();
 			case net.orm.Package.OBJECT: return createObject();
 			case net.orm.Package.PREDICATE: return createPredicate();
-			case net.orm.Package.SCHEMA_DIAGRAM: return createSchemaDiagram();
+			case net.orm.Package.SCHEMA: return createSchema();
 			case net.orm.Package.CONSTRAINT: return createConstraint();
 			case net.orm.Package.MANDATORY_CONSTRAINT: return createMandatoryConstraint();
 			case net.orm.Package.UNIQUENESS_CONSTRAINT: return createUniquenessConstraint();
@@ -109,14 +106,15 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 			case net.orm.Package.ANTI_SYMMETRIC: return createAntiSymmetric();
 			case net.orm.Package.SYMMETRIC: return createSymmetric();
 			case net.orm.Package.OBJECT_ROLE: return createObjectRole();
-			case net.orm.Package.SCHEMA_DIAGRAM_MEMBER: return createSchemaDiagramMember();
+			case net.orm.Package.SCHEMA_MEMBER: return createSchemaMember();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Role createRole() {
@@ -135,7 +133,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Predicate createPredicate() {
@@ -148,13 +147,14 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SchemaDiagram createSchemaDiagram() {
-		SchemaDiagramImpl schemaDiagram = new SchemaDiagramImpl();
-		return schemaDiagram;
+	public Schema createSchema() {
+		SchemaImpl schema = new SchemaImpl();
+		return schema;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Constraint createConstraint() {
@@ -163,7 +163,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public MandatoryConstraint createMandatoryConstraint() {
@@ -172,7 +173,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public UniquenessConstraint createUniquenessConstraint() {
@@ -181,7 +183,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ReferenceScheme createReferenceScheme() {
@@ -190,7 +193,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ValueConstraint createValueConstraint() {
@@ -199,7 +203,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ExternalizableConstraint createExternalizableConstraint() {
@@ -208,7 +213,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public SetComparisonConstraint createSetComparisonConstraint() {
@@ -217,7 +223,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ConstrainingValues createConstrainingValues() {
@@ -226,7 +233,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ConstrainingRange createConstrainingRange() {
@@ -235,7 +243,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public SubSetConstraint createSubSetConstraint() {
@@ -244,7 +253,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EqualityConstraint createEqualityConstraint() {
@@ -253,7 +263,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ExclusionConstraint createExclusionConstraint() {
@@ -262,7 +273,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public SubType createSubType() {
@@ -271,7 +283,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public FrequencyConstraint createFrequencyConstraint() {
@@ -280,7 +293,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public RingConstraint createRingConstraint() {
@@ -289,7 +303,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Acyclic createAcyclic() {
@@ -298,7 +313,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Irreflexive createIrreflexive() {
@@ -307,7 +323,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Intransitive createIntransitive() {
@@ -316,7 +333,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Asymmetric createAsymmetric() {
@@ -325,7 +343,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public AntiSymmetric createAntiSymmetric() {
@@ -334,7 +353,8 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public Symmetric createSymmetric() {
@@ -357,9 +377,9 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SchemaDiagramMember createSchemaDiagramMember() {
-		SchemaDiagramMemberImpl schemaDiagramMember = new SchemaDiagramMemberImpl();
-		return schemaDiagramMember;
+	public SchemaMember createSchemaMember() {
+		SchemaMemberImpl schemaMember = new SchemaMemberImpl();
+		return schemaMember;
 	}
 
 	/**
@@ -371,7 +391,6 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 		return (net.orm.Package)getEPackage();
 	}
 
+	 
 
-
-
-} // FactoryImpl
+} //FactoryImpl

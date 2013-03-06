@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package net.orm.impl;
 
@@ -26,7 +22,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public class RoleImpl extends SchemaDiagramMemberImpl implements Role {
+public class RoleImpl extends EObjectImpl implements Role {
 	/**
 	 * The default value of the '{@link #getPhrase() <em>Phrase</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -106,7 +102,6 @@ public class RoleImpl extends SchemaDiagramMemberImpl implements Role {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

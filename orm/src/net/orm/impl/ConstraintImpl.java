@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package net.orm.impl;
 
@@ -39,6 +35,7 @@ public class ConstraintImpl extends EObjectImpl implements Constraint {
 	 * @ordered
 	 */
 	protected EList<Role> roles;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

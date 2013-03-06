@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package net.orm.util;
 
@@ -25,7 +21,7 @@ import net.orm.ReferenceScheme;
 import net.orm.RingConstraint;
 import net.orm.Role;
 import net.orm.Schema;
-import net.orm.SchemaShape;
+import net.orm.SchemaMember;
 import net.orm.SetComparisonConstraint;
 import net.orm.SubSetConstraint;
 import net.orm.SubType;
@@ -34,7 +30,6 @@ import net.orm.UniquenessConstraint;
 import net.orm.ValueConstraint;
 
 import org.eclipse.emf.common.notify.Adapter;
-import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 
@@ -109,10 +104,6 @@ public class AdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseSchema(Schema object) {
 				return createSchemaAdapter();
-			}
-			@Override
-			public Adapter caseSchemaShape(SchemaShape object) {
-				return createSchemaShapeAdapter();
 			}
 			@Override
 			public Adapter caseConstraint(Constraint object) {
@@ -202,10 +193,18 @@ public class AdapterFactory extends AdapterFactoryImpl {
 			public Adapter caseObjectRole(ObjectRole object) {
 				return createObjectRoleAdapter();
 			}
-			
+			@Override
+			public Adapter caseSchemaMember(SchemaMember object) {
+				return createSchemaMemberAdapter();
+			}
+			@Override
+			public Adapter defaultCase(EObject object) {
+				return createEObjectAdapter();
+			}
 		};
 
 	
+	 
 
 	/**
 	 * Creates a new adapter for an object of class '{@link net.orm.Role <em>Role</em>}'.
@@ -260,20 +259,6 @@ public class AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSchemaAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link net.orm.SchemaShape <em>Schema Shape</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see net.orm.SchemaShape
-	 * @generated
-	 */
-	public Adapter createSchemaShapeAdapter() {
 		return null;
 	}
 
@@ -582,6 +567,20 @@ public class AdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createObjectRoleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link net.orm.SchemaMember <em>Schema Member</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see net.orm.SchemaMember
+	 * @generated
+	 */
+	public Adapter createSchemaMemberAdapter() {
 		return null;
 	}
 

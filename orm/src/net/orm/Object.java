@@ -23,7 +23,7 @@ package net.orm;
  * @model
  * @generated
  */
-public interface Object extends SchemaDiagramMember {
+public interface Object extends SchemaMember {
 	/**
 	 * Returns the value of the '<em><b>Occurs Else Where</b></em>' attribute.
 	 * <!-- begin-user-doc -->

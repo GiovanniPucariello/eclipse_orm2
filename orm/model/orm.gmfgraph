@@ -53,7 +53,8 @@
             xsi:type="gmfgraph:InvisibleRectangle"/>
       </actualFigure>
       <accessors
-          accessor="getRoleFigure"/>
+          accessor="getRoleFigure"
+          figure="//@figures.0/@descriptors.3/@actualFigure"/>
     </descriptors>
     <descriptors
         name="ObjectRoleFigure">

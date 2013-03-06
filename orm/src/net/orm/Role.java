@@ -1,14 +1,8 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package net.orm;
 
 import org.eclipse.emf.ecore.EObject;
-
-
 
 /**
  * <!-- begin-user-doc -->
@@ -26,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Role extends SchemaDiagramMember {
+public interface Role extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Phrase</b></em>' attribute.
 	 * <!-- begin-user-doc -->

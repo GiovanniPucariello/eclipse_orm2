@@ -6,16 +6,16 @@
     xmlns:gmfgen="http://www.eclipse.org/gmf/2009/GenModel">
   <diagram
       visualID="1000"
-      editPartClassName="SchemaDiagramEditPart"
-      itemSemanticEditPolicyClassName="SchemaDiagramItemSemanticEditPolicy"
-      canonicalEditPolicyClassName="SchemaDiagramCanonicalEditPolicy"
+      editPartClassName="SchemaEditPart"
+      itemSemanticEditPolicyClassName="SchemaItemSemanticEditPolicy"
+      canonicalEditPolicyClassName="SchemaCanonicalEditPolicy"
       iconProviderPriority="Low"
       validationProviderPriority="Low">
     <diagramRunTimeClass
         href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
     <elementType
         xsi:type="gmfgen:MetamodelType"
-        editHelperClassName="SchemaDiagramEditHelper"/>
+        editHelperClassName="SchemaEditHelper"/>
     <viewmap
         xsi:type="gmfgen:FigureViewmap"
         figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
@@ -25,7 +25,6 @@
         visualID="3001"
         editPartClassName="RoleEditPart"
         itemSemanticEditPolicyClassName="RoleItemSemanticEditPolicy"
-        notationViewFactoryClassName="RoleViewFactory"
         canonicalEditPolicyClassName="RoleCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="RoleGraphicalNodeEditPolicy"
         createCommandClassName="RoleCreateCommand"
@@ -111,7 +110,7 @@
           xsi:type="gmfgen:InnerClassViewmap"
           layoutType="TOOLBAR_LAYOUT"
           className="PredicateFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PredicateFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private  fRoleFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PredicateFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.ToolbarLayout layoutThis = new org.eclipse.draw2d.ToolbarLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.ToolbarLayout.ALIGN_TOPLEFT&#xA;);&#xA;&#xA;&#x9;layoutThis.setSpacing(1);&#xA;&#x9;layoutThis.setVertical(false);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;org.eclipse.draw2d.RectangleFigure fig0 = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fig0.setOutline(false);&#xA;fig0.setFill(false);&#xA;fig0.setOpaque(false);&#xA;&#xA;this.add(fig0);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public  getRoleFigure() {&#xA;&#x9;&#x9;return fRoleFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PredicateFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fRoleFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PredicateFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.ToolbarLayout layoutThis = new org.eclipse.draw2d.ToolbarLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.ToolbarLayout.ALIGN_TOPLEFT&#xA;);&#xA;&#xA;&#x9;layoutThis.setSpacing(1);&#xA;&#x9;layoutThis.setVertical(false);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;org.eclipse.draw2d.RectangleFigure fig0 = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fig0.setOutline(false);&#xA;fig0.setFill(false);&#xA;fig0.setOpaque(false);&#xA;&#xA;this.add(fig0);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getRoleFigure() {&#xA;&#x9;&#x9;return fRoleFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
       <modelFacet>
         <metaClass
             href="orm.genmodel#//orm/Predicate"/>
@@ -125,7 +124,6 @@
         visualID="4001"
         editPartClassName="ObjectRoleEditPart"
         itemSemanticEditPolicyClassName="ObjectRoleItemSemanticEditPolicy"
-        notationViewFactoryClassName="ObjectRoleViewFactory"
         createCommandClassName="ObjectRoleCreateCommand"
         reorientCommandClassName="ObjectRoleReorientCommand">
       <diagramRunTimeClass
@@ -155,7 +153,6 @@
         visualID="4004"
         editPartClassName="SubTypeEditPart"
         itemSemanticEditPolicyClassName="SubTypeItemSemanticEditPolicy"
-        notationViewFactoryClassName="SubTypeViewFactory"
         createCommandClassName="SubTypeCreateCommand"
         reorientCommandClassName="SubTypeReorientCommand">
       <diagramRunTimeClass

@@ -1,8 +1,4 @@
 /**
- * <copyright>
- * </copyright>
- *
- * $Id$
  */
 package net.orm.impl;
 
@@ -25,10 +21,8 @@ import net.orm.Predicate;
 import net.orm.ReferenceScheme;
 import net.orm.RingConstraint;
 import net.orm.Role;
-import net.orm.SchemaDiagram;
-import net.orm.SchemaDiagramMember;
 import net.orm.Schema;
-import net.orm.SchemaShape;
+import net.orm.SchemaMember;
 import net.orm.SetComparisonConstraint;
 import net.orm.SubSetConstraint;
 import net.orm.SubType;
@@ -75,7 +69,7 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass schemaDiagramEClass = null;
+	private EClass schemaEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -236,7 +230,7 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass schemaDiagramMemberEClass = null;
+	private EClass schemaMemberEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -430,8 +424,8 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSchemaDiagram() {
-		return schemaDiagramEClass;
+	public EClass getSchema() {
+		return schemaEClass;
 	}
 
 	/**
@@ -439,8 +433,8 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSchemaDiagram_SchemaDiagramMembers() {
-		return (EReference)schemaDiagramEClass.getEStructuralFeatures().get(0);
+	public EReference getSchema_SchemaDiagramMembers() {
+		return (EReference)schemaEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -727,8 +721,8 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getSchemaDiagramMember() {
-		return schemaDiagramMemberEClass;
+	public EClass getSchemaMember() {
+		return schemaMemberEClass;
 	}
 
 	/**
@@ -776,8 +770,8 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 		createEAttribute(predicateEClass, PREDICATE__ARITY);
 		createEReference(predicateEClass, PREDICATE__CONSTRAINTS);
 
-		schemaDiagramEClass = createEClass(SCHEMA_DIAGRAM);
-		createEReference(schemaDiagramEClass, SCHEMA_DIAGRAM__SCHEMA_DIAGRAM_MEMBERS);
+		schemaEClass = createEClass(SCHEMA);
+		createEReference(schemaEClass, SCHEMA__SCHEMA_DIAGRAM_MEMBERS);
 
 		constraintEClass = createEClass(CONSTRAINT);
 		createEReference(constraintEClass, CONSTRAINT__ROLES);
@@ -832,7 +826,7 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 		createEAttribute(objectRoleEClass, OBJECT_ROLE__MANDATORY);
 		createEReference(objectRoleEClass, OBJECT_ROLE__CONSTRAINTS);
 
-		schemaDiagramMemberEClass = createEClass(SCHEMA_DIAGRAM_MEMBER);
+		schemaMemberEClass = createEClass(SCHEMA_MEMBER);
 	}
 
 	/**
@@ -863,10 +857,9 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		roleEClass.getESuperTypes().add(this.getSchemaDiagramMember());
-		objectEClass.getESuperTypes().add(this.getSchemaDiagramMember());
+		objectEClass.getESuperTypes().add(this.getSchemaMember());
 		predicateEClass.getESuperTypes().add(this.getObject());
-		predicateEClass.getESuperTypes().add(this.getSchemaDiagramMember());
+		predicateEClass.getESuperTypes().add(this.getSchemaMember());
 		mandatoryConstraintEClass.getESuperTypes().add(this.getExternalizableConstraint());
 		uniquenessConstraintEClass.getESuperTypes().add(this.getExternalizableConstraint());
 		valueConstraintEClass.getESuperTypes().add(this.getConstraint());
@@ -877,7 +870,7 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 		subSetConstraintEClass.getESuperTypes().add(this.getSetComparisonConstraint());
 		equalityConstraintEClass.getESuperTypes().add(this.getSetComparisonConstraint());
 		exclusionConstraintEClass.getESuperTypes().add(this.getSetComparisonConstraint());
-		subTypeEClass.getESuperTypes().add(this.getSchemaDiagramMember());
+		subTypeEClass.getESuperTypes().add(this.getSchemaMember());
 		frequencyConstraintEClass.getESuperTypes().add(this.getConstraint());
 		ringConstraintEClass.getESuperTypes().add(this.getConstraint());
 		acyclicEClass.getESuperTypes().add(this.getRingConstraint());
@@ -886,7 +879,7 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 		asymmetricEClass.getESuperTypes().add(this.getRingConstraint());
 		antiSymmetricEClass.getESuperTypes().add(this.getRingConstraint());
 		symmetricEClass.getESuperTypes().add(this.getRingConstraint());
-		objectRoleEClass.getESuperTypes().add(this.getSchemaDiagramMember());
+		objectRoleEClass.getESuperTypes().add(this.getSchemaMember());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(roleEClass, Role.class, "Role", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -906,8 +899,8 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 		initEAttribute(getPredicate_Arity(), ecorePackage.getEInt(), "Arity", null, 1, -1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPredicate_Constraints(), this.getConstraint(), null, "Constraints", null, 0, -1, Predicate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(schemaDiagramEClass, SchemaDiagram.class, "SchemaDiagram", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSchemaDiagram_SchemaDiagramMembers(), this.getSchemaDiagramMember(), null, "SchemaDiagramMembers", null, 0, -1, SchemaDiagram.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(schemaEClass, Schema.class, "Schema", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSchema_SchemaDiagramMembers(), this.getSchemaMember(), null, "SchemaDiagramMembers", null, 0, -1, Schema.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(constraintEClass, Constraint.class, "Constraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConstraint_Roles(), this.getRole(), null, "Roles", null, 0, -1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -964,7 +957,7 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 		initEAttribute(getObjectRole_Mandatory(), ecorePackage.getEBoolean(), "Mandatory", "false", 0, 1, ObjectRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getObjectRole_Constraints(), this.getConstraint(), null, "Constraints", null, 0, -1, ObjectRole.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(schemaDiagramMemberEClass, SchemaDiagramMember.class, "SchemaDiagramMember", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(schemaMemberEClass, SchemaMember.class, "SchemaMember", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
