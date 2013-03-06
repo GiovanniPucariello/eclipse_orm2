@@ -863,6 +863,7 @@ public class PackageImpl extends EPackageImpl implements net.orm.Package {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		roleEClass.getESuperTypes().add(this.getSchemaDiagramMember());
 		objectEClass.getESuperTypes().add(this.getSchemaDiagramMember());
 		predicateEClass.getESuperTypes().add(this.getObject());
 		predicateEClass.getESuperTypes().add(this.getSchemaDiagramMember());

@@ -25,7 +25,6 @@
         visualID="2004"
         editPartClassName="ObjectEditPart"
         itemSemanticEditPolicyClassName="ObjectItemSemanticEditPolicy"
-        notationViewFactoryClassName="ObjectViewFactory"
         canonicalEditPolicyClassName="ObjectCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="ObjectGraphicalNodeEditPolicy"
         createCommandClassName="ObjectCreateCommand">
@@ -50,7 +49,6 @@
           visualID="5003"
           editPartClassName="ObjectNameEditPart"
           itemSemanticEditPolicyClassName="ObjectNameItemSemanticEditPolicy"
-          notationViewFactoryClassName="ObjectNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -69,11 +67,52 @@
         </modelFacet>
       </labels>
     </topLevelNodes>
+    <topLevelNodes
+        visualID="2005"
+        editPartClassName="PredicateEditPart"
+        itemSemanticEditPolicyClassName="PredicateItemSemanticEditPolicy"
+        canonicalEditPolicyClassName="PredicateCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="PredicateGraphicalNodeEditPolicy"
+        createCommandClassName="PredicateCreateCommand">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:MetamodelType"
+          editHelperClassName="PredicateEditHelper"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          layoutType="TOOLBAR_LAYOUT"
+          className="PredicateFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class PredicateFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fRoleFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public PredicateFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.ToolbarLayout layoutThis = new org.eclipse.draw2d.ToolbarLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(false);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.ToolbarLayout.ALIGN_TOPLEFT&#xA;);&#xA;&#xA;&#x9;layoutThis.setSpacing(1);&#xA;&#x9;layoutThis.setVertical(false);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fRoleFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fRoleFigure.setLineStyle(org.eclipse.draw2d.Graphics.LINE_DASH);&#xA;&#xA;this.add(fRoleFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getRoleFigure() {&#xA;&#x9;&#x9;return fRoleFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+      <modelFacet>
+        <metaClass
+            href="orm.genmodel#//orm/Predicate"/>
+        <containmentMetaFeature
+            href="orm.genmodel#//orm/SchemaDiagram/SchemaDiagramMembers"/>
+        <childMetaFeature
+            href="orm.genmodel#//orm/SchemaDiagram/SchemaDiagramMembers"/>
+      </modelFacet>
+    </topLevelNodes>
+    <topLevelNodes
+        visualID="2006"
+        editPartClassName="RoleEditPart"
+        itemSemanticEditPolicyClassName="RoleItemSemanticEditPolicy"
+        canonicalEditPolicyClassName="RoleCanonicalEditPolicy"
+        graphicalNodeEditPolicyClassName="RoleGraphicalNodeEditPolicy"
+        createCommandClassName="RoleCreateCommand">
+      <diagramRunTimeClass
+          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+      <elementType
+          xsi:type="gmfgen:NotationType"/>
+      <viewmap
+          xsi:type="gmfgen:InnerClassViewmap"
+          className="RoleFigure"
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class RoleFigure extends org.eclipse.draw2d.RectangleFigure {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public RoleFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;org.eclipse.draw2d.PolylineDecoration uniquenessConsraintDecorator0 = new org.eclipse.draw2d.PolylineDecoration();&#xA;&#xA;&#xA;this.add(uniquenessConsraintDecorator0);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;"/>
+    </topLevelNodes>
     <links
         visualID="4001"
         editPartClassName="ObjectRoleEditPart"
         itemSemanticEditPolicyClassName="ObjectRoleItemSemanticEditPolicy"
-        notationViewFactoryClassName="ObjectRoleViewFactory"
         createCommandClassName="ObjectRoleCreateCommand"
         reorientCommandClassName="ObjectRoleReorientCommand">
       <diagramRunTimeClass
@@ -103,7 +142,6 @@
         visualID="4004"
         editPartClassName="SubTypeEditPart"
         itemSemanticEditPolicyClassName="SubTypeItemSemanticEditPolicy"
-        notationViewFactoryClassName="SubTypeViewFactory"
         createCommandClassName="SubTypeCreateCommand"
         reorientCommandClassName="SubTypeReorientCommand">
       <diagramRunTimeClass
@@ -172,7 +210,8 @@
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="Predicate"
-            description="Create Arbitrary Predicate"/>
+            description="Create Arbitrary Predicate"
+            genNodes="//@diagram/@topLevelNodes.1"/>
         <entries
             xsi:type="gmfgen:ToolEntry"
             title="ObjectRole"
@@ -181,6 +220,7 @@
             xsi:type="gmfgen:ToolEntry"
             title="Role"
             description="Create new Role"
+            genNodes="//@diagram/@topLevelNodes.2"
             genLinks="//@diagram/@links.0"/>
       </groups>
       <groups

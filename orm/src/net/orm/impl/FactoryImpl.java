@@ -370,7 +370,7 @@ public class FactoryImpl extends EFactoryImpl implements Factory {
 	public net.orm.Package getPackage() {
 		return (net.orm.Package)getEPackage();
 	}
-	
+
 
 
 

@@ -103,6 +103,9 @@
   <nodes
       name="Predicate"
       figure="PredicateFigure"/>
+  <nodes
+      name="Role"
+      figure="RoleFigure"/>
   <connections
       name="SubType"
       figure="SubTypeFigure"/>

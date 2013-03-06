@@ -70,24 +70,6 @@ public interface Package extends EPackage {
 	int ROLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Phrase</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE__PHRASE = 0;
-
-	/**
-	 * The number of structural features of the '<em>Role</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE_FEATURE_COUNT = 1;
-
-	/**
 	 * The meta object id for the '{@link net.orm.impl.SchemaDiagramMemberImpl <em>Schema Diagram Member</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -105,6 +87,24 @@ public interface Package extends EPackage {
 	 * @ordered
 	 */
 	int SCHEMA_DIAGRAM_MEMBER_FEATURE_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Phrase</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE__PHRASE = SCHEMA_DIAGRAM_MEMBER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Role</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE_FEATURE_COUNT = SCHEMA_DIAGRAM_MEMBER_FEATURE_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link net.orm.impl.ObjectImpl <em>Object</em>}' class.

@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  *
  * @generated
  */
-public class RoleImpl extends EObjectImpl implements Role {
+public class RoleImpl extends SchemaDiagramMemberImpl implements Role {
 	/**
 	 * The default value of the '{@link #getPhrase() <em>Phrase</em>}' attribute.
 	 * <!-- begin-user-doc -->

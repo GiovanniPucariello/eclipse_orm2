@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Role extends EObject {
+public interface Role extends SchemaDiagramMember {
 	/**
 	 * Returns the value of the '<em><b>Phrase</b></em>' attribute.
 	 * <!-- begin-user-doc -->
